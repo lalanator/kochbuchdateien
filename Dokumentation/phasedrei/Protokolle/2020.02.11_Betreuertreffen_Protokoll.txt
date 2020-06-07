@@ -1,0 +1,14 @@
+Dokumentation:
+
+Javadoc:
+öffentliche Methoden, Klassen Javadoc mit asführlicher parameter und returnvalue Beschriebung
+	Referenten auf Klassen/Methoden setzen
+Sachen wie getter/setter (default methoden) müssen nicht kommentierrt werden
+
+Doku:
+package Doku
+Keine Doku für generated classes
+
+Abgabe: App Repo mit .apk in Release und Server Repo mit Release und 
+
+Vortrag: Orga Facts (was (überraschend) gut/schlecht, was geändert, was nicht geschafft), wie hat Clean Arch. geholfen, wie

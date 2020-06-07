@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>32</x>
+      <y>136</y>
+      <w>432</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>ShoppingListFragment
+bg=#dac39e
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>176</y>
+      <w>264</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>ShoppingListDisplayFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>48</x>
+      <y>192</y>
+      <w>136</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Einkaufsliste-Button&gt;&gt;
+
+m1=Menü</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+</diagram>

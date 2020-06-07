@@ -1,0 +1,38 @@
+Protokollam17.12.2019Betreuertreffe
+1. Klausurenphasenpause besser in der Implementierungsphase 
+Fragen---------------------------
+1. Pflichtenheft referenzierungen 
+	- alle Funktionalen und unfunktionalen Anforderungen refernzieren
+	- bei Modifizierung im Entwurfsdokument erwähnen
+	- wenn Anfordeungen nicht entworfen werden mit Begründung auslassen
+2. Viewmodel exemplarisch modellieren
+	- generisch Template definieren und pro implementierung die Abweichung klarstellen
+3. Serverapi 
+	- Relation zwischen den Klassen klarstellen durch Pfeile oder Beschreibung 
+	- Schnittstellen klar definiert 
+	- textlich beschreiben, wie die Komponenten zusammenspielen
+	- Unterscheidung treffen zwischen Thridparty Schnittstellen und eigens implementierte Logik / Schnittstellen (kein schema F) 
+	- Server architektur ist durch Api, Controller ,.. klar
+4. Libraries
+	- wenn die Libraries schon entschieden sind können diese verwendet werden. (Auf Austauschbarkeit achten) 
+	- Libraries begründen und kurz erwähnen welche Alternativen es gäbe
+5. Exptions Randfälle
+	- Überlegung, wie der Umgang mit den Randfällen geht bei den wichtigsten Fällen
+	- 
+
+TODO
+- Fragment provider 
+- Pakete mit Camelcase 
+- Entwurfsmuster kein Toplevelpunkt/Kapitel	
+- Schnittstelle zur Restschnittstelle 
+- Restschnittstelle durchlesen und definieren
+- Einheitliche Fragment beschreibung 
+- Referenzierungen 
+- Libraries begründen und kurz erwähnen welche Alternativen es gäbe
+- Randfälle spezifizieren
+- Nach min Bewertung suchen 
+- Nach min Zeit suchen 
+
+
+- Zubereitungsbeschreibung ist ein Suchfilter 
+

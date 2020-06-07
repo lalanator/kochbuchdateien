@@ -1,0 +1,143 @@
+1. Benutzersystem
+ - Hinzufügen ---------Core
+	- Name (muss)
+		- änderbar
+		- öffentlich
+
+	- Email (muss) 
+		- eindeutig 
+		- nicht änderbar 
+
+	- Passwort (muss) 
+		- änderbar
+
+	- Profilbild (wunsch)
+		- änderbar
+		- entfernbar 
+		- optional (default Profilbild)
+
+	- Gruppen (wunsch)
+		- Größe egal
+	-
+  - Entfernen ------------Core
+		- Dabei wird entfernt: Name, Email, Bilder
+			
+
+2. Rezepte ---------- Core
+ - Hinzufügen 
+	
+	- Name (muss)
+		- änderbar 
+		- Begrenzt durch 50 Zeichen
+		- nicht eindeutig 
+		
+	- Bild(er) (muss)
+		- änderbar 
+		- optional (default bild)
+		- entfernbar 
+		
+	- Freitextbeschreibung (muss)
+		- änderbar 
+		- Begrenzt durch 1000 Zeichen 
+		- entfernbar
+		
+	- Zubereitungslänge (muss)
+		- mindestzeit 10 Minuten
+		- änderbar 
+
+	- Tags (muss)
+		- eindeutig
+		- mindestens 3 pro Rezept 
+		- änderbar 
+		- im Nachhinein vom Ersteller erweiterbar/entfernbar
+		- unbegrenzt viele
+		- Tagvorschläge
+
+	- Veröffentlichbarkeit
+		- Veröffentlichen Option
+			-> Nutzer muss eingeloggt sein sonst gehe zum Profilerstellen
+	
+ - Entfernen (muss)
+	- Name
+		-> Entfernt komplettes Rezept 
+	- Bilder
+		-> Falls kein Bild mehr folg default Bild
+	- Tags
+		-> min. 3 Tags
+ 
+ - Bewerten (muss)
+	- 1 bis 5 Sterne
+	- änderbar
+	- Pro Nutzer nur 1 X Sterne gewertet (wenn einer öfters bewertet zählt nur einmal)
+	- entfernbar
+	- bei öffentlichen Rezepten der Durchschnitt einsehbar 
+
+ - kommentieren (wunsch)
+	- Begrenzt durch 100 Zeichen
+	- entfernbar 
+	- änderbar
+	- öffentlich einsehbar, falls Rezept öffentlich
+
+2.10. Merkliste---------------------(wunsch)
+
+	- offline abrufbar 
+	- veränderbar 
+	- vom Nutzer verwaltbar
+
+	
+3.Suchen -------------- Core
+
+	- Tags (Zutaten) (muss)
+		- Suchliste erstellen
+			- hinzufügen 
+	 		- entfernen 
+		- nach Rezept suchen (Rezeptliste anzeigen)
+
+	- Suchvorschläge (wunsch)
+		- Kategorisierung kleinteilig in Klammern z.B: Käse(gerieben) 200 gr.
+		- auswählbar -> zur Zutatenliste hinzufügen 
+			- Mengeneingabe eingebbar
+
+	- Zutatenliste (muss)
+		- einzelne Rezepte hinzufügbar
+		- einzelne Rezepte entfernbar 
+		- mindestens 3 Zutaten
+
+	- Rezeptsuchen (muss)
+		
+	- Nach zutatensuchen umstellbar nach Rezeptsuchen (wunsch)
+ 			
+		- Tags (Rezepte) (wunsch)
+			- Rezeptliste anzeigen
+				-> Zutatenliste anzeigen
+				-> Rezept Einkaufsliste Exportieren
+
+4. Hauptmenü
+	- Suchzeile 
+	- Zutatenliste 
+	- Suchbeginn button
+5. Rezept Erstellen Menü
+	- Name
+	- Bilder 
+	- Freitext
+	- Tags
+	- Zubereitungszeit
+6. Rezeptliste anzeigen
+	- Liste an Rezepten
+7. Benutzer erstellen
+	- Name
+	- Email
+	- Bild
+
+
+	
+
+
+TODO wunschkriterien
+	- Beliebte Rezepte Feed
+	- Zutaten mit icons versehen
+	- Produktumgebung
+		- Tablets
+		- Smartphones mit android 21, oder höher
+	
+		

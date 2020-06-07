@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>36</y>
+      <w>405</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>FeedViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;
+--
+-lastsync:Timestamp
+-newestRecipes:Livedata&lt;List&lt;PublicRecipe&gt; &gt;
+--
++getMoreRecipes(howmany:int):List&lt;PublicRecipes&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>270</y>
+      <w>351</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+getRecipesOlderThan(time:Timestamp):List&lt;PublicRecipe&gt;
+
+loadNewestRecipes(quantity:int):List&lt;PublicRecipes&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>180</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>

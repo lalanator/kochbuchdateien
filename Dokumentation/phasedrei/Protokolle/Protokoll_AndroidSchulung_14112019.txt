@@ -1,0 +1,22 @@
+ui
+layouts 
+	linear	(verschachtelbar)
+	relative --> constraint layout (ähnlich gridbag layout - hat grafischen editor)
+	web view
+	
+	in xml
+	neue layout-objekte (text, button) werden in R-file gespeichert, über das das layout bearbeitet werden kann
+
+activities
+	activities bedeuten die aktionen, die die App in ihren zuständen ausführt, zB "on start", "on close", etc.
+	jede activity muss ins manifest eingetragen werden
+
+handy auf pc anzeigen lassen (bildschirm)
+	syncopy
+	visor (kommerziell)
+
+Android Arcitecture Components	(Kleinserveranwendungen als Bsp. von Google)
+	sunflower
+	blade
+
+	Google Room und Model View View Model angucken

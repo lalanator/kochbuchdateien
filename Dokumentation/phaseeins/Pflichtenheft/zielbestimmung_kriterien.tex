@@ -1,0 +1,152 @@
+\chapter{Zielbestimmung}	
+	Im Rahmen der Veranstaltung \glqq Praxis der Softwareentwicklung\grqq{} des  Instituts für Programmstrukturen und Datenorganisation der Fakultät für Informatik des Karlsruher Instituts fuer Technologie wird eine \textit{Kochbuchapp} entwickelt. Das Projekt beinhaltet eine \gls{Android} App, die auf \gls{Android} - Smartphones läuft und einen Serversoftwareteil, mit dem die App über eine Schnittstelle, wie zum Beispiel \gls{REST}, kommuniziert und Daten abgleicht. Die App soll es Nutzern ermöglichen, Kochrezepte zu verwalten. Es soll zum einen möglich sein, Rezepte zu erstellen und für sich in seiner privaten Kochrezeptsammlung  zu verwalten und zum anderen, Rezepte zu veröffentlichen und diese dadurch anderen zur Verfügung zu stellen. Die veröffentlichten Rezepte sind für andere \gls{Nutzer} der App sichtbar und andere \gls{Nutzer} sollen nach den veröffentlichten Rezepten suchen können.
+
+%Beginn Abschnitt Musskriterien
+
+\section{Musskriterien}
+
+
+\subsection{Rezepte}
+
+\criterium{Rezepte erstellen}{crt:rezepterstellen} \gls{Nutzer} sollen neue Rezepte privat erstellen können. Dabei wird dem Ersteller ein \Gls{Template} vorgegeben. Seine privaten Rezepte soll der \gls{Autor} im Nachhinein ändern können. 
+
+\criterium{Private Rezepte speichern/Rezeptliste}{crt:speichere_unvollst}
+Alle unvollständigen privaten Rezepte eines Autors werden automatisch in seiner \gls{Rezeptliste} gespeichert. Der Autor kann diese Rezepte zu einem späteren Zeitpunkt weiter bearbeiten. Alle vollständigen privaten Rezepte eines Autors sind ebenfalls in der \gls{Rezeptliste} gespeichert.
+
+\criterium{Rezepte veröffentlichen}{crt:rezeptveroeffentlichen}
+Autoren können ihre selbsterstellten privaten Rezepte veröffentlichen. Öffentliche Rezepte können von anderen Nutzern gesehen werden. Der Autor hat das Rezept auch nach der Veröffentlichung noch in seiner privaten \gls{Rezeptliste}.
+
+\criterium{Rezepte verwalten}{crt:rezeptverwalten}
+Alle \glspl{Autor} können ihre privaten Rezepte verwalten. Dabei können sie Rezepte von ihrer Rezeptliste löschen oder bearbeiten.\newline
+Rezeptersteller können ihre veröffentlichten Rezepte verwalten. Wird ein \gls{oRezept} von seinem Ersteller gelöscht, wird das Rezept nicht mehr öffentlich angezeigt.
+
+\criterium{Rezepte favorisieren}{crt:rezeptfav}
+\Glspl{angemeldeter Nutzer} können öffentliche Rezepte favorisieren. Favorisierte Rezepte werden so gespeichert, sodass der Nutzer schnellen Zugriff darauf hat.
+%Alle unvollständigen \glspl{pRezept} eines \gls{Autor}s werden automatisch in seiner \gls{Rezeptliste} gespeichert. Der \gls{Autor} kann diese \glspl{pRezept} zu einem späteren Zeitpunkt weiter bearbeiten. Alle vollständigen \glspl{pRezept} eines \gls{Autor}s sind ebenfalls in der \gls{Rezeptliste} gespeichert.
+%Ist doppelt
+
+\criterium{Rezepte veröffentlichen}{crt:rezeptveroeffentlichen}
+\glspl{Autor} können ihre selbsterstellten privaten Rezepte  veröffentlichen. \Glspl{oRezept} können von anderen \glspl{Nutzer}n gesehen werden. Der \gls{Autor} hat das Rezept auch nach der Veröffentlichung noch in seiner privaten \gls{Rezeptliste}.
+
+\criterium{Rezepte favorisieren}{crt:rezeptfav}
+Nutzer können \glspl{oRezept} favorisieren. Favorisierte Rezepte werden so gespeichert, sodass der \gls{Nutzer} schnellen Zugriff darauf hat.
+
+
+\subsection{Suchfunktion}
+
+\criterium{Rezepte durchsuchen}{crt:rezeptdurchsuchen}
+\gls{Nutzer} können \glspl{oRezept} durchsuchen und sich die Ergebnisse sortiert ansehen.
+
+\criterium{Suchergebnisse einschränken}{crt:rfilter}
+\gls{Nutzer} können ihre Suche durch \glspl{Suchfilter} einschränken. \gls{Suchfilter} sind beispielsweise: Erstellungsdatum, Durchschnittsbewertung, Favoriten.
+
+	
+%Beginn Abschnitt Musskriterien Benutzersystem
+	
+\subsection{Benutzersystem / Accountsystem}
+
+\criterium{Accounterstellung}{crt:make_acc}
+\gls{Nutzer} können einen Account erstellen und verwalten.
+
+\criterium{Accountnutzung}{crt:login_acc}
+Registrierte Nutzer können sich mit ihrem Account in der App anmelden.
+
+
+		
+%Hier enden alle Musskriterien
+%Beginn Abschnitt Wunschkriterien
+
+\section{Wunschkriterien}
+
+
+\criteriumOptional{Profilbild}{crt:account_profilbild}
+Der \gls{angemeldeter Nutzer} kann ein Profilbild für sein Profil hochladen. Dieses kann jederzeit geändert oder entfernt werden. Falls der \gls{angemeldeter Nutzer} kein Profilbild hochlädt, wird ein Standardbild angezeigt.
+	
+	%Ende Abschnitt Benutzersystem
+
+	%Beginn Abschnitt Suchfunktion
+	
+\criteriumOptional{Tags bearbeiten}{crt:wktags}
+Der Nutzer kann die Liste der \glspl{Tag} mit eigenen Tags ergänzen, Tags löschen und bearbeiten. 
+Die Liste der von ihm angepassten Tags steht ihm als seine persönliche Liste zur Verfügung. 
+
+\criteriumOptional{Erweiterte Suche}{crt:erw_suche}
+Die Suchfunktion erhält weitere \glspl{Suchfilter}.
+
+\criteriumOptional{Sortierung}{crt:rezept_bewertung_suchen}
+\glspl{Nutzer} können die Suchergebnisse nach Bewertungen sortieren.
+
+	
+%Ende Abschnitt Suchfunktion
+	
+%Beginn Abschnitt Einkaufsliste
+
+\criteriumOptional{Einkaufliste erstellen}{crt:einkaufsliste}
+\glspl{Nutzer} können Zutaten aus \glspl{oRezept}n auswählen und ihrer Einkaufsliste hinzufügen. Sie können die Einkaufsliste bearbeiten und sehen so, welche Zutaten sie noch brauchen.
+
+
+	%Beginn Abschnitt Mengenangaben ändern
+
+\criteriumOptional{Mengenangaben skalieren}{crt:mengenangaben_skalieren}
+\glspl{Nutzer} können in der Rezeptanzeige die Portionenanzahl ändern. Anhand der eingestellten Portionenanzahl werden, in der Anzeige, die Mengenangaben der Zutaten geändert. 
+
+
+	%Beginn Abschnitt Import- und Exportfunktion
+
+\criteriumOptional{Import- und Exportfunktion}{crt:importexport}
+Der \Gls{Nutzer} kann ein \gls{pRezept} aus der App exportieren und \gls{lokal} speichern. Außerdem können Rezepte aus externen Quellen importiert werden, sodass die importierten Dateien zu neuen privaten Rezepten in der App erstellt werden können.
+
+%Beginn Rezeptstruktur
+\criteriumOptional{Rezeptstruktur}{crt:rezeptstruktur}
+Nutzer können die Zutatenliste und den Zubereitungstext mit Überschriften in einzelne Abschnitte unterteilen. 
+In der Rezeptanzeige werden die Texte dann formatiert angezeigt. 
+
+%Beginn Abschnitt Verlinkung zwischen Rezepten
+
+\criteriumOptional{Verlinkung zwischen Rezepten}{crt:rezeptverlinken}
+\glspl{Autor} können in Rezepten \glspl{oRezept} verlinken. Durch Anklicken des Links können diese verlinkten veröffentlichten Rezepte dann aufgerufen werden.
+	
+%Bewertungsfunktion
+	
+\criteriumOptional{Bewertung von Rezepten}{crt:bewerten}
+\Glspl{angemeldeter Nutzer} können \glspl{oRezept} bewerten. Dabei geben sie einen Wert auf einer Skala von 1 bis 5 an.
+
+%Beginn Kommentarfunktion
+
+\criteriumOptional{Rezepte kommentieren}{crt:rezept_kommentieren}
+\Glspl{Nutzer} können Kommentare zu veröffentlichten Rezepten verfassen und veröffentlichen. Diese Kommentare sind öffentlich sichtbar.
+	
+%Beginn Nutzerprofilansicht 
+
+\criteriumOptional{Nutzerprofilansicht}{crt:profilansicht}
+\glspl{Nutzer} können sich die Profile anderer öffentlicher angemeldeter Nutzer ansehen. Dort sehen sie die Information zu diesem angemeldeten Nutzer und können diesem angemeldeten Nutzer folgen.
+
+%Benutzersuche
+
+\criteriumOptional{Benutzersuche}{crt:user_search}
+Es kann auch nach angemeldeten Nutzern gesucht werden. Auch diese Suche ist durch \gls{Suchfilter} einschränkbar.
+
+%Freunde 
+
+\criteriumOptional{Freunde}{crt:account_freunde}
+\Glspl{angemeldeter Nutzer} können andere \glspl{angemeldeter Nutzer} als \glspl{Freund} hinzufügen. \glspl{Freund} können wiederum in \glspl{Freundesgruppe} eingeteilt werden, mit denen Rezepte geteilt werden können.
+
+%Beginn Neue Rezepte Feed 
+
+\criteriumOptional{Rezeptefeed}{crt:rezept_feed}
+\glspl{Nutzer} können durch einen \gls{Feed} von neuen veröffentlichten Rezepten scrollen.
+
+%Hier enden alle Wunschkriterien
+
+
+\section{Abgrenzungskriterien}
+
+\criteriumNot{Accountauthentifizierung}{crt:account_authentifizieren_implementierung}
+	Die Nutzerauthentifizierung wird nicht selbst implementiert, sondern eine Bibliothek wie Google Firebase verwendet, die diese Funktion bereitstellt. 
+
+\criteriumNot{Anwendungssprache}{crt:sprache}
+Die Anwendung unterstützt als Anzeigesprache Deutsch. Damit sind die Benutzeroberfläche, Zutatenlisten, Label, sowie auch alle für den \gls{Nutzer} sichtbaren Funktionalitäten in Deutscher Sprache gehalten. Da bei mehreren Sprachen ein automatisches Mapping der Zutaten/Label nicht einfach ist (Beispiel cinnanom auf zimt etc.), wurde diese Abgrenzung getroffen. 
+
+
+
+

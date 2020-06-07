@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>160</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-isAdmin:boolean
+--
+&lt;&lt;get/set&gt;&gt;-userid:String?
+&lt;&lt;get/set&gt;&gt;-img:BufferedImg?
+&lt;&lt;get/set&gt;&gt;-description:String?
+
+--
+(das sollte in die Authentifizierungsklasse)
+&lt;&lt;get&gt;&gt;-isAdmin:boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1290</x>
+      <y>910</y>
+      <w>300</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Feed
+--
+--
+-feedList:List&lt;Recipe&gt;
+-alreadyShownCount:int
+-olderThan:TimeStamp
+--
++getNewestRecipes()
++getNewestRecipes(olderThan:TimeStamp)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>840</y>
+      <w>300</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>PrivateRecipe
+--
+--
+-id:Int
+&lt;&lt;get/set&gt;&gt;-ingredients: String
+&lt;&lt;get/set&gt;&gt;-image:BufferedImg
+&lt;&lt;get/set&gt;&gt;-title:String
+&lt;&lt;get/set&gt;&gt;-preparation:String
+&lt;&lt;get/set&gt;&gt;-preparationTime:Int
+&lt;&lt;get/set&gt;&gt;-cookingTime:Int
+&lt;&lt;get/set&gt;&gt;-portions:int
+--
+-isComplete():boolean
++convertToPublicRecipe():PublicRecipe
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>840</y>
+      <w>300</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>PublicRecipe
+--
+--
+-id:int
+&lt;&lt;get&gt;&gt;-ingredients:IngredientAmountList
+&lt;&lt;get&gt;&gt;-creationTimeStamp:TimeStamp
+&lt;&lt;get&gt;&gt;-title:String
+&lt;&lt;get&gt;&gt;-rating:double?
+&lt;&lt;get&gt;&gt;-preparation:String
+&lt;&lt;get&gt;&gt;-tags:List&lt;String&gt;
+&lt;&lt;get&gt;&gt;-preparationTime:int
+&lt;&lt;get&gt;&gt;-cookingTime:int
+&lt;&lt;get&gt;&gt;-image:BufferedImg
+&lt;&lt;get&gt;&gt;-portions:int
+--
++report()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>30</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+--
+-id:int
+&lt;&lt;get/set&gt;&gt;-text:String
+&lt;&lt;get&gt;&gt;-publicationTime:Timestamp
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1010</x>
+      <y>80</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1 [author]</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>950</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>220</y>
+      <w>340</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Group
+--
+&lt;&lt;construct&gt;&gt; Group(creator:User, name:String)
+--
+&lt;&lt;get&gt;&gt;-users: List&lt;User&gt;
+&lt;&lt;get&gt;&gt;-groupName: String?
+&lt;&lt;get&gt;&gt;-creator:User
+&lt;&lt;get&gt;&gt;-recipies:List&lt;Recipe&gt;
+--
++addUser(u:User)
++deletUser(u:User)
++ChangeName(name:String)
++getRecipies()list&lt;Recipe&gt;
++addRecipe(newRecipe:Recipe)
++removeRecipe(recipe:Recipe)
+
+
+
+
+
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>530</y>
+      <w>300</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Recipe
+--
+--
+-id:Int
+-ingredients(): String
+-image():BufferedImg
+-title():String
+-preparation():String
+-preparationTime():Int
+-cookingTime():Int
+-tags():List&lt;String&gt;
+-portions():int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>710</y>
+      <w>120</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;60.0;10.0;60.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>760</y>
+      <w>170</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>490</y>
+      <w>360</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>FriendRequest
+--
+--
++Friendrequest(inquirer:User, requestedFriend:User)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>880</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt; Status
+--
+--
+{ACCEPTED, DENIED, OPEN}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1650</x>
+      <y>380</y>
+      <w>200</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0...n [&lt;&lt;get&gt;&gt; ingredients]</panel_attributes>
+    <additional_attributes>10.0;310.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>940</x>
+      <y>120</y>
+      <w>520</w>
+      <h>740</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0...n [&lt;&lt;get&gt;&gt; comments]</panel_attributes>
+    <additional_attributes>10.0;720.0;10.0;450.0;340.0;450.0;340.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>50</y>
+      <w>720</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1...n [&lt;&lt;get&gt;&gt; Users]</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0;570.0;10.0;570.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>340</y>
+      <w>470</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1 [Creator]</panel_attributes>
+    <additional_attributes>10.0;60.0;370.0;60.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>340</y>
+      <w>660</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1 [enquirer]</panel_attributes>
+    <additional_attributes>10.0;160.0;560.0;160.0;560.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>340</y>
+      <w>870</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1 [requestedFriend]</panel_attributes>
+    <additional_attributes>10.0;180.0;710.0;180.0;710.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1570</x>
+      <y>70</y>
+      <w>270</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Unit &lt;&lt;Enum&gt;&gt;
+--
+--
+{Eßl. ,Tel., Gramm, Liter, Stück, Prise}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1590</x>
+      <y>290</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IngredientAmount
+--
+--
+&lt;&lt;get/set&gt;&gt;-quantity: double 
+&lt;&lt;get&gt;&gt;-ingredient: String
+&lt;&lt;get&gt;&gt;-unit: unit</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1590</x>
+      <y>690</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IngredientChapter
+--
+--
+&lt;&lt;get&gt;&gt;-chapter:String
+&lt;&lt;get&gt;&gt;-ingredient: List&lt;IngredientAmount&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>720</y>
+      <w>510</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+m2=0...n [&lt;&lt;get&gt;&gt; chapters]</panel_attributes>
+    <additional_attributes>10.0;170.0;210.0;170.0;210.0;10.0;490.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1660</x>
+      <y>160</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>620</y>
+      <w>140</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+
+m2=1 [&lt;&lt;get&gt;&gt; status]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+</diagram>

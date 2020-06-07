@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>28</y>
+      <w>462</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeSearchViewModel
+--
+--
+-title:LiveData&lt;String&gt;
+-ingredients:LiveData&lt;List&lt;String&gt; &gt;
+-rating:Livedata&lt;int&gt;
+-tags:LiveData&lt;List&lt;String&gt; &gt;
+-time:LiveData&lt;int&gt;
+--
++addIngredientToList()
++addTags() 
++search(title:String, ingredients:List&lt;String&gt;, rating:int, tags:List&lt;String&gt;, time:int):List&lt;PublicRecipe&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>217</y>
+      <w>427</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+--
++addPrivateRecipe(rec:PrivateRecipe)
++getTagList():List&lt;String&gt;
++getRecipe(titel:String, ingredientList:List&lt;String&gt;, rating:Int, tags:List):PrivateRecipe
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>168</y>
+      <w>56</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>868</x>
+      <y>56</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>addTags inflated 
+das neue Fragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>791</x>
+      <y>77</y>
+      <w>91</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;80.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>861</x>
+      <y>147</y>
+      <w>154</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>search gibt die Argumente
+weiter zum Repository und
+inflated ein neues Fragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>791</x>
+      <y>140</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>

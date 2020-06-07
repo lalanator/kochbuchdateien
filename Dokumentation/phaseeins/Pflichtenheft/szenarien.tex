@@ -1,0 +1,96 @@
+
+\section{Szenarien}
+
+%Erst halb implementiert, deswegen zur Zeit auskommentiert:
+%\scenario{Rezepteingabe}{sc:} 
+
+
+\scenario{Rezepteingabe}{sc:05}
+ Der Nutzer gibt ein neues Rezept ein. Er tippt auf seinem Smartphone ein Rezept in die \gls{Kochbuchapp} ein. Er unterbricht den Vorgang, weil er angerufen wird. Das Rezept wird trotzdem gespeichert, auch wenn es noch nicht fertig ist. Später kann der Nutzer das Rezept weiter bearbeiten.
+\explains{crt:rezepterstellen}
+\explains{crt:speichere_unvollst}
+
+\scenario{Rezept veröffentlichen}{sc:scenario_publish}
+Ein Nutzer hat ein privates Rezept, dass er sehr gerne mit anderen Leuten teilen möchte, damit sie selber in den Genuss der Mahlzeit kommen. Dazu geht er in seine \gls{Kochbuchapp} und öffnet dieses Rezept. Dann drückt er auf "`veröffentlichen"'. Nun können auch andere Nutzer der App dieses Rezept lesen.
+\explains{crt:rezeptveroeffentlichen}
+
+\scenario{Rezepte verwalten}{sc:scenario_edit_recipe}
+Ein Nutzer hat sein Rezept verfeinert und möchte nun sein Rezept in der Kochbuchapp aktualisieren. Er öffnet das Rezept in der App und geht auf "`bearbeiten"'. Er ändert die Daten ab und klickt auf "`Speichern"'. Dann merkt er, dass sich zwei seiner Rezepte sehr ähnlich sind. Er öffnet eines der Rezepte und drückt "`löschen"'. Das Rezept wird gelöscht.
+\explains{crt:rezeptverwalten}
+
+\scenario{Rezepte favorisieren}{sc:scenario_favorisieren}
+Ein Nutzer stöbert durch die Rezepte von anderen Nutzern. Ihm gefällt ein Rezept und er möchte es sich merken, damit er es später kochen kann. Er drückt auf favorisieren. Nun kann er es in seiner Favoritenliste jederzeit öffnen.
+\explains{crt:rezeptfav}
+
+\scenario{Profilerstellung}{sc:scenario_createProfile}
+Ein Nutzer öffnet die Applikation. Die App zeigt die "`Suche"' Seite an. Über ein ausklappbares Menü gelangt der Nutzer zu einer Seite, auf der er sich anmelden kann. Dort kann er auswählen, sich neu zu registrieren. Das tut er, woraufhin ein \gls{Dialogfenster} erscheint, in dem verschiedene Eingabefelder enthalten sind (Email, ID und Passwort). In das Feld für \gls{ID} gibt er seine Wunsch-\gls{ID} ein. Als der Nutzer bemerkt, dass er sich vertippt hat, korrigiert er den Fehler und geht in das nächste Textfeld. Neben dem Passwortfeld steht die Information, dass dieses nicht leer bleiben darf. Er tippt sein Passwort ein, welches nicht im Klartext angezeigt wird. Unten kann er nun auswählen, das Profil zu erstellen. Er bestätigt und bekommt daraufhin eine Mail, dass die Erstellung des Profils erfolgreich war.
+\explains{crt:user_search}
+
+\scenario{Profilbearbeitung}{sc: scenario_ChangeProfile}
+Der Nutzer hat sich ein Profil erstellt. Er meldet sich in der Applikation mit seiner ID und einem Passwort an. Da ihm nun auffällt, das er sich in seiner Wunsch-ID verschrieben hat, geht er in seine \gls{Profilansicht} und wählt da die Bearbeiten-Funktion aus. Es erscheinen wieder das Text-\gls{Template} wie beim Erstellen des Profils. Dort kann er bis auf die E-Mail alle Felder nach Belieben verändern. Als der Nutzer seinen Fehler ausgebessert hat, bestätigt er die Änderung seines Profils und bekommt direkt eine Nachricht, dass die Änderung erfolgreich war.
+\explains{crt:make_acc}
+\explains{crt:login_acc}
+
+\scenario{Profilbild}{sc:scenario_profil_picture}
+Der Nutzer möchte seinem Profil ein Profilbild hinzufügen, damit ihn seine Freunde sofort erkennen, wenn sie ihn suchen. Er geht in der App auf sein Profil und wählt "`Profilbild ändern"' aus. Nun kann er von seinem Gerät ein Bild auswählen und es als Profilbild setzen.
+\explains{crt:account_profilbild}
+		
+\scenario{Verlinkung}{sc:s420}
+Ein Nutzer möchte Zitronentarte backen und hat ein Rezept dazu in der Kochbuch-App gefunden. Im Rezept steht aber keine Anleitung dazu, wie der benötigte Mürbeteig gemacht wird. Stattdessen hat das Wort "`Mürbeteig"' eine andere Farbe, als die anderen Wörter im Text. Der Nutzer klickt auf "`Mürbeteig"' und gelangt so zu einem anderen Rezept in der App, welches ihm beschreibt, wie Mürbeteig zubereitet wird.
+\explains{crt:rezeptverlinken}
+
+\scenario{Bewertung}{sc:scenario_rating}
+Ein Nutzer findet ein Rezept sehr lecker. Dies möchte er anderen Nutzern der Kochbuchapp mitteilen. Er öffnet das Rezept in seiner App und scrollt zu der Bewertung. Er bewertet das Rezept mit 5 Sternen.
+\explains{crt:bewerten}
+		
+\scenario{Kommentare}{sc:430}
+Ein Nutzer hat eines der Rezepte aus der Kochbuch-App gekocht und statt Öl Butter verwendet. Da das genauso gut funktioniert hat, möchte er das anderen Nutzern öffentlich mitteilen. Er geht auf das Rezept und schreibt in das Kommentarfeld seine Anmerkung. Dann veröffentlicht er diese.
+\explains{crt:rezept_kommentieren}
+		
+\scenario {Nutzern folgen}{sc:440} Nutzer A gefallen viele von Nutzer Bs Rezepten. A möchte B aus diesem Grund gerne folgen, um benachrichtigt zu werden, falls B ein neues Rezept veröffentlicht. Dazu geht A auf Bs Profil, auf dem er Informationen über den Nutzer lesen kann und wählt aus, dass diesem Nutzer gefolgt werden soll.
+\explains{crt:profilansicht}
+		
+
+\scenario{Suche}{sc:100} Ein Nutzer sucht nach einem Rezept für seine Lieblingspiroggen. Er gibt bei Rezeptname "`Piroggen"', bei Zutaten "`Hackfleisch"' und bei \glspl{Tag} "`deftig"' ein und erhält ein Rezept, das seinen Vorstellungen entspricht.
+\explains{crt:rezeptdurchsuchen}
+\explains{crt:rfilter}
+
+		
+\scenario{Benutzerid ändern}{sc:unknown} Eine Nutzerin möchte ihren Account bearbeiten, da ihre \gls{ID} öffentlich einsehbar ist. Deswegen ändert sie die \gls{ID} und dann auch noch das Passwort. Die Email kann sie nicht ändern.
+\explains{crt:make_acc}
+
+\scenario{Accountersterstellung}{sc:120}
+Ein Nutzer möchte sich einen Account für die App erstellen. Er gibt seine private E-Mailadresse und überlegt sich ein Passwort. Da er sich keine Benutzer-ID überlegt hat, wird ihm eine neue zugewiesen. Direkt nach der Registrierung meldet sich der Nutzer mit seiner ID und seinem Passwort an.
+\explains{crt:make_acc}
+		
+
+\scenario{Freundesgruppen}{sc:130} Ein Nutzer möchte gerne seine Rezepte an die Teilnehmer seines Kochunterrichts geben. Da er hier auch besondere Rezepte hat, die er in seinen verkauften Büchern veröffentlicht, möchte er, dass sie nicht jeder sehen kann. Er fügt jeden Teilnehmer als \gls{Freund} hinzu und eröffnet eine Gruppe, in der er jeden Teilnehmer einlädt. Dann wählt er die Rezepte aus, welche er in der Gruppe teilen möchte.
+\explains{crt:account_freunde}
+		
+\scenario{Rezeptskalierung}{sc:140}
+Ein Nutzer muss oft für mehrere Personen kochen, doch seine Rezepte sind nur für 4 Personen gemacht. Er gibt in der App die Anzahl an Personen an und die Zutaten werden für die nötige Anzahl an Portionen hochgerechnet.
+\explains{crt:mengenangaben_skalieren}
+
+\scenario{Textstruktur}{sc:141}
+Ein Nutzer gibt das Rezept für seinen Lieblingskuchen ein: {\em Zwetschgenkuchen mit Streuseln}. In den Zutaten fügt er zwei Überschriften ein: {\em Zutaten Mürbteig} und {\em Zutaten Streusel} ein, und auch die Zubereitung gliedert er nach Mürbteig und Streusel auf. Er backt ihn mehrmals, schaut noch ein Youtubevideo über Kuchen und schreibt folgenden Extraabsatz, mit der Überschrift {\em Tipps und Tricks} in sein Kochrezept: {\em Mit etwas Geschick, kann man den Teig auch direkt auf dem Boden der Springform ausrollen. Das letzte Drittel der Teigmenge zu einer Wurst ausrollen und an den Rand der Springform drücken.} Immer wenn er seinen Lieblingskuchen backt, werden ihm jetzt die einzelnen Schritte und die Anmerkung übersichtlich angezeigt. 
+\explains{crt:ueingabe}
+\explains{crt:uanzeige}
+		
+\scenario{Einkaufsliste}{sc:150} Ein Nutzer, der Küchenchef ist, hat eine Übersicht, welche und wie viele Gerichte am Tag im Restaurant ausgegeben werden. Auch hat er eine Liste davon, was er im Lager liegen hat.	Da er morgens zum Großmarkt geht, muss er wissen, was er noch für Zutaten braucht. Er wählt alle Rezepte aus, die täglich am meisten gekocht werden und fügt die Zutaten seiner Einkaufsliste hinzu. Dann braucht er nur noch das abhaken, was er schon im Lager hat oder was bereits gekauft ist.
+\explains{crt:einkaufsliste}
+		
+\scenario{Tags}{sc:160}	
+Der Nutzer möchte ein scharfes Gericht kochen. Da er aber kein Rezept weiß, geht er in die Suche und fängt an "`scharf"' zu schreiben. Nach den ersten Buchstaben werden ihm Suchwörter vorschlagen. Er tippt weiter bis "`scharf"' vorgeschlagen wird und wählt den Vorschlag aus.
+\explains{crt:tags}
+
+\scenario{Tags bearbeiten}{sc:scenario_create_tags}
+Der Nutzer möchte mit dem Tag "`herzhaft"' sein Rezept veröffentlichen. Doch wenn er den Tag eingibt, gibt es diesen nicht. Er öffnet die Liste der verfügbaren Tags und drückt hinzufügen. Nun kann er seinen Tag "`herzhaft"' hinzufügen und diesen seinem Rezept hinzufügen.
+\explains{crt:wktags} 
+		
+\scenario{Suchsortierung}{sc:170} 
+Der Nutzer möchte ein sehr gutes Rezept für eine Currysoße haben. Bei der Suche werden ihm sehr viele Varianten angeboten. Er gibt in der Suche an, dass er die bestbewertesten Soßen haben möchte. Die App zeigt ihm daraufhin nur Rezepte mit 5-Sterne-Bewertungen an. 
+\explains{crt:rezept_bewertung_suchen}
+
+\scenario{Rezepte Feed}{sc:scenario_feed}
+Der Nutzer möchte die neuesten veröffentlichten Rezepte anschauen. Er geht im Menü auf den Rezepte Feed. Ihm wird eine Liste der neusten veröffentlichten Rezepte angezeigt.
+\explains{crt:rezept_feed}

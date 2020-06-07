@@ -1,0 +1,36 @@
+Max ist Chefkoch in einer Sterneküche. Er hat schon viele Rezepte erfunden und auch schon Bücher herausgebracht. Er probiert gerne neue Gerichte von anderen aus. 
+In seiner Freizeit Unterrichtet er Hobbyköche. Er hat eine Familie mit Frau und 2 Kindern. Sie essen gerne was er kocht.
+
+Szenarios: 
+Max hat viele Rezepte die er auf Papier stehen hat und auch viele in verschiedenen Dokumente, da er in der Küche wenig Platz hat und es auch schnell Schmutzig wird, 
+wäre es gut wenn er alle seine Rezepte in eine App schreiben könnte und in der Küche auf einem Tablet anzeigen könnte.
+=>	Rezepte reinschreiben
+=>	Rezepte anzeigen
+=>	Private Rezepte
+
+Max möchte gerne seine Rezepte gerne an die Teilnehmer seines Unterrichts geben. Da er hier auch besondere Rezepte hat verwendet, die er in seinen verkauften Büchern hat, 
+möchte er, dass sie nicht jeder sehen kann.
+=>	Gruppen
+=>	Privat
+
+Max hat auch Rezepte die jeder gerne Verwenden kann, diese würde er gerne auf einer Plattform teilen, damit andere auch auf den Genuss kommen. 
+=>	Rezepte reinschrieben
+=>	Rezepte öffentlich stellen
+
+Max muss oft für mehrere Personen kochen, doch seine Rezepte sind nur für 4 Personen gemacht. Er würde gerne die Möglichkeit haben die Rezepte 
+auf mehr Personen hochzurechnen.  
+=>	Rezepte auf mehr Personen rechnen
+
+Max hat eine Übersicht welche und wieviel Gerichte am Tag ausgegeben werden. Auch hat er eine Liste davon, was er im Lager liegen hat. 
+Da er morgens zum Großmarkt geht wäre es gut zu wissen was er noch für Rohstoffe braucht, indem er alle Gerichte auswählt die so am Tag gekocht werden können 
+und diese in einer Einkaufsliste hinzufügen kann. Danach braucht er nur noch das abhaken, was er schon im Lager hat oder gekauft hat.
+=>	Einkaufsliste erstellen
+=>	Einkäufe abhaken
+
+Max probiert gerne  neue Gerichte aus, um sein Wissenstand und Angebot zu erweitern. Gut wäre wenn es eine Plattform geben, 
+in der er Rezepte suchen und nachkochen könnte. Schön wäre es wenn er diese dann Bewerten könnte und auch ein Kommentar dazu hinterlegen könnte. 
+=>	Kommentarfunktion
+=>	Bewerten
+=>	Suchen
+
+=>	In allen Benutzersystem

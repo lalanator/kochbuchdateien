@@ -1,0 +1,77 @@
+% Preambel
+\documentclass[a4paper,openany,parskip=full]{scrreprt}
+\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+%Sprache=deutsch, utf8 oder ansinew(Windows) für Umlaute
+%code formatting
+%Sourcecode Highlighting
+%\usepackage{minted}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+%Schönschrift beim PDF erstellen
+\usepackage{lmodern}
+%Grafikunterstützung
+\usepackage{graphicx}
+
+%Tools
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{float}
+
+
+%Klickbare Links
+\usepackage{hyperref}
+\hypersetup{pdftitle={Implementierungsbericht},
+	colorlinks=true, bookmarks, bookmarksnumbered}
+
+\usepackage{csquotes}
+\usepackage[nonumberlist]{glossaries}
+
+\makenoidxglossaries
+
+\begin{document}
+	\title{
+		\huge{Implementierungsbericht}
+	}
+	\subtitle{
+		\vspace{1cm}
+		\Large {PSEKochbuch}\\
+		\LARGE{Exzellenzkoch}
+		\vspace{2cm}
+	}
+	\date{
+		\vspace{3cm}
+		Wintersemester 2019/2020, \today \\
+		\vspace{1cm}
+		\vspace{1cm}
+	}
+	\author{
+		Magnus Bühler
+		\and Wolf H. Lauppe
+		\and Pascal Maier
+		\and Thomas Weidmann
+		\and Lea Strauch
+	}
+	\maketitle
+
+%Inhaltsverzeichnis
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+%Input einzelner Kapitel
+\input{zielbestimmung}
+\input{uebersicht}
+\input{realisiert}
+\input{nichtrealisiert}
+\input{entwurfsaenderungen}
+\input{verwendeteLibs}
+\input{daten}
+\input{probleme}
+
+\end{document}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>28</x>
+      <y>14</y>
+      <w>343</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>DomainLayerInterfaces
+layer=-3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>63</x>
+      <y>56</y>
+      <w>273</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>RepositoryInterfaces
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>63</x>
+      <y>210</y>
+      <w>273</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>AuthentifizierungInterface
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>63</x>
+      <y>350</y>
+      <w>273</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Import/ExportInterface
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>245</y>
+      <w>231</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Authentifizierung
+&lt;&lt;Interface&gt;&gt;
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>392</y>
+      <w>231</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>ImportExport
+&lt;&lt;Interface&gt;&gt;
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

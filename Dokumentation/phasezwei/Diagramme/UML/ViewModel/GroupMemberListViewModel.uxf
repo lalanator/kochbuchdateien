@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>40</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>GroupMemberListViewModel
+--
+--
+members:LiveData&lt;List&lt;User&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>270</x>
+      <y>40</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=yellow
+--
+In den Buttons des Fragments
+werden die Bilder und Namen
+der User angezeigt.
+Das Fragment hat also Getter 
+für diese 2 Attribute.</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

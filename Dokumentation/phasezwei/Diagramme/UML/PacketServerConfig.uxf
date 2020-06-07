@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>18</x>
+      <y>27</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.security
+--
+bg=light_gray
+layer=-3
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>63</y>
+      <w>108</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>FirebaseTokenHolder
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>36</y>
+      <w>108</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>JwtAuthenticationEntryPoint implements 
+AuthenticationEntryPoint
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>75</y>
+      <w>108</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FirebaseAuthentication extends 
+AbstractAuthenticationToken
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>51</y>
+      <w>108</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>JWTRequestFilter extends OncePerRequestFilter
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>150</x>
+      <y>27</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch
+--
+bg=light_gray
+layer=-3
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>42</y>
+      <w>54</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>ExzellenzkochApplication
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>150</x>
+      <y>96</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.exception
+--
+bg=light_gray
+layer=-3
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>153</x>
+      <y>105</y>
+      <w>111</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>RessourceNotFoundException extends RuntimeException
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>282</x>
+      <y>27</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.config
+--
+bg=light_gray
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>285</x>
+      <y>36</y>
+      <w>66</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>WebSecurityConfig extends 
+WebSecurityConfigurerAdapter
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>285</x>
+      <y>54</y>
+      <w>42</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>FirebaseConfig
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

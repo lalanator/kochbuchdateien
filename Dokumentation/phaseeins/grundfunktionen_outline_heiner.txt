@@ -1,0 +1,77 @@
+=====
+Was ist das Minimale was unsere App können muss kann man das herausschälen.?
+
+Private Rezpte eingeben, speichern, editieren, und veröffentlichen. in Privaten und öffentlichen
+Rezepten suchen. 
+
+Wie können wir diese Sacheneinfach mal funktional beschreiben, ohne uns zum Beispiel auf ein Layout zu commiten? 
+
+1. Private Rezepte. 
+
+Überschrift, und Text
+
+eine oder mehrere kann mehrere
+Zutaten Boden. 
+
+Zutaten Belag. 
+
+
+2. Öffentliche Rezeptegs 
+Kann Rezepte veröffentlichen. 
+kann öffentliche Rezepte Suchen und "Liken"
+alle gelikten findet man dann 
+beim veröffentlichen vielleichtnoch mal ein check auf gute Struktur)
+
+=====
+Anmerkungen Suche
+
+Suche Relevanz? wenn man Filter auswählt, zum Beispiel Schweinefleisch, oder Vegetarisch, dann
+sollten doch genau diese Rezepte angezeigt werden. 
+Reicht das nicht, wenn man, das umsetzt und dann nach Neuigkeit absteigend sortiert, anzeigt?
+Andere Möglichkeiten
+
+
+Profil bzw. Account
+was ich cool finde, ist wenn man den Login völlig simpel hält, das war das frustrierendste 
+bei den anderen Kochapps. 
+Also registrieren: email und passwort sonst nichts. 
+System vergibt wie bei Google einen Phantasienamen, zum beispiel koch3756, oder "Anonymes Eichhörnchen"
+was man dann später in den Einstellungen "Mein Profil ändern kann"
+Sollte erst mal drauflosschreiben können. Das ganze mit Profil muss man erst machen, wenn man Rezepte veröffentlichen will. 
+
+minimaltes Should have: wäre den Namen ändern zu können, alles andere 
+
+Wofür Braucht man ein Profil bzw. einen Account
+Rezepte veröffentlichen. 
+Sync von 
+
+=======
+Kochrezept Struktur
+
+Liste von Textabschnitten:
+jeder Textabschnitt hat. 
+Überschrift (Beispiel: Zubereitung)
+und Text. 
+das ist simpel und variabel genug, dass man sehr frei Sachen. 
+
+Ansonsten noch: 
+Label die man variabel erfinden und adden kann. 
+Zubereitungszeit
+ggfs. Backzeit
+und Ruhezeit. 
+Personenzahl (für n Personen)
+letztes Bearbeitungsdatum. 
+
+Zutatenparseproblematik: Könnte für Private Rezepte erst mal alles erlauben, beim 
+Veröffentlichen könnte das Problem. 
+
+======
+Fragen:
+hat jemand einen schmissigen Namen für unsere App?
+
+======
+Mir wichtige optionale Kritierien:
+"senden an" Importfunktion. 
+Beispielsweise von Notizapp, oder Email kann ich einfach
+Teilen und dann kochbuchapp auswählen. 
+

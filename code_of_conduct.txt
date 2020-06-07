@@ -1,0 +1,25 @@
+Code of Conduct 
+ 
+1. Treffen
+- jeder sollte versuchen pünktlich zu sein. 
+- Zu beginn fasst der Moderator kurz die letzten Punkte und was bis 
+  zu diesem Treffen gemacht werden sollte. 
+- Standup Meeting ohne Unterbrechungen (falls Fragen aufkommen schreibt 
+  man die auf)
+- Besprechung und Fragen Klärung
+- weitere Aufgabenverteilung / Teamarbeit/ Produktives Schaffen /....
+- Kurze Reflektion des Treffens
+
+2. Abgaben 
+- Inhaltlich fertig vor dem letzten Betreuertreffen
+
+3. Aufgabenverteilung 
+- Teilsprints mit festen Aufgabenverteilungen
+- Besprechung von Teilsprints nach ca 4 Tagen
+
+4. Kommunikation 
+- Wir lassen einander aussprechen. Einen Einwand kommuniziert man durch
+ ein Klopfen auf den Tisch. Der kommt als nächstes mit Sprechen drann
+- Falls man eine Aufgabe nicht schafft, oder einen Einwand hat, schreibt
+ man das direkt in Git und Slack 
+

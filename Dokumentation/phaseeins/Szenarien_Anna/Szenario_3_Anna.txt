@@ -1,0 +1,35 @@
+Szenario 3:
+
+(Browsing ohne spezifisches Ziel)
+(Mengenangaben)
+(Einkaufszettel)
+
+Anna hat an einem Samstag mal mehr Zeit und überlegt für sich, vielleicht auch für 
+Freunde, etwas kochen. Sie ist noch nicht entschlossen, was genau, weiß aber, dass sie 
+kein Fan von scharfem Essen ist und definiert, dass das Essen "mild" sein soll. 
+Dann drückt sie auf "suchen". Die App zeigt ihr Vorschläge zu Gerichten an, durch die 
+Anna, wie auf einer Pinnwand, durchscrollen kann. Gefällt ihr der Titel oder das Foto
+eines Gerichts, so kann sie das Gericht auf ihre "persönliche Liste" hinzufügen.
+Auf dieser stehen alle Gerichte, die Anna selbst in die App eingetragen hat, sowie auch
+Gerichte, die Anna sich vorgemerkt hat. Diese Rezepte sind offline verüfgbar.
+Anna sucht sich ein Gericht aus, klickt auf das Foto und kommt auf die Rezeptseite.
+Unter Titel und Foto stehen die Zutaten in einer übersichtlichen Liste, sowie auch
+die Anzahl der Portionen, die die angegebenen Mengen ergeben. 
+
+Da das emmpirische Werte sind und Anna weiß, dass ihre Mitbewohnerin auch etwas mitessen wird, 
+gibt sie ein, dass sie 4 Portionen kochen will. Die App rechnet ihr aus, 
+welche Menge jeder einzelnen Zutat Anna dann braucht. 
+
+Anna möchte einkaufen gehen und drückt auf den Button "Zum Einkaufszettel hinzufügen".
+Dadurch werden die Zutaten dieses Gerichts in der "Einkaufszettel"-Funktion der App hinzugefügt - 
+jeweils in den benötigten Mengen.
+
+Anforderungen:  
+
+Funktional:	"Pinnwand" mit vorhandenen Gerichten, durch die man scrollen kann,
+			Mengenangaben auf Portionen aufgeteilt,
+			Mengenangaben an Portionsanzahl kalibrieren können,
+			Einkaufszettel aus den Zutaten generieren mit eingestellter Portionengröße (Mengenangabe)
+
+
+Nichtfunktional:

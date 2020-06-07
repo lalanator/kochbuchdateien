@@ -1,0 +1,37 @@
+Protokoll am 12.12.019 
+1. Standup 
+	- Entitymodel Get und Set
+	- Entitymodel in LatexDokument eingefügt
+	- Archivordner
+	- LatexDokument angefangen 
+	- Datenbank und ServerDatenbank 
+	- 
+	
+	- Aktivitätsdiagramm Rezept erstellen und veröffentlichen 
+	- Sequenzdiagramm
+	- DaoKlasse beispielhaft modelliert 
+	- 
+
+2. Todos
+	- DAO Klassen besprechen und klären 
+	- Datenbank besprechen 
+	- Dokumentstruktur besprechen 
+	- Klassenuml besprechen <>
+	- Usecases 
+	- 
+
+3.Besprechung 
+	- Aggregation einfügen 
+	- Chapter Entity 
+	- SErverDB:
+		- Ingredient Tabelle raus
+		- anfrageUser Tabelle
+	-ClientDB:...
+	- Sequenzdiagramme
+
+		
+
+ 
+Server sequenziell abarbeiten ? 
+
+

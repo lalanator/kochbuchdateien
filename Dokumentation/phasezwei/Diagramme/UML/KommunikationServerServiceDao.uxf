@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>33</y>
+      <w>111</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>UserDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>33</y>
+      <w>117</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>GroupDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>45</y>
+      <w>117</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>SharedPrivateRecipe implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>57</y>
+      <w>117</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>69</y>
+      <w>117</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>IngredientChapterDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>81</y>
+      <w>117</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>IngredientAmountDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>93</y>
+      <w>117</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>RecipeRatingDao implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>69</y>
+      <w>111</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>CommentDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>57</y>
+      <w>111</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>FollowerDao implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>45</y>
+      <w>111</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>FriendRequestDao implements JpaRepository
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>255</x>
+      <y>24</y>
+      <w>255</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.infrastructure.dao
+--
+bg=light_gray
+layer=-3
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>18</x>
+      <y>33</y>
+      <w>126</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.service
+--
+bg=light_gray
+layer=-3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>42</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>UserService
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>42</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>GroupService
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>54</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>FriendRequestService
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>54</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>AdminService
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>66</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeService
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>81</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>FavouritesSerivce
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>66</y>
+      <w>51</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>CommentService
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>69</x>
+      <y>33</y>
+      <w>333</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1090.0;10.0;1040.0;10.0;1040.0;260.0;60.0;260.0;60.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>69</x>
+      <y>45</y>
+      <w>333</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1090.0;10.0;1050.0;10.0;1050.0;230.0;50.0;230.0;50.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>69</x>
+      <y>66</y>
+      <w>333</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1090.0;20.0;1070.0;20.0;1070.0;180.0;40.0;180.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>9</x>
+      <y>42</y>
+      <w>393</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1290.0;60.0;1260.0;60.0;1260.0;250.0;10.0;250.0;10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>12</x>
+      <y>33</y>
+      <w>513</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1650.0;10.0;1690.0;10.0;1690.0;300.0;10.0;300.0;10.0;170.0;30.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>33</y>
+      <w>126</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;90.0;10.0;90.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>45</y>
+      <w>126</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>18</y>
+      <w>276</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>900.0;50.0;900.0;10.0;310.0;10.0;310.0;120.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>36</y>
+      <w>126</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;320.0;10.0;320.0;70.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>48</y>
+      <w>126</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;330.0;10.0;330.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>57</y>
+      <w>126</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;340.0;10.0;340.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>60</y>
+      <w>126</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;350.0;10.0;350.0;30.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>69</y>
+      <w>126</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>72</y>
+      <w>126</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;40.0;360.0;40.0;360.0;20.0;60.0;20.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>72</y>
+      <w>138</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>440.0;80.0;400.0;80.0;400.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

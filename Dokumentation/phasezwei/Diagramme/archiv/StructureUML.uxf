@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1588</x>
+      <y>380</y>
+      <w>116</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>User
+--
+--
+- ID:Int?
+- name:String?
+- password:String?
+- email:String?
+- img: BufferedImg?
+- description:String?
+--
++ constructor(name:String, 
+	    pw:String, description:String,
+	    Bild:BufferedImg)
+--
++ changeID(newID:Int)
++ changePW(newPW:String)
++ changeImg(newImg: BufferedImg)
++ changeDescription(newD:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1588</x>
+      <y>720</y>
+      <w>116</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Recipe
+--
+--
+- recipeID:Int
+- recipeImg:BufferedImg
+- recipePortion:Int
+- recipeName:String
+- recipeDesc:String
+- isPublic:Boolean
+- prepTime:TotalTime
+- cookingTime:CookingTime
+- totalTime:Time
+- ingredientList:IngredientList
+--
+constructor(...)
+--
++changeName(newName:String)
++deleteName()
++changeImg(newImg:BufferedImg)
++deleteImg()
++changePortion(newInt:Int)
+...
+-isReadytoPublish()boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1592</x>
+      <y>900</y>
+      <w>116</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Time
+--
+--
+- duration:Int
+--
++getTime()Int
++setTime(newTime:Int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1644</x>
+      <y>936</y>
+      <w>12</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1572</x>
+      <y>992</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PrepTime</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1608</x>
+      <y>988</y>
+      <w>80</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1680</x>
+      <y>992</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>CookingTime</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1644</x>
+      <y>824</y>
+      <w>12</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1772</x>
+      <y>752</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>IngredientList
+--
+--
++addIngredient(ingredient:Ingredient)
++deleteIngredient(ingredient:Ingredient)
++getIngredientByID(ID:ingredientID)Ingredient
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1812</x>
+      <y>816</y>
+      <w>76</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Ingredient
+--
+--
+- ingredientID:Int
+- ingredientName:String
+- ingredientQuantity:IngredientQuantity
+--
++changeQuantity(portionQuantity:int)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1820</x>
+      <y>788</y>
+      <w>12</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1700</x>
+      <y>760</y>
+      <w>80</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1756</x>
+      <y>760</y>
+      <w>12</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;470.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1712</x>
+      <y>948</y>
+      <w>124</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>TagList
+--
+--
++addTag(tag:Tag)
++deleteTag(tag:Tag)
++getTagByID(ID:TagID)Tag
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1756</x>
+      <y>984</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1732</x>
+      <y>1016</y>
+      <w>60</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Tag
+--
+--
+- tagId:Int
+- tagName:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1424</x>
+      <y>852</y>
+      <w>84</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+--
+- commentID:Int
+- commentContent:String
+- commentCreator: User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1456</x>
+      <y>772</y>
+      <w>12</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1456</x>
+      <y>768</y>
+      <w>140</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;330.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1796</x>
+      <y>588</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ShoppingList
+--
+constructor(recipe:Recipe)
+--
++addIngredient(ingedient:Ingredient)
++deleteIngredient(ingedient:Ingredient)
++getIngredientByID(ID:ingredientID)Ingredient
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1816</x>
+      <y>624</y>
+      <w>48</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes>
+    <additional_attributes>10.0;320.0;10.0;50.0;100.0;50.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1456</x>
+      <y>532</y>
+      <w>112</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>RecipeList
+--
+--
+HashMap&lt;recipeID,Recipe&gt;
+--
+--
++addRecipe(newRecipe:Recipe)
++deleteRecipe(oldRecipe:Recipe)
++getRecipeByID(recipeID:Int)Recipe
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1728</x>
+      <y>532</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>FavoriteList
+--
+--
++addRecipe(newRecipe:Recipe)
++deleteRecipe(oldRecipe:Recipe)
++getRecipeByID(recipeID:Int)Recipe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>568</y>
+      <w>296</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= 1
+m2=1</panel_attributes>
+    <additional_attributes>710.0;10.0;710.0;130.0;10.0;130.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1640</x>
+      <y>616</y>
+      <w>12</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>500</y>
+      <w>296</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>720.0;80.0;720.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1700</x>
+      <y>456</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>380.0;330.0;380.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1336</x>
+      <y>852</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>CreationDate
+--
+--
+- creationDate:Date
+--
++ setCreationDate()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1368</x>
+      <y>756</y>
+      <w>228</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0;550.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1784</x>
+      <y>416</y>
+      <w>172</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Friendgroup
+--
+--
++addFriend(newFriend:User)
++deleteFriendByID(ID:Int)
++getFriendByID(ID:Int)User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2072</x>
+      <y>632</y>
+      <w>72</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Feed
+--
+--
++show()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1624</x>
+      <y>664</y>
+      <w>488</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;50.0;1200.0;50.0;1200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1700</x>
+      <y>420</y>
+      <w>92</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..*
+</panel_attributes>
+    <additional_attributes>210.0;20.0;110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1700</x>
+      <y>352</y>
+      <w>104</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;110.0;190.0;110.0;190.0;10.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1796</x>
+      <y>344</y>
+      <w>116</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>SubsciptionList
+--
+--
++appendSub(newSubscriber:User)
++deleteSub(subsriber:User)
++getSubByID(ID:Int)User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1920</x>
+      <y>540</y>
+      <w>116</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>SearchFilterList
+--
+--
++addFilter(newFilter:SearchFilter)
++deleteFilter(oldFilter:SearchFilter)
++getFilterByID(filterID:Int)SearchFilter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1920</x>
+      <y>588</y>
+      <w>116</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>SearchFilter
+--
+--
+- searchFilterID:Int
+- searchFilterName:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1936</x>
+      <y>488</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>SearchFilterHandler
+--
+--
++handleFilter(...)...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1700</x>
+      <y>468</y>
+      <w>244</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+
+
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>590.0;80.0;250.0;80.0;250.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1972</x>
+      <y>576</y>
+      <w>12</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1972</x>
+      <y>508</y>
+      <w>12</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1896</x>
+      <y>612</y>
+      <w>88</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;380.0;200.0;380.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1832</x>
+      <y>760</y>
+      <w>152</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;480.0;360.0;480.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1640</x>
+      <y>484</y>
+      <w>12</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2036</x>
+      <y>396</y>
+      <w>68</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>StorageHandler
+--
+--
++StorageHandling()
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1700</x>
+      <y>408</y>
+      <w>344</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>840.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1236</x>
+      <y>184</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Client
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1328</x>
+      <y>184</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Component</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1288</x>
+      <y>192</y>
+      <w>124</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;100.0;290.0;100.0;290.0;140.0;290.0;100.0;10.0;100.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1248</x>
+      <y>244</y>
+      <w>96</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>Leaf (atomare Zutat)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1360</x>
+      <y>248</y>
+      <w>76</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Composite
+(Teilrezept/Zutat)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1272</x>
+      <y>188</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1364</x>
+      <y>184</y>
+      <w>104</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;170.0;240.0;170.0;240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1204</x>
+      <y>156</y>
+      <w>300</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>Idee: Zutaten und Rezepte werden im Wesentlichen gleich behandelt daher evtl. Kompositum
+bg=#F6E3CE
+layer=0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1536</x>
+      <y>156</y>
+      <w>344</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Idee: Singleton für Admin 
+bg=#F6E3CE
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1664</x>
+      <y>180</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1624</x>
+      <y>188</y>
+      <w>124</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;100.0;290.0;100.0;290.0;140.0;290.0;100.0;10.0;100.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1584</x>
+      <y>240</y>
+      <w>104</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Admin
+--
+- admin:Admin
+--
+- Admin()
++getInstanceOfAdmin():Admin
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1720</x>
+      <y>244</y>
+      <w>64</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Normie
+--
+....</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1536</x>
+      <y>0</y>
+      <w>344</w>
+      <h>148</h>
+    </coordinates>
+    <panel_attributes>Idee: Stellvertreter für Speicherzugriff
+bg=#F6E3CE
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1572</x>
+      <y>56</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1640</x>
+      <y>64</y>
+      <w>124</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;100.0;290.0;100.0;290.0;140.0;290.0;100.0;10.0;100.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1736</x>
+      <y>120</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Stellvertreter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1624</x>
+      <y>116</y>
+      <w>60</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>RealerSpeicher
+(SQLite)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1672</x>
+      <y>48</y>
+      <w>60</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>Storagehandler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1608</x>
+      <y>56</y>
+      <w>72</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1680</x>
+      <y>124</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2044</x>
+      <y>356</y>
+      <w>68</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>ServerHandler
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1976</x>
+      <y>360</y>
+      <w>76</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+&lt;&lt;SendsRequest&gt;&gt;</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2172</x>
+      <y>392</y>
+      <w>92</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ServerRemoteProxyController
+{Adapter für Saubere Server
+Schnittstelle -&gt; Austauschbarkeit}
+bg=#c1ad9c</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2108</x>
+      <y>364</y>
+      <w>72</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;100.0;60.0;100.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2172</x>
+      <y>356</y>
+      <w>96</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ServerPushHandler
+{Adapter für saubere Server
+Schnittstelle -&gt; Austauschbarkeit}
+bg=#c1ad9c</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2108</x>
+      <y>360</y>
+      <w>72</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>2308</x>
+      <y>364</y>
+      <w>40</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Server
+bg=#c1ad9c</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2264</x>
+      <y>360</y>
+      <w>52</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Recieves</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2260</x>
+      <y>384</y>
+      <w>56</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+Requests</panel_attributes>
+    <additional_attributes>10.0;50.0;80.0;50.0;80.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>372</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.recipe
+{RecipeDisplayFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>300</y>
+      <w>340</w>
+      <h>856</h>
+    </coordinates>
+    <panel_attributes>com.cook.cookbook.view</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>320</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Recipe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>336</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.recipe
+{RecipeListFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>184</x>
+      <y>336</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.recipe
+{ CreateRecipeFragment / 
+RecipeEditFragment }
+--
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>184</x>
+      <y>372</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.recipe
+{Add/EditCommentFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>412</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Tags</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>468</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.tags
+{EditTagFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>432</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.tags
+{SearchWithTagsFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>508</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>User/Account</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>528</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.user
+{RegistrationFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>528</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.user
+{LogInFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>564</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.user
+{ProfileDisplayFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>564</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.user
+{ProfileEditFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>600</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Friends</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>616</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.friends
+{FriendgroupFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>616</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.friends
+{FriendgroupListFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>652</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.friends
+{GroupReciyListFragemnt}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>692</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Feed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>724</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.feed
+{MyFeedFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>784</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Search</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>800</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.search
+{PublicRecipeSearchFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>800</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.search
+{UserSearchFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>840</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.search
+{DisplaySearchListFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>876</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Favourites</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>968</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>ShoppingList</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>104</x>
+      <y>916</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.favorites
+{FavouriteRecipeFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>104</x>
+      <y>1004</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.shoppinglist
+{ShoppinglistDisplayFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>8</x>
+      <y>1060</y>
+      <w>324</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Subscribe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>1084</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>
+Package::com.cook.cookbook.view.subscribe
+{SubscribeListFragment}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>428</x>
+      <y>300</y>
+      <w>608</w>
+      <h>856</h>
+    </coordinates>
+    <panel_attributes>Viewmodels</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1112</x>
+      <y>296</y>
+      <w>1284</w>
+      <h>860</h>
+    </coordinates>
+    <panel_attributes>Model
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1428</x>
+      <y>400</y>
+      <w>64</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>UserHandler
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1488</x>
+      <y>412</y>
+      <w>108</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;controls&gt;&gt;</panel_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1612</x>
+      <y>640</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RecipeHandler
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1644</x>
+      <y>660</y>
+      <w>12</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>584</y>
+      <w>420</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>RezeptViewModel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>360</y>
+      <w>420</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>RezepteListViewModel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>484</y>
+      <w>420</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>SearchListViewModel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1812</x>
+      <y>876</y>
+      <w>116</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>IngredientQuantity
+{enum}
+--
+--
+- kilogramm:int
+- gramm: int
+- pinch:int
+- liter:int
+- milliliter:int
+- tablespoon:int
+- teaspoon:int
+(...)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1856</x>
+      <y>848</y>
+      <w>12</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>21</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeSearchFragment
+--
+--
+-recipeTitle:EditText
+-newIngredient:EditText
+-addIngredients:Button
+-showIngredients:TextView
+-addTags:Button
+-showText:TextView
+-search:Button</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>28</y>
+      <w>217</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeSearchViewModel
+--
+--
+-recipeTitle:LiveData&lt;String&gt;
+-newIngredient:LiveData&lt;List&lt;String&gt; &gt;
+-rating:Livedata&lt;Int&gt;
+-tags:LiveData&lt;List&lt;String&gt;&gt;
+--
++addIngredientToList()
++addTags() 
++search(titel:String, ingedientlist:List&lt;String&gt;,
+rating:Int, tags:List&lt;String&gt;):List&lt;PublicRecipe&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>56</y>
+      <w>210</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>161</x>
+      <y>0</y>
+      <w>154</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Note..
+--
+bg=blue
+Beobachter Entwurfsmuster
+zwischen den LiveData-Objekten
+in VM und Fragment-Atrributen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>217</y>
+      <w>287</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+--
++addPrivateRecipe(rec:PrivateRecipe)
++getTagList():List&lt;String&gt;
++getRecipe(titel:String, ingredientList:List&lt;String&gt;,
+rating:Int, tags:List):PrivateRecipe
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>182</y>
+      <w>56</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>84</y>
+      <w>210</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>623</x>
+      <y>98</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>addTags inflated 
+das neue Fragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>126</y>
+      <w>98</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>616</x>
+      <y>154</y>
+      <w>154</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>search gibt die Argumente
+weiter zum Repository und
+inflated ein neues Fragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>147</y>
+      <w>84</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>

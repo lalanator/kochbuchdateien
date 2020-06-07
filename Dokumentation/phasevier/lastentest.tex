@@ -1,0 +1,27 @@
+\chapter{Lasttest}
+
+\section{Testumgebung} 
+Um bestimmte Anforderungen der {\grqq Nichtfunktionalen Anforderungen\grqq} zu verifizieren wurde ein Lasttest erstellt und durchgeführt. 
+Dieser wurde auf einem zusätzlich dafür eingerichteten Testserver ausgeführt, welcher Skripte enthält, die es ermöglichen, die Datenbank auf einen Ursprungszustand zurückzusetzen.
+
+\subsection{Verwaltungsaufwand N1}
+\textbf{Status \textcolor{green}{Der Test läuft durch}}
+\begin{itemize}
+\item Voraussetzung: Server ist deployed und mit Anfangsdatenbank eingerichtet.
+\item Aktion: Es werden 450 User und für jeden User zusätzlich Rezepte mit unterschiedlichem Titel und Rezeptbild erstellt, sodass insgesamt 14.000 Rezepte erstellt werden.
+\item Erwartetes Ergebnis: Der Server lässt dies zu und ist auch noch mit über 14.000 Rezepten flüssig zu bedienen. 
+\end{itemize}
+
+Eine der Ergebnisse des Lastentests ist, dass die Verwaltung von 14.000 Rezepten erhöhte Speicheranforderungen mit sich bringt. In der Standardausführung der BawüCloud sind die Serverimages 12Gigabyte gross. 
+Das Speichern von 14.000 Rezepten bedeutete dass Platz für 23 Gigabyte Bilderdaten nötig war. 
+Durch Einhängen einer zweiten neu angelegten Festplatte (Insgesamt sind in der Standard-BWCloud-version 50 Gigabyte verfügbar) konnte dieser bereitgestellt werden. 
+
+
+\section{Nichtfunktionale Anforderungen}
+Weitere Nichtfunktionale Anforderungen sind durch bereit implementierte Tests überdeckt, oder nicht testbar, da die zugrundeliegenden Funktionen nicht implementiert sind.
+Überdeckt sind:
+\begin{itemize}[nosep]
+	\item \textbf{N6}, \textbf{N8} und \textbf{N9} durch Espressotests
+	\item \textbf{N7} durch das Nicht-Implementieren der Funktion
+\end{itemize}
+Die nicht genannten Nichtfunktionalen Anforderungen sind nicht implementiert.

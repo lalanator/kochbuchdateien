@@ -1,0 +1,77 @@
+Protokoll am 05.12.2019
+
+1. Standupmeeting
+	-Lea
+		- Fragments
+	-Thomas 
+		- Fragments auf Papier
+		- Datenbanken überblickt
+	- Heiner
+		- Struktur / Clean Architektur
+		- Papier Zeichnungen
+		- Idee (Asynchrones Arbeiten)
+		- REST(Authentifizierung, Jason Token) 
+		
+	- Pascal
+		- Datenbank ergänzt /modelliert
+		- springboot mit mysql
+	
+	- Magnus 
+		- Klassendiagramme
+		- Fragments modelliert
+	 
+2. Fragmentsdurchgehen 
+		- Lea
+			- Rezeptbearbeiten: Template für Zutaten oder Parsen 
+				-> beim Veröffentlichen erst prüfen
+			- Tagseingeben: 
+				- Freitexttags (wunschrkriterium) 
+				- Vordefinierte Tags woraus der Nutzer wählen kann (Musskriterium)
+				- Jedes Tag kann individuell bearbeitet werden
+				-> User haben eigene TAGLIST
+			- Meine Favoriten: 
+			- Feed: 
+				- Erstellungsdatum und kleine Nachricht bei Veröffentlichen 
+				- Ersteller kann ausgewählt werden 
+				- Facebookansicht 
+			- Profilbearbeitennsicht: 
+				- Eigenes Fragment zu Logindatenändern bzw. falls Firebase keine View bereitstellt, parameter zu
+					Logik weitergeben 
+				
+
+		- Thomas 
+			- RecipelistFragment (sieheGUI)
+			- SearchwithTags
+				- evtl. vordefinierte Tags abhakbar machen und damit suchen 
+				- EigeneTagshinzufügen  (Frage steht offen)
+			- Profile Fragment
+				- Person Folgen button 
+				- freundlöschen falls schon freund
+				- Rezeptauflistung 
+				- veröffentlichte Rezepte anzeigen 
+			-GroupRecipeListFragment
+				- 
+		- Heiner 
+			- UserSearchfragment
+			- Add/EditCommentFragment
+				- 
+
+			Freundesgruppen 
+				- Liste aller seiner Freunde
+				- Liste aller Gruppen 
+					- Freundesgruppe erstellen 
+					- 
+		- Magnus 
+			- Tagliste und Zutatenliste
+			- Durchschnittsbewertung
+			- Bild oben 
+			- Zeiteinheiten müssen klar sein  (Uml anpassen) 
+			- Fehlt!! FriendgroupFragment (Liste aller Freundesgruppen) neu machen 
+			-PublicRecipeSearchFragment ( Ansicht Sucheingabe) neu machen 
+			- Screenshots in Git (+ezept MElden)
+
+4. AdminRolle 
+5. Shoppingliste 
+6. Datenbank 
+
+3. 

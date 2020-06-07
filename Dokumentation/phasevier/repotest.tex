@@ -1,0 +1,93 @@
+\chapter{Data Layer - Repository Tests}
+
+\subsection{FavouriteRecipeRepository}
+
+\subsubsection{deleteAll}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es befinden sich Rezepte in der Datenbank
+	\item Aktion: Es werden alle Rezepte über die Daos gelöscht
+	\item Getestet: Die Datenbank ist leer
+\end{itemize}
+
+
+\subsubsection{getfavourite}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es wird ein Rezept in die Datenbank geschickt
+	\item Aktion: Dieses Rezept wird aus der Datenbank geholt
+	\item Getestet: Es wird überprüft, ob das Rezept, welches aus der Datenbank geholt wird, mit dem Rezept, welches eingefügt wird, übereinstimmt
+\end{itemize}
+
+
+\subsubsection{deleteandgetall}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es befinden sich Rezepte in der Datenbank und alle werden gelöscht
+	\item Aktion: Man fragt alle Rezepte der Datenbank ab
+	\item Getestet: Man bekommt eine leere Liste
+\end{itemize}
+
+
+\subsubsection{safedelete}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es werden zwei Rezepte in die Datenbank eingefügt und dann das erste gelöscht
+	\item Aktion: Man fragt das zweite Rezept ab
+	\item Getestet: Man bekommt das zweite Rezept zurück
+\end{itemize}
+
+
+\subsection{PrivateRecipeRepository}
+
+\subsubsection{correctdelete}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Die Datenbank ist leer
+	\item Aktion: Es wird ein Rezept eingefügt und dieses eine Rezept wird gelöscht
+	\item Getestet: Es befindet sich kein Rezept mehr in der Datenbank
+\end{itemize}
+
+
+\subsubsection{insertdeleteandget}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Die Datenbank ist leer
+	\item Aktion: Es wird ein Rezept in die Datenbank eingefügt, dieses dann geholt und dann das Rezept aus der Datenbank gelöscht und erneut geholt
+	\item Getestet: Erst wird das richtige Rezept aus der Datenbank geholt und nachdem es gelöscht wurde ein vordefiniertes Errorrezept
+\end{itemize}
+
+
+\subsubsection{insertandupdate}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Die Datenbank ist leer
+	\item Aktion: Es werden nacheinander zwei Rezept mit derselben Id eingefügt und dann das Rezept mit dieser Id aus der Datenbank geholt
+	\item Getestet: Man bekommt das zuletzt in die Datenbank eingefügte Rezept zurück
+\end{itemize}
+
+\subsection{PublicRecipeRepository}
+
+\subsubsection{uploadGetAndDeleteRecipe}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es befindet sich ein Rezept auf der Datenbank
+	\item Aktion: Das Rezept wird vom Server geholt, dann wird es gelöscht und danach erneut geholt
+	\item Getestet: Zuerst kommt das Rezept welches man vom Server holt zurück und nachdem man das Rezept gelöscht hat, kommt ein vorgefertigtes Errorrezept zurück
+\end{itemize}
+
+\subsubsection{recipesFromUser}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es wird ein neuer Nutzer erstellt und es wird ein Rezept über diesen Nutzer hochgeladen
+	\item Aktion: Es werden alle Rezepte der Nutzers vom Server geholt
+	\item Getestet: Das hochgeladene Rezept stimmt mit dem vom Server geholten Rezept überein
+\end{itemize}
+
+\subsubsection{search}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\begin{itemize}
+	\item Voraussetzung: Es werden zwei Rezepte mit verschiedenen Attributen hochgeladen
+	\item Aktion: Es werden zwei Suchen gestartet, wobei nach dem Titel der jeweiligen Rezepte gesucht wird
+	\item Getestet: Jede Suche enthält ihr Rezept
+\end{itemize}

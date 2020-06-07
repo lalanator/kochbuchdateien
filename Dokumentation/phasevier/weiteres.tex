@@ -1,0 +1,53 @@
+\chapter{Übersicht über gefixte und noch nicht gefixte aber bekannte Bugs}
+
+Während des Testens sind an verschiedenen Stellen Funktionen aus dem Pflichtenheft zutage gekommen, die die Abgabeversion der letzten Phase noch nicht implementiert hat. Des weiteren haben die Tests einige kleinere und größere Bugs zutage gelegt, welche im Laufe der Testphase behoben wurden. Dennoch gibt es Funktionen, die in der momentanen Version von "`Exzellenzkoch"' nicht vorhanden, demnach auch nicht testbar sind. Ebenfalls wurden, aufgrund der Zeitknappheit, einige weniger dringende bekannte Bugs nicht ausgebessert, sind hier aber für eine erfolgreiche Weiterentwicklung mitsamt Lösungsansatz vermerkt.
+
+
+\section{Behobene Bugs}
+\subsection{Leere Suche}
+Eine Suche ohne Eingabe gibt nun nicht mehr gar keine Ergebnisse, sondern gibt einfach die erste Seite an vom Server geladenen Rezepten aus.
+\subsection{Feed nicht absteigend nach Datum sortiert}
+Gelöst durch eine Änderung der Reihenfolge der zurückgegebenen Liste im Repository.
+\subsection{Automatisches Speichern eines Rezeptes}
+Beim Erstellen eines Rezeptes wird dieses nun auch automatisch gespeichert, wenn der Nutzer die Ansicht verlässt und über den "`zurück"'-Button des Gerätes in die Rezeptliste zurückkehrt, zuvor aber nicht auf den "`speichern"'-Button gedrückt hat.
+\subsection{getUserByEmail Server} SQL-Befehl wurde angepasst, sodass die Funktion nun die Email fehlerfrei zurückgibt.
+\subsection{Doppeltes Speichern eines Rezeptes, wenn es veröffentlicht wurde}
+Ein Rezept wird nun nur noch einmal lokal gespeichert, nachdem es veröffentlicht wurde, statt, dass es ein private Rezept gibt, in dem "`veröffentlichen"' aktiviert ist und eines mit gleichen Werten, in dem dies nicht der Fall ist.
+\subsection{Default Bild lokal mitgespeichert}
+Das per Default gesetzte Bild wird mittlerweile auch lokal beim Speichern privater Rezepte mitgespeichert.
+\subsection{Checkboxes}
+Die Checkboxen waren falsch mit dem Livedata verbunden. Zusätzlich war eine Methode redundant im Viewmodel und im Fragment, weshalb sich die Checkboxeingaben gegenseiten aufgehoben haben. 
+\subsection{ProfileDisplayFragment Ohne Nutzer angezeigt}
+Der Übergang vom ProfileEditFragment zum ProfileDisplayFragment hatte keine ID Übergabe, weshalb es im Zielfragment fehlerhaft angezeigt wurde. 
+\subsection{Crashes beim Speichern/Unvollständiges Speichern}
+In manchen Fällen ist die App beim Speichern eines öffentlichen Rezepts abgestürzt. Dieses Problem konnte behoben werden, indem abgefragt wird, ob ein Rezept, das bereits als veröffentlicht gekennzeichnet ist, auch auf dem angebundenen Server existiert. Wenn Inkonsistenten aufdrehten, fängt die App das ab und stürzt nicht mehr ab.
+Ebenso wurde teilweise ein veröffentlichtes Rezept nicht auf dem Server gespeichert.
+Dieses Problem konnte behoben werden, indem statt eines lokalen Coroutine Scopes, ein globaler für das Speichern verwendet wurde. Dadurch wird sichergestellt, dass auch ein längerandauerendes Speichern vollständig ausgeführt wird, selbst wenn das ViewModel, welches das Speichern ausgelöst hat, nicht mehr existiert.
+\subsection{Rezepte löschen}
+Mittlerweile wird, wenn das zugrundeliegende private Rezept gelöscht wird, auch das zugehörige veröffentlichte Rezept gelöscht. 
+Außerdem werden beim Löschen eines Rezepts aus der Rezept- oder Favoritenliste die darunter stehenden Rezepte aufgerückt.
+\subsection{Checkboxen Rezept erstellen}
+Beim Erstellen eines Rezeptes wird nicht mehr nur die Checkbox "`vegan"' gespeichert, sondern auch die übrigen Checkboxen sind nutzbar.
+
+
+\section{Bestehende Bugs}
+
+\subsection{Pagination}
+In der momentanen Version der App wird in RecyclerViews keine "`pagination"' eingesetzt. Das bedeutet, dass die angezeigten Elemente nicht dynamisch mit dem Scrollen vom Server nachgeladen werden, sondern immer nur eine Seite mit fixer Größe angezeigt wird, durch die gescrollt werden kann. Diese Seite hat die Größe 300. Das bringt das Problem mit sich, dass beispielsweise nur 300 Rezepte im Feed angezeigt werden, das 301. Rezept aber nicht mehr.
+Zukünftig sollte also die Seitengröße verringert werden und die nächsten anzuzeigenden Elemente dynamisch vom Server nachgeladen werden.
+Ein Ansatz, dieses Problem zu lösen, ist, einen onScrolledListener im Fragment als Beobachter zu setzen, der mitbekommt, wann die RecyclerView bis zum momentan letzten Element gescrollt wurde. Daraufhin wird  die nächste Seite im ViewModel vom Repository angefragt und und an die bereits angezeigte LiveData Liste an Rezepten angehängt (die bestehende Liste wird dynamisch vergrößert). Da die Liste angezeigter Rezepte LiveData ist, wird sich nach der Änderung auch die View aktualisieren und die nächste Seite wird angezeigt.
+
+\subsection{Löschen von genutzten Bildern auf dem Gerät}
+Löscht ein Nutzer ein Bild, welches er vorher in einem veröffentlichen Rezept als Bild gesetzt hat, so kann das öffentliche Rezept nicht mehr durch erneutes veröffentlichen aktualisiert werden, weil eine FileNotFoundException diesen Fall behandelt. War das Rezept nicht veröffentlicht, so wird beim nächsten Bearbeiten das Bild nicht mehr im Rezept angezeigt, da der Pfad nicht gefunden wurde. 
+Mögliche Lösungsansätze sind, z.B. eine extra Datenbank für Bilder zu erstellen, in der diese lokal gespeichert werden. Eine simplere und effektivere Methode wäre es, eine fileExists Funktion zu schreiben, die prüft, ob die Datei am Ende eines gesuchten Pfades noch existiert und im Fall, dass sie es nicht tut, das default Bild und eine Meldung auszugeben.
+
+\subsection{Felder prüfen beim Rezept veröffentlichen}
+Beim veröffentlichen eines Rezeptes wird nicht überprüft, ob in jedem Feld etwas eingetragen wurde.
+
+\subsection{Nutzer löschen}
+Löscht ein Nutzer seinen Account, so wird der Nutzername in der Firebase-Datenbank nicht freigegeben, sodass ein Nutzer mit dem gleichen Nutzernamen erst wieder erstellt werden kann, wenn der Name manuell aus der Firebase-Datenbank gelöscht wurde.
+Eine momentane Umgehung ist es, sich keinen Nutzernamen zu vergeben, dann zählt der Server diese automatisch hoch und Firebase kann diese automatische ID einfach löschen.
+Ein Lösungsansatz ist, nach jedem Löschen eine Benachrichtigung mit dem User ID Parameter an Firebase zu senden, damit diese ID gelöscht wird. 
+
+\subsection{Unvollständigkeit eines Rezepts}
+Ein Rezept muss nach Spezifikation vollständig sein, um veröffentlicht zu werden. Lösbar wäre dies, indem man vor dem Veröffentlichen prüft, ob alle Felder (Titel, Zutaten und Beschreibung) leer sind. 

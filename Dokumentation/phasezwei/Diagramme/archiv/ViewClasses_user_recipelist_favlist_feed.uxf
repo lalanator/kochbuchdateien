@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>162</y>
+      <w>246</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ProfileEditFragment
+--
+--
+viewModel:ProfileEditViewmodel
+
+--
+onCreateView(inflater:LayoutInflater, container:ViewGroup?, 
+				savedInstanceState:Bundle?):View?
+onActivityCreated(savedInstanceState:Bundle?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>282</y>
+      <w>246</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>MyFeedFragment
+--
+--
+viewModel:ProfileEditViewmodel
+
+--
+onCreateView(inflater:LayoutInflater, container:ViewGroup?, 
+				savedInstanceState:Bundle?):View?
+onActivityCreated(savedInstanceState:Bundle?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>48</x>
+      <y>24</y>
+      <w>276</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>ANMERKUNG..
+Fragments alle gleich 
+--&gt; alle modellieren???
+oder globales Beispiel???</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

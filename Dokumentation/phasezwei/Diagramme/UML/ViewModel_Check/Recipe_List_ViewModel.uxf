@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>473</x>
+      <y>44</y>
+      <w>396</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>RecipeListViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;
+--
+-mrepo:Repository
+-recipes:List&lt;PrivatRecipe&gt;
+
+--
++getPrivateRecipes():List&lt;privateRecipe&gt; 
++deletePrivateRecipe(id:String)
++editPrivateRecipe(recipe:PrivateRecipe)
++createNewRecipe()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>506</x>
+      <y>319</y>
+      <w>297</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+getprivateRecipes():List&lt;privateRecipe&gt;
+deleteprivateRecipe(id:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>231</y>
+      <w>88</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>

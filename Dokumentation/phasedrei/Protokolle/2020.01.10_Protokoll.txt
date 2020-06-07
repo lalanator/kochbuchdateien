@@ -1,0 +1,25 @@
+
+Standup:
+	Heiner: Vorgehen - Simple App und Simple Server bauen und erweitern
+	Thomas: Eingelesen
+	Pascal: Server und DBs ausprobiert und implementiert
+		http://193.196.38.185:8080/api/recipe/1
+	Magnus: Korrektur einiger Getter und Setter
+	Lea: noch nix
+
+Generelle Vorhaben für die Phase:
+	Continuous Integration: Travis oder GoCD, etc.
+	Test Driven Dev. möglicherweise?
+
+Bis nächste Android Schulung: alle Repositoryfragen geklärt haben damit man die Fragezeit nutzen kann (einlesen).
+
+Repository Links:
+
+Kochbuchapp
+https://github.com/wlauppe/kochbuchapp
+
+SimpleKochbuchApp:
+git clone https://github.com/wlauppe/simplekochbuchapp.git
+
+Server
+ git clone https://github.com/wlauppe/kochbuchserver.git

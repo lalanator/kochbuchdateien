@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>
+
+</help_text>
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>8</y>
+      <w>224</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>User
+--
+--
+iD:String?
+email:String?
+img:BufferedImg?
+description:String?
+recipeList:RecipeList&lt;Recipe&gt;
+favouriteList:FavouriteList&lt;Recipes&gt;
+isAdmin:boolean
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>296</x>
+      <y>488</y>
+      <w>224</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>RecipeList
+--
+--
+recipeList:RecipeList&lt;Recipe&gt;
+--
++deleteList()
++sortAfter()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>488</y>
+      <w>240</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>FavouriteList
+--
+--
+favouriteList:FavouriteList&lt;Recipes&gt;
+--
++deleteList()
++sortAfter()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>464</y>
+      <w>240</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Feed
+--
+--
+feedList:List&lt;Recipe&gt;
+alreadyShownCount:int
+olderThan:TimeStamp
+--
++getNewestRecipes()
++getNewestRecipes(olderThan:TimeStamp)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>184</x>
+      <y>232</y>
+      <w>192</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>List&lt;E&gt;
+--
+--
+
+--
++addEntry(entry:E):void
++removeEntry(entry:E):void
++get(entry:E):E
++get(index:int):E
++flush():void
++deleteList():void
+/+sortAfter():void/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>360</y>
+      <w>24</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>136</x>
+      <y>440</y>
+      <w>264</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0;310.0;10.0;310.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>128</y>
+      <w>24</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>288</y>
+      <w>264</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0;310.0;220.0</additional_attributes>
+  </element>
+</diagram>

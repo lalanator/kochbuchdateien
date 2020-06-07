@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>215</x>
+      <y>245</y>
+      <w>145</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>UserSearchViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;
+--
+-User:List&lt;User&gt;
+-inputID:Livedata&lt;String&gt;
+--
++followUser(userID:String)
++getUsers(userID:String):List&lt;User&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>360</y>
+      <w>125</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+--
++getUsers(userID:String):List&lt;User&gt;
++getUser(userID:String):User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>305</y>
+      <w>45</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0
+m2=1 mRepo   </panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>

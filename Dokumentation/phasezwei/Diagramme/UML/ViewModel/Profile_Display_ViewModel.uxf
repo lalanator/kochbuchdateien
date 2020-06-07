@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>0</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>ProfileDisplayFragment
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>10</y>
+      <w>360</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>ProfileDisplayViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;user:User
+--
+
+-userID:String
+-userDescription:String
+-userImg:BufferedImage
+-recipeList:List&lt;PublicRecipe&gt;
+--
++followUser(user:User)
++reportProfile(user:User)
++addFriend(user:User)
++getRecipe(selectedRecipe:PublicRecipe):PublicRecipe  
+
+//+showRecipe(recipe)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>50</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>330</y>
+      <w>360</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+--
++getUser(user:User)
++getRecipes(user:User):List&lt;PublicRecipe&gt;
++sendFriendRequest(user:User)
++reportProfile(user:User)
++getRecipe(selectedRecipe:PublicRecipe):PublicRecipe 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>230</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>110</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>350</y>
+      <w>460</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>showRecipe() //-&gt;inflates display_public_Profile_fragment
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

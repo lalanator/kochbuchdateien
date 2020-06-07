@@ -1,0 +1,154 @@
+Wunschkriterien:
+
+Nutzer können Rezepte aus der App exportieren und von externen Orten importieren. 
+--------[FA400] [FA410], [S400] [S410]
+
+In öffentlichen Rezepten können vom Ersteller andere Rezepte aus der App verlinkt werden und dann von Nutzern aufgerufen werden.
+--------[FA420], [NF420], [S420]
+
+Nutzer können Kommentare zu Rezepten posten.
+--------[FA430] [FA440] [Freundesystem], [S430]
+
+Nutzer können sich die Profile anderer öffentlicher Nutzer angucken. Dort sehen sie die Information zu diesem Nutzer und können diesen Nutzern folgen.
+--------[FA450] [FA460], [NF450], [S440]
+
+Sucht ein Nutzer nach Rezepten, werdem ihm auch ähnliche Rezepte vorgschlagen, welche er kochen könnte.
+--------[FA470], [NF470], [S450]
+
+Nutzer können durch einen Feed von neuen Rezepten scrollen.
+--------[FA480], [NF480], [S450]
+
+
+
+Abgrenzungskriterien:
+
+Die Nutzerauthentifizierung wird nicht selbst implementiert
+--------[FA490]
+
+
+
+
+Funktionale Anforderungen:
+
+
+Import- und Exportfunktionen:
+
+[FA400] Der Nutzer kann ein Rezept als PDF lokal auf dem Gerät speichern
+
+[FA410] Der Nutzer kann ein vorhandenes Rezept von externen Quellen importieren
+	
+	[FA411] Externe Quellen sind:
+		* lokal gespeicherte Text-Dateien
+		* Rezepte von bereits existierenden Kochwebseiten
+		* Rezepte von anderen Kochapps
+
+
+Datenstruktur/Rezeptdarstellung:
+
+[FA420] Beim Erstellen eines Rezeptes kann der Ersteller einzelne Wörter auswählen und ihnen Links anderer öffentlicher Rezepte aus der App zuordnen.
+	
+	[FA421] Ist einem Wort ein Rezept zugeordnet, 
+	wird es bei Veröffentlichung des Rezepts farblich markiert.
+
+	[FA422] Ein beliebiger Nutzer kann durch das Auswählen eines
+	farblich markierten Wortes das darauf verlinkte Rezept aufrufen.
+	
+	[FA423] Durch Bedienen der "zurück"-Taste kann zum 		ursprünglichen Rezept zurückgekehrt werden.
+
+	[FA424] Ist ein bereits gelöschtes Rezept noch auf einem 			Wort verlinkt, wird bei Auswahl des Wortes eine Fehlermeldung 		angezeigt.
+	
+[NF420] Der Server erhhält eine Suchanfrage und Antwortet mit dem verlinkten Rezept
+
+	[NF421] Ist das Rezept nicht in der Datenbank vorhanden, 
+	gibt der Server eine Fehlermeldung zurück
+
+
+Interaktion mit anderen Nutzern:
+
+[FA430] Ein Nutzer kann unter einem öffentlichen Rezept einen öffentlichen Kommentar posten:
+	
+	[FA431] Der Nutzer kann den Kommentar verfassen.
+
+	[FA432] Der Nutzer kann den Kommentar veröffentlichen.
+
+	[FA43] Der Nutzer kann den veröffentlichten Kommentar bearbeiten.
+
+[FA440] Ein Nutzer kann unter einem privaten Rezept einen Kommentar posten. Dazu muss der Nutzer Zugriff auf das Rezept haben. Also muss der Nutzer:
+	* in einer Freundesgruppe des Rezepterstellers sein
+	* oder selbst Ersteller des Rezepts sein
+
+[FA450] Nutzer können sich andere öffentliche Nutzerprofile anschauen
+
+	[F451] Ein Nutzer kann einstellen, was in seinem Nutzerprofil
+	sichtbar ist:
+		* Name: - optional 
+			- wenn vergeben: öffentlich oder privat sichtbar
+		* Nutzername:
+			- öffentlich oder privat sichtbar
+		* Veröffentlichte Rezepte:
+			- obligatorisch öffentlich sichtbar
+		* Textuelle Beschreibung seiner selbst:
+			- optional 
+			- wenn vergeben: obligatorisch öffentlich sichtbar
+		* Profilbild:
+			- optional
+			- wenn vergeben: obligatorisch öffentlich sichtbar
+
+[FA460] Öffentliche Nutzer können anderen öffentlichen Nutzern folgen. Folgt ein Nutzer einem anderen, kriegt er Benachrichtigungen zur Aktivität dieses Nutzers.
+	
+	[FA461] Aktivität eines Nutzer ist:
+			- ein Nutzer veröffentlicht ein neues Rezept
+			- ein Nutzer veröffentlicht einen neuen Kommentar
+			- ein Nutzer hat eines seiner Rezepte bearbeitet
+	
+
+	[FA463] Ein Nutzer kann einem Nutzer dem er folgt 
+	wieder "entfolgen".
+	Dazu geht er auf das Profil des Nutzers und wählt "entfolgen" aus.
+
+[NF460] Server speichert in Nutzerdatenbank zusätzliche Informationen. Erforderliche Infos sind Nutzername, Passwort und Emailadresse. Unveränderbare Information sind der Nutzername und die Emailadresse.
+[NF462] Öffentliche Nutzer, denen ein Nutzer folgt, werden in einem
+	dafür vorgesehenen Menüpunkt angezeigt.
+
+
+Suchfunktion:
+
+[FA470] Unter den Suchergebnissen aus [Suchfunktion] werden Rezepte angezeigt, die Zutaten von Rezepten aus der gestarteten Suche enthalten, der Suche aber nicht hinreichend genügen, um als Suchergebnisse zu qualifizieren.
+
+	[FA471] Die Rezepte werden in einem eigenen Abschnitt angezeigt.
+	Dieser hat die Überschrift "Ähnliche Rezepte"
+
+[NF470] Nutzer stellt Anfrage, Server gibt Suchergebnisse zurück. Gleichzeitig wird intern eine neue Suche gestartet mit Zutaten aus Suchanfrage vom Nutzer. Suchergebnis der internen Suche wird in Abschnitt "ähnliche Rezepte" angezeigt.
+
+[FA480] Statt der Suchfunktion als Startseite gibt es einen Feed mit den neusten öffentlichen Rezepten.
+	
+	[FA481] Die Suchfunktion erhält einen eigenen Menüpunkt.
+
+	[FA482] Der Feed zeigt die Rezepte, die zuletzt veröffentlicht
+	wurden.
+
+[NF480] Server kriegt bei Aufruf der Startseite eine Anfrage, neueste Rezepte anzuzeigen. Liefert die neusten Rezepte dem Datum nach sortiert zurück.
+
+[FA490] Die Authentifizierung der Nutzer bei der Anmeldung und Registrierung ihres Accounts wird nicht vom System implementiert. Stattdessen wird eine Bibliothek eingebunden, die diese Funktion übernimmt.
+
+
+
+Szenarien:
+
+[S400]
+Anna fährt ihre Oma besuchen und mit ihr backen. Da das Internet dort so schlecht ist, möchte sie ein paar Rezepte aus der Koch-App ausdrucken. Sie wählt eines der Rezepte aus und wählt über das [REZEPT-MENÜ] die Option "Als PDF exportieren". Dadurch kann sie das Rezept an einem ausgewählten Ort lokal auf ihrem Handy speichern und später drucken.
+
+[S410] 
+Bertram schreibt schon lange an verschiedensten Rezepten. Diese hat er bisher in Notizen auf seinem Handy gespeichert. Nun möchte er sie in die Koch-App eintragen. Dazu öffnet er die App und geht auf die Seite, in der er Rezepte hinzufügt. Dort wählt er die Option "Rezept importieren". Nun kann er angeben, ob er eine Textdatei, zB eine seiner Notizen, oder ein Rezept von einer anderen Webseite importieren möchte.
+
+[S420]
+Anna möchte Zitronentarte backen und hat ein Rezept dazu in der Kochbuch-App gefunden. Im Rezept steht aber keine Anleitung dazu, wie der benötigte Mürbeteig gemacht wird. Stattdessen hat das Wort "Mürbeteig" eine andere Farbe, als die anderen Wörter im Text. Anna klickt auf "Mürbeteig" und gelangt so zu einem anderen Rezept in der App, welches ihr beschreibt, wie Mürbeteig zubereitet wird.
+
+[S430]
+Bertram hat eines der Rezepte aus der Kochbuch-App gekocht und statt Öl Butter verwendet. Da das genauso gut funktioniert hat, möchte er das den anderen Nutzern mitteilen. Er geht auf das Rezept und schreibt in das Kommentarfeld seine Anmerkung. Dann veröffentlicht er diese.
+
+[S440]
+Anna gefallen viele von Betrams Rezepten. Sie möchte ihm aus diesem Grund gerne folgen, um benachrichtigt zu werden, falls Bertram ein neues Rezept veröffentlicht oder etwas an einem Bestehenden ändert. Dazu geht Anna aus Bertrams Profil und wählt aus, dass sie diesem Nutzer folgen möchte.
+
+[S450]
+Anna weiß nicht, was sie kochen soll und öffnet die App, um sich Inspiration zu holen. Sie geht auf den Feed und scrollt durch die neuesten Rezepte. Sie sieht ein Calzone-Rezept und bekommt Lust, Pizza zu backen. Also sucht sie in der App nach Pizza-Rezepten. Leider findet sie keines, was sie wirklich anspricht, aber unter den Suchergebnissen wird ihr ein Abschnitt mit der Überschrift "Ähnliche Rezepte" angezeigt. Dort sieht sie ein Spaghetti-Bolognese Rezept, was ihr zuspricht und beschließt, dieses zu kochen.

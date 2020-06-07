@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>33</y>
+      <w>187</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>RecipeListFragment
+--
+--
+-remove:Button
+-edit:Button
+-createRecipe:Button
+-Recipe:Textview</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>473</x>
+      <y>44</y>
+      <w>396</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>RecipeListViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;
+--
+-mrepo:Repository
+-recipes:List&lt;PrivatRecipe&gt;
+
+--
++getprivateRecipes():List&lt;privateRecipe&gt; 
++deleteprivateRecipe(id:String)
++edidprivateRecipe(recipe:PrivateRecipe)
++createnewRecipe()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>88</y>
+      <w>319</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>209</x>
+      <y>0</y>
+      <w>242</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Note..
+--
+bg=blue
+Beobachter Entwurfsmuster
+zwischen den LiveData-Objekten
+in VM und Fragment-Atrributen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>506</x>
+      <y>319</y>
+      <w>297</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+getprivateRecipes():List&lt;privateRecipe&gt;
+deleteprivateRecipe(id:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>231</y>
+      <w>88</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>154</y>
+      <w>319</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>99</x>
+      <y>341</y>
+      <w>363</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=yellow
+--
+getprivaterecipes()
+liefert alle privaten Rezepte aus der lokalen DB
+
+deleteprivateRecipe(id:String)
+löschtdas private Rezept mit der ID = id
+
+edidprivateRecipe(id:String)
+wechselt in das CreateRecipeFragment mit dem
+Rezept mit der ID = id
+
+createnewRecipe()
+wechselt in das CreateRedipeFragment mit leren
+Feldern
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,36 @@
+\chapter{Nichtfunktionale Anforderungen}
+
+\nonFunctionality{Verwaltungsaufwand}{nfc:verw}
+Es müssen minimal 10000 Rezepte und minimal 300 Accounts verwaltet werden können
+
+\section {Rezeptverwaltung}
+
+\nonFunctionality{Zutatenliste}{nfc:zlist}
+Zutaten in der Zutatenliste eines Rezepts dürfen sich nicht wiederholen
+
+\nonFunctionality{Automatisches Speichern}{nfc:autosave}
+Um Musskriterium {\em Automatisches Speichern} zu genügen, müssen bearbeitete Rezepte regelmäßig in Intervallen und wenn die App den Focus verliert automatisch gespeichert werden
+
+\nonFunctionality{Gesamtzubereitungszeit}{nfc:gesamtzeit}
+Die Gesamtzeit muss aus der \gls{Backzeit/Schmorzeit} und der \gls{Zubereitungszeit} errechnet werden
+
+\nonFunctionality{Persönliche Tagliste}{nfc:perstags}
+Falls das Wunschkriterium der modifizierbaren Tags umgsetzt wird, sind diese nur jeweils für den Nutzer, der sie hinzugefügt hat, verfügbar
+
+\section{Benutzerverwaltung}
+	
+\nonFunctionality{Eindeutigkeit der Benutzer-ID}{nfc:userid_ein}
+Die \gls{ID} muss eindeutig sein
+
+
+\nonFunctionality{Änderbarkeit der Email-Adresse}{nfc:mailchg}
+Die Email-Adresse ist nicht änderbar
+
+\nonFunctionality{Änderbarkeit des Passworts}{nfc:password}
+\Gls{angemeldeter Nutzer} können ihr Passwort ändern
+
+
+\section{Rezepte Feed}
+
+\nonFunctionality{Aktualisieren der Anzeige}{nfc:feed_act}
+Ist das Wunschkriterium {\em Rezeptefeed} implementiert, muss die Ansicht {\em Rezeptefeed} vor jedem erneuten Aufrufen aktualisiert werden

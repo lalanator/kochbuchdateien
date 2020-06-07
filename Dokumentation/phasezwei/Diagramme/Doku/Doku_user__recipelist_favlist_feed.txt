@@ -1,0 +1,30 @@
+User:
+Die Klasse User beinhaltet Attributinformationen zum Objekt User.
+Der String ID ist die Benutzer-ID, die einen eindeutigen Bezeichner für den Nutzer darstellt. Da Nutzer nicht unbedingt angemeldet sein müssen, um Teilfunktionalitäten der App zu nutzen (zB. unveröffentlichte Rezepte erstellen, öffentlich gestellte Rezepte durchsuchen, Rezepte favorisieren), sind die iD, email, img und description nullable.
+Jeder Nutzer hat genau eine Liste, in die seine selbsterstellten Rezepte gespeichert werden (private und öffentliche Rezepte). [Singleton]
+Jeder Nutzer hat außerdem eine Liste, in der ihm favorisierte öffentliche Rezepte anderer Nutzer angezeigt werden. [Singleton]
+Die Listen sind anfangs leer.
+
+
+List<E>:
+Die Klasse List arbeitet mit einem Typparameter und stellt auf diesem Parameter Funktionalität für die erbenden Klassen bereit.
+Die Methode addEntry(entry:E) fügt am Ende einer existierenden Liste das Element entity vom Typ E ein.
+Die Methode removeEntry(entry:E) entfernt den Eintrag entry aus der Liste.
+Die zwei Methoden get(entry:E) und get(index:int) geben ein Element der Liste zurück, das entweder durch seinen Bezeichner gefunden wird oder durch die Angabe seines Indexes in der Liste.
+Die Methode flush() löscht alle Einträge, die in der Liste stehen, sodass die Liste wieder leer ist.
+Die Methode deleteList() löscht die Liste komplett.
+Die abstrakte sortAfter()-Methode wird von den Unterklassen implementiert und soll die Liste nach einem Attribut des enthaltenen Typparameters sortierbar machen.
+
+
+RecipeList:
+Die Klasse RecipeList ist Unterklasse der List-Klasse.
+Diese Klasse enthält genau ein Element vom Typ RecipeList und ist damit ein Singleton. Diese recipeList hat als Typparameter "Recipe" und speichert die Rezepte, die ein User erstellt hat.
+Die Klasse überschreibt die deleteList()-Methode so, dass die recipeList nicht gelöscht werden kann.
+Die Klasse implementiert die sortAfter()-Methode in der Weise, dass Rezepte nach ihrem Veröffentlichungsdatum oder ihrer Bewertung absteigend sortiert werden.
+
+
+Feed:
+Die Feed-Klasse enthält eine Liste, in der Rezepte abgespeichert werden. Die Liste enthält die (X-vielen) neusten Rezepte, die in der App veröffentlicht wurden.
+Die Methode getNewestRecipes() lädt die 20 zuletzt veröffentlichten Rezepte in die feedList, wenn der Feed gerade neu geladen wurde (zB nach dem Öffnen des Feeds). Die globale Variable olderThan wird dann auf den TimeStamp des letzten hinzugefügten Rezeptes gesetzt.
+Die Methode getNewestRecipes(olderThan:TimeStamp) lädt Rezepte nach, sodass die Liste dynamisch weiter gefüllt werden kann, wenn der Feed bereits geöffnet ist.
+Rezepte, die nachgeladen werden, sind solche, deren TimeStamp kleiner ist, als die momentane klassenweite olderThan-Variable. Sind die Rezepte fetig nachgeladen, so wird die olderThan Variable wieder auf den TimeStamp des letzten hinzugefügten Rezeptes aktualisiert. Somit werden Rezepte nach ihrem Veröffentlichungsdatum in absteigender Reihenfolge in die Liste eingefügt.

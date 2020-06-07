@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>209</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>DisplaySearchListFragment
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>484</x>
+      <y>11</y>
+      <w>495</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>DisplaySearchListViewModel
+--
+--
+&lt;&lt;construct&gt;&gt; title:String, ingredients:List&lt;String&gt;, tags:List&lt;String&gt;
+--
+-title:String
+-ingredients:List&lt;String&gt;
+-tags:List&lt;String&gt;
+-recipes:Livedata&lt;List&lt;PublicRecipe&gt; &gt;
+-sortAfter: {Datum, Bewertung, ...}
+-sortIncreasing:Livedata&lt;boolean&gt;
+--
++sortRecipes()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>55</y>
+      <w>308</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>517</x>
+      <y>352</y>
+      <w>638</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+getpublicrecipes(title:String, ingredients:List&lt;String&gt;, tags:List&lt;String&gt;):List&lt;PublicRecipe&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>649</x>
+      <y>275</y>
+      <w>88</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>121</y>
+      <w>308</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>99</x>
+      <y>308</y>
+      <w>363</w>
+      <h>396</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=yellow
+--
+sortrecipes()
+sortiert die Liste der publicRecipes nach den
+eingestellten Filtern und aufsteigent/absteigend
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

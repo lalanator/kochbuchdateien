@@ -1,0 +1,80 @@
+\chapter{Produktdaten}
+
+Folgende Daten werden von dem \gls{Kochbuchserver} gespeichert und der Kochapp verwendet.
+
+\section{Benutzerdaten}
+
+\pdatum{Über registrierte Nutzer sind folgende Daten zu speichern}
+ ID, Email-Adresse, Passwort, ({\em optional} Profilbild)
+\pdatum{Für jeden Nutzer sind Zuweisung zu seinen Rezepten zu speichern}
+\pdatum{Für jeden Nutzer sind die IDs seiner favorisierten Rezepte zu speichern}
+\pdatum{{\em optional} Für jeden Nutzer sind Freunde zu speichern}
+\pdatum{{\em optional} Für jeden Nutzer sind Freundesgruppen zu speichern}
+\pdatum{{\em optional} Für jeden Nutzer ist seine Einkaufsliste und sein Einkaufsbestand zu speichern}
+\pdatum{{\em optional} Abgegebene Bewertungen zu Rezepten sind zu speichern}
+
+\section{Rezeptdaten}
+
+\pdatum{Über das Rezept sind folgende Daten zu speichern:}
+ID, Titel, Bild, Zutatenliste, Gesamtzubereitungsdauer, \gls{Backzeit/Schmorzeit}, \gls{Zubereitungszeit}, Zubereitungsbeschreibung, Tags, Privat/Öffentlich, Erstelldatum
+\pdatum{Über die Zutatenliste sind folgende Daten zu sichern:}
+Zutat, Menge, Mengeneinheit
+\pdatum{Über das Rezept sind folgende Daten zu sichern:}
+ID, Titel, Bild, Zutatenliste, Gesamtdauer, Zubereitungsdauer, Zubereitungsbeschreibung, \glspl{Tag}, Privat/Öffentlich, Erstelldatum
+\pdatum{{\em optional} Zu jedem Rezept ist die durchschnittliche Bewertung zu speichern}
+\pdatum{{\em optional} Zu jedem Rezept sind die Kommentare zu speichern}
+\pdatum{{\em optional} Wenn in Rezepten zu anderen Rezepten verlinkt wird, sind die Verlinkungen zu speichern}
+
+
+%\section{/D10/ Rezept}
+%Das ist die wichtigste Datenstruktur, private Rezepte werden gespeichert, so dass der Nutzer sie  persistieren und über seine Geräte synchronisieren kann. die Speicherung von veröffentlichten Rezepte dient dazu Rezepte für andere Benutzer suchbar und verfügbar zu machen. 
+%
+%Ein Rezept hat die Felder, wie im folgenden beschrieben. 
+%\begin{itemize}
+%\item Titel: Titel des Rezeptes. 
+%\item Bild: ein Bild was das Rezept beschreibt
+%\item Zutatenliste: 
+%Liste von Zutaten, Eine Zutat hat folgende Felder:
+%optional: Mengenangabe und Mengeneinheit. Optional bedeutet, dass sie entweder beide gesetzt sind oder nicht. 
+%Beispiel: 500 g Dinkelmehl 
+%ein Beispiel für eine Zutat ohne Mengenangabe wäre zum Beispiel:
+%Zimt
+%Wenn das entsprechende Wunschkriterium umgesetzt wird kann diese Zutatenliste strukturiert sein, und zusätzlich noch TeilÜberschriften enthalten. 
+%Beispielsweise wäre bei einer Torte denkbar: 
+%Teilüberschrift "Für den Boden"
+%500g Mehl
+%300g Zucker
+%Teilüberschrift "für den Belag"
+%850g Kirschen
+%500g Schichtkäse
+%Liste von Tags: 
+%Zubereitungsbeschreibung:
+%(veröffentlichte Repete) (Wunschkritierum) Bewertung:  aggregierte 
+%\end{itemize}
+%
+%\section{Zusätzliche Datenstrukturen}
+%
+%\subsection{/D20/ Tags}
+%jeder Benutzer hat eine Liste von Tags mit denen er die Rezepte sortieren kann: 
+%Beispiel: {\em schnell}, {\em asatisch} oder {\em weihnachtsgebäck}
+%
+%Bewertung, wunschkriterium: 
+%Rezeptid 
+%
+%
+%\subsection{/D30/ Kommentare \em{(optional)
+%}}
+% wenn das Wunschkriterium Kommentare umgesetzt wird, muss sie der Kochbuchserver speichern. 
+%diese bestehen aus 
+%Kommenar: ein Textfeld
+%BenutzerID: Benutzer der 
+%Datum: Datum an dem der Kommentar erstellt wurde-
+%
+%\subsection{/D40/ Profildaten \em{(optional)}} falls dieses Wunschkriterium umgesetzt wird muss sie der Kochbuchserver speichern.
+%diese können bestehen aus:
+%Profilfoto: 
+%Profilname. 
+%BenutzerID:
+%Email: 
+%da geplant ist die Authentifizierung über eine Bibliothek wie Firebase umzusetzen, müssen Authentifizierungsdaten nicht gespeichert werden. 
+%...

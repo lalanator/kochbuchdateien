@@ -1,0 +1,12 @@
+Lessons Learned Implementierung:
+
+- weniger komplexes Vorhaben hätte uns mehr Zeit eingebracht
+	zB. Server automatischer aufsetzten vs. absolut alles alleine, oder zB. IngredientChapter raus und einfach String, etc.
+
+- keine Schuldzuweisung (kontraproduktiv), sondern konstruktive und direkte Kritik (Anmerkung von Magnus und Lea)
+
+- Sachen nicht zu schnell persönlich nehmen
+
+- Mehr Eigenverantwortung in und außerhalb der Layer-Gruppen (Layer-Beauftragte kümmern sich um ihre Layer und kommunizieren gut)
+
+- aktivere Hilfe beim präsentieren und bei akuteren Problemen schnelle Unterstützung

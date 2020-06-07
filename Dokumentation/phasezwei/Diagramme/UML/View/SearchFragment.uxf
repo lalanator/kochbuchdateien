@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>48</x>
+      <y>60</y>
+      <w>582</w>
+      <h>246</h>
+    </coordinates>
+    <panel_attributes>SearchFragment
+bg=#dac39e
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>102</x>
+      <y>156</y>
+      <w>198</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>DisplaySearchListFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>102</x>
+      <y>96</y>
+      <w>198</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>UserSearchFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>240</y>
+      <w>198</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeSearchFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>240</y>
+      <w>198</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>SearchWithTagsFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>54</y>
+      <w>324</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Recipe-Button&gt;&gt;
+m2=RecipeDisplayFragment
+</panel_attributes>
+    <additional_attributes>10.0;200.0;370.0;200.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>54</y>
+      <w>198</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;User-Button&gt;&gt;
+m2=ProfileDisplayFragment</panel_attributes>
+    <additional_attributes>10.0;110.0;170.0;110.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>138</x>
+      <y>192</y>
+      <w>84</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Suchen-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>258</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;+-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>240</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Fertig-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

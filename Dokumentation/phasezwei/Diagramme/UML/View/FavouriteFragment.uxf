@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>48</x>
+      <y>102</y>
+      <w>426</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>FavouriteFragment
+
+bg=#dac39e
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>144</y>
+      <w>198</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>FavouriteRecipeFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>96</y>
+      <w>216</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Recipe-Button&gt;&gt;
+m2=RecipeDisplayFragment
+</panel_attributes>
+    <additional_attributes>10.0;110.0;190.0;110.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>180</y>
+      <w>90</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Favoriten-Button&gt;&gt;
+
+m1=Menü</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

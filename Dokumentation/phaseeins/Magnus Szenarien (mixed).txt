@@ -1,0 +1,61 @@
+Szenario (Carl normaler Such und finde Verlauf)
+Carl ist mittlerweile sehr alt und beschäftigt sich nur noch ungern mit all dieser neumodischen Technik. Vor einigen Tagen hat sein Enkel aber eine sehr einfach zu bedienende App auf sein Mobiltelefon geladen. Er gibt sich einen Ruck und öffnet die App. Als er dies Tut erscheint kurz ein ansprechender Ladebildschirm und daraufhin ein anschauliches Menü. Dort kann er auswählen, ob er eine Hauptspeise, ein Dessert, oder doch lieber eine Vorspeise zubereiten will. Dafür klickt er auf das Mittlere (Hauptspeise) der drei deutlich erkennbaren Icons. Danach erscheint ein ansehnliches Layout mit einer Suchzeile in der Mitte, einem Ausgegrauten Button mit der Aufschrift "Rezept suchen" und einem Zurück Button. Als er versucht darauf zu tippen, erscheint eine kleine Nachricht, die sagt, dass er mindestens 3 Zutaten eingeben müsse. Oben links sieht Carl ein kleinen Button, der ein Seitenmenü öffnet, als er darauf tippt. Dort kann er sein Profilanzeigen lassen, seine Merkliste, seine eigenen -& offline verfügbaren Rezepte & ein Logout Button. Sein Enkel hat ihm erzählt, dass er nun einfach die Zutaten, die er noch im Kühlschrank hat suchen kann und schwuppdiwupp soll ein leckeres Rezept erscheinen.
+Er öffnet seinen Kühlschrank und wie befürchtet ist er natürlich wie immer nur noch mit wenigen Lebensmitteln gefüllt. Ein wenig Gemüse und ein paar frische Eier sind alles, was er sieht. Nun gut. Er schließt den Kühlschrank wieder und fängt an. Er sieht mitten im Bild eine Suchzeile, die er bis dahin auch schon in anderen Apps gesehen hat. Als Erstes will er die Eier eingeben. Als er auf die Suchzeile tippt und den ersten Buchstaben "E" eingibt, erscheint auch schon ein kleines Dropdown Menü, welches die jeweiligen Zutaten vorschlägt vervollständigt. Da neben dem Namen noch ein kleines Bildchen hinzugefügt wurde, kann er direkt das Ei auswählen und eine Mengenanzahl angeben. Er fügt es somit seiner Vorratsliste hinzu. Als Nächstes will er das Wort "Tomaten" eintippen. Dafür ist nach dem Auswählen des Eis erneut die Suchleiste ausgewählt. Er tippt nach und nach das Wort ein, wobei erneut viele Vorschläge mit kleinen Icons im Dropdown Menü erscheinen, obwohl er nicht auf klein & Großschreibung achtet. Nachdem er auch die Tomaten mit ihrer Mengenanzahl eintippt, fällt ihm die Navigation in der App immer leichter, weshalb er immer weniger Zeit benötigt die neuen Zutaten einzufügen. Als dies nun geschehen ist, drückt er auf ein gut sichtbares Icon mit der Aufschrift "Rezept suchen". Als Carl dieses Icon betätigt, erscheint erneut kurz ein Ladebildschirm. Aber nach schon 5 Sekunden scheint eine Liste mit einigen Rezepten. Noch ein wenig unentschlossen scrollt Carl durch die Rezepte, bis er sich schließlich für ein simples Spiegelei mit einer kleinen Gemüsepfanne entscheidet. Dafür tippt er einmal auf das kleine Bildchen, das in der Liste zu jedem Rezept bereitsteht. Dadurch gelangt er zu dem Rezept, welches er haben will und sieht direkt, eine Galerie, die einige Bilder zu diesem Rezept bereitstellt, die genauen Zutaten (mit Mengenangaben) die er benötigt und einen beschreibenden Text für die Zubereitung. Daraufhin kocht er glücklich und zufrieden los.
+Anforderungen
+
+- simple Navigation
+- anschauliches Startmenü
+- Auswahl zwischen Hauptspeise, Dessert, Vorspeise als Zwischenmenü nach dem Start
+- Suchzeile, mit Dropdown-Menü für Vorschläge mit kleinen Bildern
+- mindestens 3 Zutaten, um Rezept suchen
+- Seitenmenü
+- Profil (optional, nur wenn man jemandem folgen will)
+- Liste mit Rezepten anzeigen mit kleinen Bildern / Bewertungen / Ersteller / Zeitangabe
+- Auswählbares Rezept mit Bildergalerie und Rezept & genauen Mengenangaben
+-option das Rezept zu bewerten
+
+Szenario 2 (Anne Studentin - schnelles Rezept finden)
+
+Anne kommt gerade aus der Universität und hat nicht mehr viel Zeit, bis sie auf eine Party geht. Davor will sie sich noch eine Kleinigkeit kochen.
+Da fällt ihr ein, dass sie eine neue App ausprobieren wollte, von der sie gehört hat. Sie öffnet die App, woraufhin sich ein Startmenü öffnet. Anna sieht mittig eine Suchleiste, in der leicht ausgegraut drinnen steht "hier Zutaten eingeben" und darunter ist eine leere Liste. Des Weiteren ist links oben ein Button, der ein Menü ausfährt, in dem man in die Seitenansicht des Profils, der jeweiligen Merkzettel, oder der Einloggen Funktion navigieren kann. Sie wählt zuerst die Suchzeile aus und tippt ihre Rezepte ein. Während sie dies tut, werden ihr in einem Dropdown Menü schon Zutaten Vorschläge gegeben. Nach drei Zutaten erscheint über der Suchzeile ein Button mit der Markierung "Rezept suchen", den sie auswählt. Nun lädt die App kurz und zeigt darauf hin eine Liste mit Rezepten an. Neben der Liste an Rezepten gibt es einen weiteren Button, den sie auswählen kann, mit dem Namen "ähnliche Rezepte anzeigen". Als Anna hier draufdrückt, werden ihr Rezepte in einer Liste angezeigt, die unter Anderem die Zutaten beinhalten, die sie eingegeben hat, jedoch weitere Zutaten benötigt werden. Da Anna tatsächlich nur die Zutaten zu Hause hat, die sie eingegeben hat, bleibt sie bei den ursprünglichen Rezepten und sucht sich eins aus.
+
+Anforderungen
+
+- Startmenü mit Suchfunktion
+- Auswahl Vorspeise, Hauptgang, Nachspeise
+- Zutatenliste
+- Menübutton -> Login(/-out), Merkzettel, Hauptseite
+- Dropdown Menü mit Zutaten Vorschlägen
+- Rezept suchen Funktion
+- ähnliche Rezepte anzeigen Funktion
+
+Szenario (Carl - Rezept erstellen Szenario)
+
+Nachdem Carl nun schon einige Erfahrungen mit der App gemacht hat, freut er sich immer wieder darauf neue Rezepte auszuprobieren. Mittlerweile hat er schon viele Rezepte ausprobiert und da er sich kürzlich ein neues Rezept ausgedacht hat, will er dieses perfektionierte Rezept veröffentlichen. Im Auswahlmenü wählt er Herzhaft aus und drückt danach den Button "Neues Rezept erstellen". Dort kann er verschiedene Zutaten mit jeweiliger Mengenangaben hinzufügen. Zusätzlich gibt er einen beschreibenden Text und zusätzliche Fotos ein. Wichtig ist, dass er auch eine Zeitangabe und die weiteren Parameter wie "Herzhaft, Süß, oder ähnliches" angibt. Nachdem er das Rezept vollständig eingegeben hat, drückt er auf den Button "Rezept speichern". Nun findet er dieses Rezept in seiner Merkliste, die er jederzeit auch ohne Internetverbindung abrufen kann. Zusätzlich kann er, wenn er bereits ein Profil hat dieses Rezept für alle Nutzer anbieten.
+
+Anforderungen
+- Rezept veröffentlichen Funktion
+- Neues Rezept erstellen Funktion
+- Zutaten mit Mengenangaben hinzufügen (min. 3 pro Rezept)
+- Bilder hinzufügen
+- Rezept Beschreibung hinzufügen
+- Zubereitungsdauer
+- Tags hinzufügen (Vorspeise, Hauptspeise, Nachspeise & salzig, herzhaft, süß, scharf, orientalisch,...)
+- Rezept speichern (-> offline speicher) Funktion
+- Anlegen eines Nutzerprofils
+- Verwaltung eines Nutzerprofils
+- Veröffentlichen eines Rezeptes
+
+Carl 70 (Profilanlegen Szenario)
+Carl ist mittlerweile im Rentenalter und hat das Kochen für sich entdeckt. Kürzlich hat er in einer neuen App ein Rezept erstellt und da der letzte Feinschliff vollendet ist, will er dieses Rezept nun veröffentlichen. Er öffnet die App und gelangt direkt in das Hauptmenü mit einer Suchzeile. Links oben findet Carl einen Button, über den er verschiedene Reiter erreicht. Einer dieser Reiter heißt Merkzettel, wo er seine selbst erstellten Rezepte findet. Dort klickt er darauf und bekommt so eine Listenansicht von all seinen selbst erstellten Rezepten. Nun wählt er das neue Rezept aus und sieht oben rechts einen Button "veröffentlichen" dort drückt er darauf. Da Carl selbst noch kein Profil angelegt hat, öffnet sich ein Dialogfenster, welches ihn fragt, ob er ein Profil anlegen möchte, oder das Rezept anonym veröffentlichen will. Er wählt die erste Variante aus und wird in ein weiteres Menü geleitet. Dort gibt er einen Namen ein und kann optional ein Bild hochladen. Nun drückt er den Button "Profil anlegen" und er kommt erneut zu seinem Rezept. Als er erneut "Veröffentlichen" drückt, wählt er sein Profil aus und bekommt eine Bestätigungsnachricht, dass sein Rezept nun öffentlich einsehbar ist.
+
+Anforderungen
+- Menü zur Navigation (Hauptmenü, Merkzettel, Profil,...)
+- Merkzettel liste mit offline verfügbaren Rezepten
+- Rezept veröffentlichen Funktion
+- Anonym veröffentlichen
+- mit Profil veröffentlichen
+- veröffentlicht Bestätigung
+- Profil anlegen
+- Name verwalten
+- Profilbild verwalten

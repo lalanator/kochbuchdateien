@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>200</y>
+      <w>360</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ProfileEditViewModel
+--
+--
+repository: DataRepository
+MediatorLiveData&lt;User&gt; observableUser
+--
+&lt;&lt;construct&gt;&gt; ProfileEditViewModel(a:Applikation)
+getUser():LiveData&lt;User&gt;
+searchUser(query: String):LiveData&lt;User&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>30</y>
+      <w>30</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>0</y>
+      <w>190</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>AndroidViewModel
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

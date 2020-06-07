@@ -1,0 +1,31 @@
+Pse Betreuertreffen am 03.12.2019 
+
+1. Feedback (Note 1.7)
+- 15 Minuten waren drei Minuten zu kurz
+- Administratorrolle
+ 
+2. Fragen zum Entwurf
+- Abgabe 22.12.2019
+- Präsentation 07.01.2020
+- Alle Wunschkriterien müssen Modelliert werden 
+	- Klassen diagramm
+	- Aber keine Sequenzdiagramme
+- Testklassen 
+	- Schon über Integrationstests nachdenken
+	- nicht pflicht 
+	- am ende bei Zeit expliziet mitaufnehmen 
+	
+- Herangehensweise 
+	- Frameworks sollten schwach gekoppelt sein 
+	- Fragments - > Ablauf der Funktionalität - > Klassifizierung und Einteilung in Module
+	- Mvvm -> Entities (Domänenmodell) -> Klassenbildung (Paperprototyp) -> Funktionalität -> Modulbildung
+	-> Dynamische Diagramme (Aktivitätsdiagramm, Sequenzdiagramm,....)
+
+	-> nach dem 1. Entwurf nochmal reflektieren ( Entwurfmuster,...)
+	- Android Samples abstrahieren und leichter machen 
+3. Tooling
+	- Umlet
+	- plantuml
+4. Prototypen bauen 
+5. Graphiken im Vorfeld schicken 
+

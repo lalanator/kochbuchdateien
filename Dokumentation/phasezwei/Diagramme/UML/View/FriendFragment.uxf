@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>45</x>
+      <y>50</y>
+      <w>520</w>
+      <h>235</h>
+    </coordinates>
+    <panel_attributes>FriendFragment
+bg=#dac39e
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>80</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>FriendGroupFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>230</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>FriendListFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>170</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>CreateGroupFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>80</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GroupFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>165</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GroupeMemberListFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>95</y>
+      <w>120</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Gruppe anklicken&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>80</y>
+      <w>120</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Zurück-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>110</y>
+      <w>95</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Gruppe erstellen-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>110</y>
+      <w>75</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Erstellen-Button&gt;&gt;/
+&lt;&lt;Zurück-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>110</y>
+      <w>65</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Zurück-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>465</x>
+      <y>110</y>
+      <w>100</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Gruppenname anklicken&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>240</y>
+      <w>375</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=UserDisplayFragment
+&lt;&lt;Profil-Link anklicken&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;730.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>15</x>
+      <y>25</y>
+      <w>115</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=Menü
+
+
+
+
+
+
+
+&lt;&lt;Meine Gruppen-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0;210.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>15</x>
+      <y>95</y>
+      <w>115</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;&lt;Meine Freunde-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0;210.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>375</x>
+      <y>195</y>
+      <w>15</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

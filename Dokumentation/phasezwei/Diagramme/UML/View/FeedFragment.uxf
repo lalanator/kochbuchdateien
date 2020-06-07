@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>168</x>
+      <y>63</y>
+      <w>483</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>FeedFragment
+
+bg=#dac39e
+
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>203</x>
+      <y>105</y>
+      <w>231</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>FeedFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>42</y>
+      <w>280</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+&lt;&lt;Recipe-Button&gt;&gt;
+m2=RecipeDisplayFragment</panel_attributes>
+    <additional_attributes>10.0;130.0;230.0;130.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>42</y>
+      <w>84</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=Menü
+
+&lt;&lt;Feed-Button&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+</diagram>

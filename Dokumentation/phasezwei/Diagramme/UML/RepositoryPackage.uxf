@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>20</x>
+      <y>35</y>
+      <w>300</w>
+      <h>500</h>
+    </coordinates>
+    <panel_attributes>LocalDBRepository
+layer=-3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>615</x>
+      <y>360</y>
+      <w>160</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Feed
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>600</x>
+      <y>335</y>
+      <w>190</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>FeedRepository
+bg=gray
+layer=-2
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>595</x>
+      <y>70</y>
+      <w>190</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>FriendsRepository
+bg=gray
+layer=-2
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>610</x>
+      <y>95</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>FriendRequest
+bg=#0857c5
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>600</x>
+      <y>250</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CommentRepository
+bg=gray
+layer=-2
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>615</x>
+      <y>275</y>
+      <w>160</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Comment
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>150</y>
+      <w>195</w>
+      <h>345</h>
+    </coordinates>
+    <panel_attributes>RecipeRepository
+bg=gray
+layer=-2
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>180</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PrivateRecipeRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>315</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>445</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>IngredientAmountRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>365</x>
+      <y>70</y>
+      <w>195</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>UserRepository
+bg=gray
+layer=-2
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>95</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>User
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>400</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>IngredientChapterRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>615</x>
+      <y>185</y>
+      <w>160</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Group
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>600</x>
+      <y>160</y>
+      <w>190</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>GroupsRepository
+bg=gray
+layer=-2
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>355</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeTagRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>225</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PrivateRecipeTagRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>270</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PrivateTagsRepo
+bg=#0857c5
+group=10</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>60</y>
+      <w>190</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>ShoppingListRepository
+bg=gray
+layer=-2
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>85</x>
+      <y>85</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>ShoppingListRepo
+bg=#0857c5
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>10</y>
+      <w>845</w>
+      <h>550</h>
+    </coordinates>
+    <panel_attributes>Repository
+layer=-4
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>350</x>
+      <y>45</y>
+      <w>475</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>ServerRepository
+layer=-3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>365</x>
+      <y>160</y>
+      <w>195</w>
+      <h>215</h>
+    </coordinates>
+    <panel_attributes>RecipeRepository
+bg=gray
+layer=-2
+group=11</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>195</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeRepo
+bg=#0857c5
+group=11</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>325</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>IngredientAmountRepo
+bg=#0857c5
+group=11</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>280</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>IngredientChapterRepo
+bg=#0857c5
+group=11</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>235</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeTagRepo
+bg=#0857c5
+group=11</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

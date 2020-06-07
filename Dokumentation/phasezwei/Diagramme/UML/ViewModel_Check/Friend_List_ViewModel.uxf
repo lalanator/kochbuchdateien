@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>20</y>
+      <w>280</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>FriendListFragment
+--
+--
+-header:TextView
+-friendlistNames:TextView
+-friendlistImages:ImageView
+-delteButton:Button
+-requestList:TextView
+-requestListImages:ImageView
+-search:Button
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>30</y>
+      <w>290</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>FriendListViewModel
+--
+--
+-mrepo:Repository
+-friendList:List&lt;User&gt;
+-requestList:List&lt;User&gt;
+--
++loadFriends():List&lt;User&gt;
++deleteFriend(user:User)
++loadRequests():List&lt;User&gt;
++search():List&lt;User&gt;
++acceptFriendRequest(userId:String)
++declineFriendRequest(userId:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>70</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>130</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+</diagram>

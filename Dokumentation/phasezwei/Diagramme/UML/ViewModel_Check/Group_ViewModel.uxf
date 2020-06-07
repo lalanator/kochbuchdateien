@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>304</x>
+      <y>128</y>
+      <w>256</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>GroupViewModel
+--
+&lt;&lt;construct&gt;&gt; groupID:String
+--
+-mRepo:Repository
+-recipes:List&lt;PrivateRecipe&gt;
+-groupName:String
+--
++getRecipes(groupid:String):List&lt;PrivateRecipe&gt;
++showRecipe(recipe:PrivateRecipe)
++postRecipe(recipe:PrivateRecipe)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

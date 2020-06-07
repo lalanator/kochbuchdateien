@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>81</y>
+      <w>171</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>FeedFragment
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>90</y>
+      <w>405</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>FeedViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;
+--
+lastsync:Timestamp
+newestRecipes:Livedata&lt;List&lt;PublicRecipe&gt; &gt;
+--
++getmoreRecipes(howmany:int):List&lt;PublicRecipes&gt;
+{
+return mrepo.loadNewestRecipes(quantity:Int)
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>126</y>
+      <w>252</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>549</x>
+      <y>477</y>
+      <w>522</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+getrecipesolderthan(time:Timestamp)
+
+loadNewestRecipes(quantity:int):List&lt;PublicRecipes&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>396</y>
+      <w>72</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>180</y>
+      <w>252</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>207</x>
+      <y>333</y>
+      <w>297</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=yellow
+--
+getmorRecpes(howmany:int)
+gibt howmany rezepte in die newestRecipes liste
+neu ein
+
+showRecipe(recipe:PublicRecipe)
+geht in das RecipeDisplayFramgent und zeit das
+Rezept recipe</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

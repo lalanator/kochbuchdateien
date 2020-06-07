@@ -1,0 +1,19 @@
+publicRecipe:
+Diese Klasse beinhaltet Attributinformationen zu einem öffentlichen Rezept.
+Das Attribut creationTimeStamp gibt an an welchem Tag dieses Rezept veröffentlicht wurde, title gibt den Titel an. bewertung gibt die durchschnittliche Bewertung an, diese ist null, wenn noch keine Bewertung abgegeben wurde. preparation ist die Beschreibung, wie man das Rezept durchführt, tags isind die dem Rezept gegebenen Tags, preparationTime die Zeit das Rezept an Arbeit benötigt und die cookingTime die Back/Schmorzeit. Die Methode getimage() läd das Bild des Profils und getComments() läd die dem Rezept gegebenen Kommentare.
+
+privateRecipe:
+Diese Klasse beinhaltet Attributinformationen zu einem privaten Rezept.
+Ein privates Rezept besteht lediglich aus den Attributen ingredients, welches eine textuelle Beschreibung der benötigten Zutaten ist, image das Bild, title der Titel, preparation die Beschreibung der Zubereitung, 
+
+IngredientAmount
+Zu einer Zutat gehört natürlich wie viel (quantity) von welcher Einheit(unit) und wie die Zutat überhaupt heist.
+
+FriendList:
+Die Klasse beinhaltet alle Freunde des Users. Die Modellierung teilt zwischen angenommenen Freunde und noch ausstehende Freundschaftsanfragen. 
+
+FriendGroupList:
+Diese Klasse verwaltet die Freundesgruppen eines Users. 
+
+FriendGroup:
+beinhaltet die Schnittstelle und die Verwaltung zu den jeweiligen Freundesgruppen eines Users. Freunde können hier individuell verwaltet werden. 

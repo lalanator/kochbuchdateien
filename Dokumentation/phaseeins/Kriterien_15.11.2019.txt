@@ -1,0 +1,161 @@
+0. Technische Anforderungen
+- Sprache (m)
+	- deutsch
+
+- Produktumgebung
+	- Smartphone mit mindestens 70% Abdeckung der Android Geräte (m)
+	- Tablet mit mindestens 70% Abdeckung der Android Geräte (w)
+
+- Server
+	- speichert
+	    - Rezepte
+	- Schnittstelle
+
+- Nutzerdaten
+
+1. Benutzersystem/Account
+
+- Hinzufügen (optional)
+	- Benutzername/ID (m)
+	    - eindeutig
+	    - obligatorisch
+	    - wird zum Login benötigt
+	- Name (m)
+	    - optional
+	    - änderbar
+	    - öffentlich
+
+	- Email (m)
+	    - nicht änderbar (?)
+	    - eindeutig
+	    - wird zum Login benötigt
+
+	- Passwort (m)
+	    - änderbar
+	    - obligatorisch
+	    - nicht leer
+	
+	- Profilbild (w)
+	    - änderbar
+	    - optional
+
+	- Gruppen/Freunde (w)
+	    - Nutzer kann Gruppe erstellen
+	    - Größe egal
+	    - Nutzer kann mit ihnen private Rezepte teilen
+	
+- Entfernen (für jeden Account obligatorisch)
+	- alle öffentlichen Nutzerdaten restlos gelöscht
+
+
+2. Rezepte Datenstruktur
+
+- Veröffentlichte Rezepte (m)
+	- Titel (m)
+	    - änderbar
+	    - obligatorisch
+	    - nicht eindeutig
+	
+	- Bild (m)
+	    - änderbar
+	    - entfernbar
+	    - optional
+	
+	- Zubereitungszeit Gesamtdauer (m)
+	    - aufteilbar (?)
+	
+	- Zutatenliste (m)
+	    - eindeutig
+	    - Zutatenanzahl (?)
+	    - änderbar
+	    - Mengenangabe (optional)
+
+	- Zubereitungsbeschreibung (m)
+	    - Freitext
+	    - änderbar
+
+	- Tags (optional) (m)
+	    - eindeutig
+	    - änderbar
+	    - entfernbar
+	
+	- Erstelldatum (m)
+
+	- Bewertung (otional) (?)
+
+	- Zutatenskalierung (w)
+
+- Private Rezepte (w)
+	- wie veröffentlichte rezepte, aber alles optional
+
+
+3. Suchfunktion
+
+- Möglichkeit zu suchen nach:
+	- Titel (m)
+	- Zutaten (m)
+	- Tags (m)
+	- Zubereitungsbeschreibung (w)
+	- Bewertung (w)
+
+- Suchergebnisse (m)
+	- Rezepte anzeigen
+	    - 
+	- sortierbar (w)
+	    - Bewertung
+	    - Anzahl gemerkt 
+	    - Datum
+
+- Suchvorschläge bei Eingabe der Suchkriterien (w)
+	[Entwurf] - Gruppierung von Rezeptzutaten
+
+
+4. Eigene Rezepte-Liste (m)
+
+- speichert alle vom Nutzer erstellten Rezepte
+- speichert private Rezepte, die noch in Bearbeitung sind
+
+
+5. Favoritenliste/Merkliste
+
+- zum Merken öffentlicher Rezepte (w)
+
+
+6. Einkaufsliste (w)
+
+
+7. Import- und Exportfunktion
+
+- Export als PDF (w)
+
+- Import aus (w)
+	- Link
+	- anderer Android App
+	- parsen aus anderer Rezeptstruktur (Heiner)
+
+
+8. Verlinkung zwischen Rezepten
+
+
+9. Nutzerprofilansicht (w)
+
+
+10. Kommentarfunktion (w)
+	- Rezepte Kommentieren
+
+
+11. Ähnliche Rezepte Vorschlag (w)
+
+
+12. Zutaten mit Icons versehen (w)
+
+
+13. Neue Rezepte Feed (w)
+
+
+14. Anderen Nutzern folgen können (w)
+
+
+Abgrenzungskriterien
+
+- Authentifizierung wird nicht implementiert

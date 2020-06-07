@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>1104</w>
+      <h>488</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.controller
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1152</x>
+      <y>0</y>
+      <w>1088</w>
+      <h>496</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.controller.api
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1168</x>
+      <y>32</y>
+      <w>336</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>UserApi&lt;&lt;interface&gt;&gt;
+--
++createUser(user:UserDto):void
++updateUser(user:UserDto):void
++deleteUser(userId:String):void
++getUserById(userId:String):UserDto
++addFollow(subscriberId:String, followedId:String):void
++getFollow(userId:String, page:int, size:int):List&lt;UserDto&gt;
++removeFollow(subscriberId:String, followedId:String):void
++searchUser(userId:String, page:int, size:int):List&lt;UserDto&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>504</y>
+      <w>1008</w>
+      <h>632</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.service
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1096</x>
+      <y>504</y>
+      <w>832</w>
+      <h>800</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.infrastructure.dao
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1600</x>
+      <y>552</y>
+      <w>296</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>UserDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+--
++createUser(user:User):void
++updateUser(user:User):void
++deleteUser(idUser:String):void
++getUser(idUser:String):User
++getUniqueID():String
++setFavourite(fav:Favourites):void
++deleteFavourite(idUser:String, idRecipe:int):void
++getFavourites(idUser:String):List&lt;Recipe&gt;
++setMarkAsEvil(userId:int, evil:boolean):void
++searchUser(userID:String, count:int):List&lt;User&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1992</x>
+      <y>512</y>
+      <w>1152</w>
+      <h>848</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.domain.model
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>544</y>
+      <w>304</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>GroupDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+--
++createGroup(group:Group):void
++updateGroup(group:Group):void
++deleteGroup(groupId:int):void
++getGroup(groupId:int):Group
++addUserToGroup(user:User,group:Group):void
++getGroups(userId:String):List&lt;Group&gt;
++removeUserFromGroup(userId:String, groupId:int):void
++setMarkAsEvil(groupId:int, evil:boolean):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>832</y>
+      <w>296</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+--
++addRecipe(recipe:PublicRecipe):void
++updateRecipe(recipe:PublicRecipe):void
++deleteRecipe(idRecipe:int):void
++getRecipe(idRecipe:int):PublicRecipe
++getRecipeChapter(idRecipe:int):List&lt;IngredientChapter&gt;
++getComments(idRecipe:int):List&lt;Comment&gt;
++getTags(idRecipe:int):List&lt;RecipeTag&gt;
++getAvgRating(idRecipe:int):int
++setMarkAsEvil(publicRecipeId:int, evil:boolean):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1496</x>
+      <y>1120</y>
+      <w>256</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>CommentDao&lt;&lt;interface&gt;&gt; 
+implements JpaRepository
+--
++addComment(comment:Comment):void
++updateComment(comment:Comment):void
++deleteComment(idComment:int):void
++getComments(recipeId:int):List&lt;Comment&gt;
++setMarkAsEvil(commentId:int, evil:boolean):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>976</y>
+      <w>312</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>IngredientChapterDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+--
++addChapter(chapter:IngredientChapter):void
++editChapter(chapter:IngredientChapter):void
++deleteChapter(idChapter:int):void
++getIngredientAmount(idChapter:int):List&lt;IngredientAmount&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1072</y>
+      <w>304</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>IngredientAmountDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+--
++addIngredient(ingredient:IngredientAmount):void
++updateIngredient(ingredient:IngredientAmount):void
++deleteIngredient(idChapter:int, nameIngredient:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>680</y>
+      <w>304</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>SharedPrivateRecipe implements JpaRepository
+--
++addRecipe(recipe:SharedPrivateRecipe):void
++deleteRecipe(idRecipe:int):void
++getRecipe(idRecipe:int):SharedPrivateRecipe
++getTags(idRecipe:int):PrivateRecipeTag
++getSharedRecipe(groupId:int):List&lt;Recipe&gt;
++addSharedRecipe(groupId:int, sharedRecipeId:int):void
++deleteSharedRecipe(groupId:int, sharedRecipeId:int):void
++setMarkAsEvil(sharedRecipeId:int, evil:boolean):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1152</y>
+      <w>280</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>RecipeRatingDao implements JpaRepository
+--
++addRating(rating:RecipeRating)
++updateRating(rating:RecipeRating)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1168</x>
+      <y>184</y>
+      <w>376</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeApi&lt;&lt;interface&gt;&gt;
+--
++addRecipe(recipe:PublicRecipeDto):void
++updateRecipe(recipe:PublicRecipeDto):void
++deleteRecipe(recipeId:int):void
++getRecipe(recipeId:int):PublicRecipeDto
++setRating(recipeId:int, userId:String, value:int):void
++getRatingFromUser(userId:String, recipeId:int):int
++getAverageRating(recipeId:int):double
++search(title:String, tags:List&lt;String&gt;, ingredients:List&lt;String&gt;,
+ creationDate: Date, alreadyLoad:int, readCount:int):List&lt;PublicRecipeDto&gt;
++reportRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1552</x>
+      <y>32</y>
+      <w>472</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>GroupApi&lt;&lt;interface&gt;&gt;
+--
++createGroup(group:GroupDto):void
++updateGroup(group:GroupDto):void
++deleteGroup(groupId:int):void
++getGroupById(groupId:int):GroupDto
++addUserToGroup(userId:String, groupId:int):void
++getGroups(userId:String, page:int, size:int):List&lt;GroupDto&gt;
++removeUserFromGroup(userId:String, groupId:int):void
++getSharedRecipesFromGroup(groupId:int, page:int, size:int):List&lt;SharedPrivateRecipeDto&gt;
++addSharedRecipeToGroup(groupId:int, sharedRecipe:SharedPrivateRecipeDto):void
++deleteSharedRecipeFromGroup(groupId:int, sharedRecipeId:int):void
++updateRecipe(groupId:int,recipe:SharedPrivateRecipeDto):void
++reportGroup(groupId:int):void
++reportSharedPrivateRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1552</x>
+      <y>232</y>
+      <w>336</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>AdminApi&lt;&lt;interface&gt;&gt;
+--
++getReportedPublicRecipe(size:int, page:int):List&lt;Recipe&gt;
++getReportedSharedPrivateRecipe(size:int, page:int):List&lt;Recipe&gt;
++getReportedUsers(size:int, page:int):List&lt;UserDto&gt;
++getReportedGroups(size:int, page:int):List&lt;GroupDto&gt;
++getReportedComments(size:int, page:int):List&lt;CommentDto&gt;
++deReportPublicRecipe(recipeId:int):void
++deReportSharedPrivateRecipe(recipeId:int):void
++deReportUser(userId:String):void
++deReportGroups(groupId:int):void
++deReportComment(commentId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1520</x>
+      <y>856</y>
+      <w>384</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>FriendRequestDao implements JpaRepository
+--
++addRequest(request:FriendRequestDao):void
++deleteRequest(idEnquirer:String, idRequestedFriend:String):void
++getRequestForUser(idRequestedFriend:String):List&lt;String&gt;
++getFriends(idUser:String):List&lt;String&gt;
++setRequest(idEnquirer:String, idRequestedFriend:String, state:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1896</x>
+      <y>232</y>
+      <w>336</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>CommentApi&lt;&lt;interface&gt;&gt;
+--
++addComment(comment:CommentDto):void
++updateComment(comment:CommentDto):void
++deleteComment(commentId:int):void
++getComments(recipeId:int, page:int, size:int):List&lt;CommentDto&gt;
++reportComment(commitId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1568</x>
+      <y>408</y>
+      <w>360</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>FavouritesApi&lt;&lt;Interface&gt;&gt;
+--
++addFavRecipe(userId:String, recipeId:int):void
++getFavRecipe(userId:String, page:int, size:int):List&lt;PublicRecipeDto&gt;
++delFavRecipe(userId:String, recipeId):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>24</y>
+      <w>336</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>UserController implements UserApi
+--
++createUser(user:UserDto):void
++updateUser(user:UserDto):void
++deleteUser(userId:String):void
++getUserById(userId:String):UserDto
++addFollow(subscriberId:String, followedId:String):void
++getFollow(userId:String, page:int, size:int):List&lt;UserDto&gt;
++removeFollow(subscriberId:String, followedId:String):void
++searchUser(userId:String, page:int, size:int):List&lt;UserDto&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>400</y>
+      <w>360</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>FavouritesController implements FavouritesApi
+--
++addFavRecipe(userId:String, recipeId:int):void
++getFavRecipe(userId:String, page:int, size:int):List&lt;PublicRecipeDto&gt;
++delFavRecipe(userId:String, recipeId):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>24</y>
+      <w>472</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>GroupController implements GroupApi
+--
++createGroup(group:GroupDto):void
++updateGroup(group:GroupDto):void
++deleteGroup(groupId:int):void
++getGroupById(groupId:int):GroupDto
++addUserToGroup(userId:String, groupId:int):void
++getGroups(userId:String, page:int, size:int):List&lt;GroupDto&gt;
++removeUserFromGroup(userId:String, groupId:int):void
++getSharedRecipesFromGroup(groupId:int, page:int, size:int):List&lt;SharedPrivateRecipeDto&gt;
++addSharedRecipeToGroup(groupId:int, sharedRecipe:SharedPrivateRecipeDto):void
++deleteSharedRecipeFromGroup(groupId:int, sharedRecipeId:int):void
++updateRecipe(groupId:int,recipe:SharedPrivateRecipeDto):void
++reportGroup(groupId:int):void
++reportSharedPrivateRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>176</y>
+      <w>384</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeController implements PublicRecipeApi
+--
++addRecipe(recipe:PublicRecipeDto):void
++updateRecipe(recipe:PublicRecipeDto):void
++deleteRecipe(recipeId:int):void
++getRecipe(recipeId:int):PublicRecipeDto
++setRating(recipeId:int, userId:String, value:int):void
++getRatingFromUser(userId:String, recipeId:int):int
++getAverageRating(recipeId:int):double
++search(title:String, tags:List&lt;String&gt;, ingredients:List&lt;String&gt;,
+ creationDate: Date, alreadyLoad:int, readCount:int):List&lt;PublicRecipeDto&gt;
++reportRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>280</y>
+      <w>336</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>CommentController implements CommentApi
+--
++addComment(comment:CommentDto):void
++updateComment(comment:CommentDto):void
++deleteComment(commentId:int):void
++getComments(recipeId:int, page:int, size:int):List&lt;CommentDto&gt;
++reportComment(commitId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>384</y>
+      <w>368</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>FriendRequestController implements FreindRequestApi
+--
++publishRequest(request: FriendRelationDto)
++getOpenRequestsforMe(userId:String, page:int, count:int) : List&lt;String&gt;
++getFriends(userId:String, page:int, size:int) : List&lt;String&gt;
++deleteFriend(enquirerId:String, requestedFriendId:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>224</y>
+      <w>344</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>AdminController implements AdminApi
+--
++getReportedPublicRecipe(size:int, page:int):List&lt;PublicRecipeDto&gt;
++getReportedSharedPrivateRecipe(size:int, page:int):List&lt;SharedPrivateRecipeDto&gt;
++getReportedUsers(size:int, page:int):List&lt;UserDto&gt;
++getReportedGroups(size:int, page:int):List&lt;GroupDto&gt;
++getReportedComments(size:int, page:int):List&lt;CommentDto&gt;
++deReportPublicRecipe(recipeId:int):void
++deReportSharedPrivateRecipe(recipeId:int):void
++deReportUser(userId:String):void
++deReportGroups(groupId:int):void
++deReportComment(commentId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>552</y>
+      <w>464</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>GroupService
+--
++createGroup(group:GroupDto):void
++updateGroup(group:GroupDto):void
++deleteGroup(groupId:int):void
++getGroupById(groupId:int):GroupDto
++addUserToGroup(userId:String, groupId:int):void
++getGroups(userId:String, page:int, size:int):List&lt;GroupDto&gt;
++removeUserFromGroup(userId:String, groupId:int):void
++getSharedRecipesFromGroup(groupId:int, page:int, size:int):List&lt;SharedPrivateRecipeDto&gt;
++addSharedRecipeToGroup(groupId:int, sharedRecipe:SharedPrivateRecipeDto):void
++deleteSharedRecipeFromGroup(groupId:int, sharedRecipeId:int):void
++updateRecipe(groupId:int,recipe:SharedPrivateRecipeDto):void
++reportGroup(groupId:int):void
++reportSharedPrivateRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>568</y>
+      <w>336</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>UserService
+--
++createUser(user:UserDto):void
++updateUser(user:UserDto):void
++deleteUser(userId:String):void
++getUserById(userId:String):UserDto
++addFollow(subscriberId:String, followedId:String):void
++getFollow(userId:String, page:int, size:int):List&lt;UserDto&gt;
++removeFollow(subscriberId:String, followedId:String):void
++searchUser(userId:String, page:int, size:int):List&lt;UserDto&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>912</y>
+      <w>384</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeService
+--
++addRecipe(recipe:PublicRecipeDto):void
++updateRecipe(recipe:PublicRecipeDto):void
++deleteRecipe(recipeId:int):void
++getRecipe(recipeId:int):PublicRecipeDto
++setRating(recipeId:int, userId:String, value:int):void
++getRatingFromUser(userId:String, recipeId:int):int
++getAverageRating(recipeId:int):double
++search(title:String, tags:List&lt;String&gt;, ingredients:List&lt;String&gt;,
+ creationDate: Date, alreadyLoad:int, readCount:int):List&lt;PublicRecipeDto&gt;
++reportRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>752</y>
+      <w>424</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>AdminService
+--
++getReportedPublicRecipe(size:int, page:int):List&lt;PublicRecipeDto&gt;
++getReportedSharedPrivateRecipe(size:int, page:int):List&lt;SharedPrivateRecipeDto&gt;
++getReportedUsers(size:int, page:int):List&lt;UserDto&gt;
++getReportedGroups(size:int, page:int):List&lt;GroupDto&gt;
++getReportedComments(size:int, page:int):List&lt;CommentDto&gt;
++deReportPublicRecipe(recipeId:int):void
++deReportSharedPrivateRecipe(recipeId:int):void
++deReportUser(userId:String):void
++deReportGroups(groupId:int):void
++deReportComment(commentId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>248</x>
+      <y>1024</y>
+      <w>328</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>CommentService
+--
++addComment(comment:CommentDto):void
++updateComment(comment:CommentDto):void
++deleteComment(commentId:int):void
++getComments(recipeId:int, page:int, size:int):List&lt;CommentDto&gt;
++reportComment(commitId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>64</x>
+      <y>896</y>
+      <w>352</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>FavouritesSerivce
+--
++addFavRecipe(userId:String, recipeId:int):void
++getFavRecipe(userId:String, page:int, size:int):List&lt;PublicRecipeDto&gt;
++delFavRecipe(userId:String, recipeId):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>736</y>
+      <w>360</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>FriendRequestService
+--
++publishRequest(request: FriendRelationDto)
++getOpenRequestsforMe(userId:String, page:int, count:int) : List&lt;String&gt;
++getFriends(userId:String, page:int, size:int) : List&lt;String&gt;
++deleteFriend(enquirerId:String, requestedFriendId:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>520</y>
+      <w>1416</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1750.0;100.0;1690.0;100.0;1690.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>584</y>
+      <w>256</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>688</y>
+      <w>256</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>300.0;100.0;220.0;100.0;220.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>872</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;80.0;10.0;80.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>960</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;60.0;100.0;60.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>1056</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;50.0;80.0;50.0;80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>1088</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;110.0;60.0;110.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>608</y>
+      <w>296</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;130.0;10.0;130.0;250.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>784</y>
+      <w>296</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>350.0;10.0;150.0;10.0;150.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>848</y>
+      <w>296</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>350.0;20.0;170.0;20.0;170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>608</y>
+      <w>776</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>950.0;10.0;890.0;10.0;890.0;270.0;190.0;270.0;190.0;290.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>896</y>
+      <w>936</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1150.0;350.0;1080.0;350.0;1080.0;400.0;10.0;400.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>1104</y>
+      <w>1112</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>1370.0;110.0;1320.0;110.0;1320.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>704</y>
+      <w>1712</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>2100.0;10.0;2120.0;10.0;2120.0;680.0;10.0;680.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>808</y>
+      <w>1864</w>
+      <h>472</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>2310.0;170.0;2310.0;570.0;10.0;570.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>408</y>
+      <w>368</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>FriendRequestApi&lt;&lt;interface&gt;&gt;
+--
++publishRequest(request: FriendRelationDto)
++getOpenRequestsforMe(userId:String, page:int, count:int) : List&lt;String&gt;
++getFriends(userId:String, page:int, size:int) : List&lt;String&gt;
++deleteFriend(enquirerId:String, requestedFriendId:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2208</x>
+      <y>616</y>
+      <w>208</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>User
+--
+&lt;&lt;get/set&gt;&gt;-userId:String
+&lt;&lt;get/set&gt;&gt;-image:BufferedImage
+&lt;&lt;get/set&gt;&gt;-description:String
+&lt;&lt;get/set&gt;&gt;-groups:List&lt;Group&gt;
+&lt;&lt;get/set&gt;&gt;-favourites:List&lt;PublicRecipe&gt;
+&lt;&lt;get/set&gt;&gt;-markAsEvil:Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2784</x>
+      <y>616</y>
+      <w>280</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Group
+--
+&lt;&lt;get&gt;&gt;-groupId:int
+&lt;&lt;get&gt;&gt;-mainUser:User
+&lt;&lt;get/set&gt;&gt;-name:String
+&lt;&lt;get/set&gt;&gt;-members:List&lt;User&gt;
+&lt;&lt;get/set&gt;&gt;-markAsEvil:Boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2856</x>
+      <y>816</y>
+      <w>208</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>SharedPrivateRecipe
+--
+&lt;&lt;get&gt;&gt;-recipeId:int
+&lt;&lt;get/set&gt;&gt;-title:String
+&lt;&lt;get/set&gt;&gt;-ingredientsText:String
+&lt;&lt;get/set&gt;&gt;-preparationDescription:String
+&lt;&lt;get/set&gt;&gt;-picture:BufferedImage
+&lt;&lt;get/set&gt;&gt;-cookingTime:int
+&lt;&lt;get/set&gt;&gt;-preperationTime:int
+&lt;&lt;get&gt;&gt;-user:User
+&lt;&lt;get/set&gt;&gt;-creationDate:Date
+&lt;&lt;get/set&gt;&gt;-markAsEvil:Boolean
+&lt;&lt;get/set&gt;&gt;-portions:int
+&lt;&lt;get/set&gt;&gt;-group:Group</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2840</x>
+      <y>1096</y>
+      <w>256</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>PrivateRecipeTag
+--
+&lt;&lt;get/set&gt;&gt;-tagId:String
+&lt;&lt;get&gt;&gt;-recipe:SharedPrivateRecipe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2536</x>
+      <y>800</y>
+      <w>216</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>PublicRecipe
+--
+&lt;&lt;get&gt;&gt;-recipeId:int
+&lt;&lt;get/set&gt;&gt;-title:String
+&lt;&lt;get/set&gt;&gt;-ingredientsText:String
+&lt;&lt;get/set&gt;&gt;-preparationDescription:String
+&lt;&lt;get/set&gt;&gt;-picture:BufferedImage
+&lt;&lt;get/set&gt;&gt;-cookingTime:int
+&lt;&lt;get/set&gt;&gt;-preperationTime:int
+&lt;&lt;get&gt;&gt;-user:User
+&lt;&lt;get/set&gt;&gt;-creationDate:Date
+&lt;&lt;get/set&gt;&gt;-markAsEvil:Boolean
+&lt;&lt;get/set&gt;&gt;-portions:int
+&lt;&lt;get/set&gt;&gt;-userFav:List&lt;User&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2456</x>
+      <y>1064</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>IngredientChapter
+--
+&lt;&lt;get&gt;&gt;-chapterId:int
+&lt;&lt;get&gt;&gt;-recipe:PublicRecipe
+&lt;&lt;get/set&gt;&gt;-chapterName:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2448</x>
+      <y>1184</y>
+      <w>176</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>IngredientAmount
+--
+&lt;&lt;get&gt;&gt;-chapter:IngredientChapter
+&lt;&lt;get/set&gt;&gt;-nameIngredient:String
+&lt;&lt;get/set&gt;&gt;-amount:int
+&lt;&lt;get/set&gt;&gt;-unit:Unit</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2224</x>
+      <y>1256</y>
+      <w>184</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt; Unit
+--
+--
+{Eßl. ,Tel., g, Liter, Strück, ... }</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2400</x>
+      <y>1248</y>
+      <w>64</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2656</x>
+      <y>1064</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>RecipeTag
+--
+&lt;&lt;get/set&gt;&gt;-idTag:String
+&lt;&lt;get&gt;&gt;-recipe:PublicRecipe
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2272</x>
+      <y>968</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>RecipeRating
+--
+&lt;&lt;get&gt;&gt;-recipe:Recipe
+&lt;&lt;get&gt;&gt;-user:User
+&lt;&lt;get/set&gt;&gt;-points:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2232</x>
+      <y>1088</y>
+      <w>160</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+&lt;&lt;get&gt;&gt;-idComment:int
+&lt;&lt;get&gt;&gt;-user:User
+&lt;&lt;get&gt;&gt;-recipe:PublicRecipe
+&lt;&lt;get/set&gt;&gt;-comment:String
+&lt;&lt;get/set&gt;&gt;-markAsEvil:boolean
+&lt;&lt;get/set&gt;&gt;-date:Date</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2208</x>
+      <y>784</y>
+      <w>192</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>FriendRequest
+--
+&lt;&lt;get/set&gt;&gt;-enquirer:User
+&lt;&lt;get/set&gt;&gt;-requestedFriend:User
+&lt;&lt;get/set&gt;&gt;-state:state</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2200</x>
+      <y>888</y>
+      <w>184</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt; State
+--
+--
+{ACCEPTED, DENIED, OPEN}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2280</x>
+      <y>840</y>
+      <w>56</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>648</y>
+      <w>392</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m1=0..*[groups]</panel_attributes>
+    <additional_attributes>470.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2952</x>
+      <y>736</y>
+      <w>56</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[group]</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2960</x>
+      <y>1000</y>
+      <w>136</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[sharedPrivateRecipe]</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2552</x>
+      <y>984</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[publicRecipe]</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2552</x>
+      <y>1128</y>
+      <w>64</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[chapter]</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2360</x>
+      <y>960</y>
+      <w>192</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[publicRecipe]</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;120.0;170.0;120.0;170.0;10.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2376</x>
+      <y>928</y>
+      <w>176</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[publicRecipe]</panel_attributes>
+    <additional_attributes>10.0;80.0;70.0;80.0;70.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2712</x>
+      <y>984</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[publicRecipe]</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>680</y>
+      <w>184</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[user]</panel_attributes>
+    <additional_attributes>210.0;150.0;210.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2312</x>
+      <y>728</y>
+      <w>56</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=2[user]</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>664</y>
+      <w>464</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=[user]</panel_attributes>
+    <additional_attributes>560.0;240.0;450.0;240.0;450.0;70.0;270.0;70.0;270.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2160</x>
+      <y>712</y>
+      <w>88</w>
+      <h>416</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=[user]</panel_attributes>
+    <additional_attributes>90.0;500.0;20.0;500.0;20.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2488</x>
+      <y>568</y>
+      <w>104</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Follower
+--
+subscriber:User
+followed:User
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2368</x>
+      <y>592</y>
+      <w>136</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m2=2[user]</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2408</x>
+      <y>712</y>
+      <w>144</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*[favourites]</panel_attributes>
+    <additional_attributes>160.0;160.0;110.0;160.0;110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1576</x>
+      <y>984</y>
+      <w>264</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>FollowerDao implements JpaRepository
+--
++addFollow(subscriber:String, followed:String):void
++getFollows(userId:String):List&lt;String&gt;
++removeFollow(subscriber:String)void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>672</y>
+      <w>1808</w>
+      <h>624</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>2240.0;480.0;2240.0;760.0;10.0;760.0;10.0;10.0;30.0;10.0</additional_attributes>
+  </element>
+</diagram>

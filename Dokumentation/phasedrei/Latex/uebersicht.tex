@@ -1,0 +1,95 @@
+\chapter{Übersicht}
+
+Da sowohl eine App, als auch ein Webserver im Laufe dieses Projekts, erstellt wurden, wurden unterschiedliche Repositories angelegt, eines für den \href{https://github.com/wlauppe/kochbuchserver}{Webserver} und eines für die \href{https://github.com/wlauppe/kochbuchapp}{App}.
+
+\section{App}
+
+\subsection{Paketübersicht}
+Alle im Laufe des Prozesses erstellten Klassen befinden sich unter der Domain \\ \textbf{de.psekochbuch.exzellenzkoch}. Es wurden sowohl strukturelle-, als auch Testklassen erstellt.
+Für die Klassen der Hauptlogik der App sind die Directories nach den drei bestehenden Schichten der Clean Architecture aufgeteilt. Im Toplevel der Domain liegen lediglich die MainActivity, welche die App startet und die InjectorUtils Klasse, auf die später genauer eingegangen wird.
+
+\subsubsection{de.psekochbuch.exzellenzkoch.datalayer}
+
+Unter \textbf{.datalayer.localDB} befinden sich die Klassen für die lokale Datenbank, in der private Rezepte gespeichert werden. Hier liegen:
+\begin{itemize}
+	\item Die Data Access Object \textbf{.datalayer.localDB.daos}
+	\item Die auf dem Server benötigten Entity-Klassen \textbf{.datalayer.localDB.entities}
+	\item Die Imlementierung des PrivateRecipeRepository \textbf{.datalayer.localDB.repositoryImp}, welches den Datenzugriff auf die lokale Datenbank bereitstellt
+\end{itemize}
+
+In \textbf{.datalayer.remote} sind die Klassen für die Kommunikation mit nicht-lokalen Quellen. Dies sind: 
+\begin{itemize}
+	\item API Interfaces in \textbf{.datalayer.remote.api}
+	\item Data Transfer Objects in \textbf{.datalayer.remote.dto}
+	\item Mapper Klassen, die DTOs in Entites umwandeln in \textbf{.datalayer.remote.mapper}
+	\item Implementierung der Server-Repository-Schnittstelle in \textbf{.datalayer.remote.repository}
+	\item Implementierung der Authentifizierung in \textbf{.datalayer.remote.service}
+	\item ApiServiceBuilder als Hilfsklasse für die Service API 
+\end{itemize}
+
+\subsubsection{de.psekochbuch.exzellenzkoch.domainlayer}
+Im Domainlayer befinden sich:
+\begin{itemize}
+	\item Die Domainentity Klassen in \textbf{.domainlayer.domainentities} 
+	\item Die Schnittstellen für die Repositories \textbf{.domainlayer.interfaces.repository}
+	\item Die Schnittstellen für die Services \textbf{.domainlayer.interfaces.services}
+	\item Klassen, welche Reaktionen auf mögliche Fehlermeldungen der Schnittstellen implementieren in \textbf{.domainlayer.interfaces.repository.errors}
+\end{itemize}
+
+
+\subsubsection{de.psekochbuch.exzellenzkoch.userinterfacelayer}
+Im UI Layer liegen:
+\begin{itemize}
+	\item  Adapter Klassen, welche für die RecyclerViews mancher Fragments nötig sind in \textbf{.userinterfacelayer.adapter}
+	\item Fragments in \textbf{.userinterfacelayer.view}
+	\item ViewModel in \textbf{.userinterfacelayer.viewmodel}
+	\item ViewModelFactories in \textbf{.userinterfacelayer.viewmodel.factories} (diese werden im Verlaufe des Dokuments erklärt)
+\end{itemize}
+
+
+\subsubsection{.res}
+Im Resource Directory liegen jegliche layout files, die für die Oberfläche und Navigation zwischen UI-Komponenten nötig sind:
+\begin{itemize}
+	\item Die Fragment XML-Files sind in \textbf{.layout} zu finden.
+	\item Unter \textbf{.navigation} befindet sich die XML-Datei, die den Navigation Graph zum navigieren zwischen Fragments definiert.
+	\item \textbf{.drawable}, \textbf{.mipmap} und \textbf{.values} enthalten Icon-, Farb- und String-Resourcen.
+\end{itemize}
+
+\subsection{Testklassen}
+\subsubsection{.datalayer.remote.mapper}
+Unittests für die Mapperklasse, welche ein PublicRecipe in ein DTO umwandelt.
+
+\subsubsection{.datalayer.remote.repository}
+Unittests für die PublicRecipeAPI und die Implementierung des PublicRecipe Repositories.
+
+\subsubsection{.exzellenzkoch}
+ExampleUnitTest und ExampleInstrumentedTest sind Klassen, die einen Tests implementieren, die auf einem Gerät ausgeführt werden.
+
+\subsubsection{.datalayer.loacalDB.repositoryImp}
+Unittests für die Implementierung der lokalen DB.
+
+
+\section{Server}
+\subsection{Paketübersicht}
+Alle im Laufe des Prozesses erstellten Klassen befinden sich unter der Domain \\
+\textbf{de.psekochbuch.exzellenzkoch}. Es wurden sowohl strukturelle-, als auch Testklassen erstellt. 
+Auf dem Toplevel liegt nur die ExzellenzkochApplication, welche die Springboot Application des Servers Startet.
+
+\subsubsection{\textbf{de.psekochbuch.exzellenzkoch.application}}
+Das vorliegende Directory enthält die Schnittstellen, welche die APIs zu den nötigen auf dem Server gespeicherten Entities definieren in \textbf{.application.api}, sowie die Controller, die die API Interfaces implementieren in \textbf{.application.controller}. Die Data Transfer Objects der Entities sind in \textbf{.application.dto} definiert und in \textbf{.application.service} sind Service-Klassen für jede Entity enthalten.
+
+\subsubsection{\textbf{de.psekochbuch.exzellenzkoch.config}}
+Im config-Directory liegen die Konfigurationen für die Firebase-Authentifizierung, sowie die Sicherheit auf dem Webserver.
+
+\subsubsection{\textbf{de.psekochbuch.exzellenzkoch.domain}}
+In \textbf{.domain.model} sind die Entities, welche auf dem Server gespeichert werden, modelliert.
+
+\subsubsection{\textbf{de.psekochbuch.exzellenzkoch.infrastructure}}
+In \textbf{.infrastructure.dao} sind Repository DAOs für die auf dem Server befindlichen Domain Entites enthalten. In \textbf{.dao.custom} ist ein eigens erstelltes Repository enthalten für das PublicRecipe (Interface und Implementierung).
+
+\subsubsection{\textbf{de.psekochbuch.exzellenzkoch.security}}
+Hier sind Klassen für die Authentifizierung über JSON und Firebase enthalten.
+
+\subsection{Testklassen}
+In \textbf{PublicRecipeTest} wird die PublicRecipeDAO Klasse getestet.
+

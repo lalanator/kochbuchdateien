@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>0</y>
+      <w>280</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>AdminFragment
+--
+--
+-header:TextView
+-reportedUser:TextView
+-profilList:List&lt;TextView&gt;
+-showProfilButton:List&lt;Button&gt;
+
+-reportedRecipes:TextView
+-reportedRecipes:List&lt;TextView&gt;
+-reportedRecipeButton:List&lt;Button&gt;
+
+-reportedGroups:TextView
+-reportedGroupNames:List&lt;TextView&gt;
+-reportedGroupsButton:List&lt;Button&gt;
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>10</y>
+      <w>290</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>AdminViewModel
+--
+&lt;&lt;construct&gt;&gt;users:List&lt;User&gt;, recipes:List&lt;Recipe&gt;,
+groups:List&lt;Group&gt;
+--
+-mrepo:Repository
+-profiles:List&lt;User&gt;
+-recipes:List&lt;PublicRecipe&gt;
+-groups:List&lt;Group&gt;
+--
++showUser(user:User)
++deleteRecipe(recipe:PublicRecipe)
++deleteGroup(group:Group)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>50</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>110</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>270</y>
+      <w>250</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>wechselt zum 
+User Display Fragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>140</y>
+      <w>80</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;130.0</additional_attributes>
+  </element>
+</diagram>

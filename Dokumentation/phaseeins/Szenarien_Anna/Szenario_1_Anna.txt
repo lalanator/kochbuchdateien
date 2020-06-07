@@ -1,0 +1,25 @@
+Szenario 1:
+
+(Use-Case: jüngere Person, mit moderner Technik aufgewachsen)
+
+Anna - 18, Studentin, gerade erst ausgezogen - lebt sich gerade noch in der neuen Stadt
+ein und hat viel in der Uni zu tun. Abends kommt sie hungrig und müde nach Hause 
+und möchte sich nur schnell noch etwas zwischen die Kiemen schieben. 
+Selbst zubereitet soll es trotzdem sein, denn sie achtet darauf, ihre Lebensmittel nicht
+unnötig wegzuwerfen, sondern möglichst restlos zu verarbeiten.
+Sie öffnet den Kühlschrank und findet eine Zwiebel, Lauch, zwei Eier und ein paar Champignons.
+Da sie nicht weiß, was sie aus den Zutaten machen kann, öffnet sie die [Kochbuch]-App.
+Sie gibt in den entsprechenden Feldern der Suchfunktion die Zutaten ein: Zwiebel, Lauch, Eier, Champignons.
+Außerdem definiert sie, dass die Zubereitungszeit nicht länger als 30 Minuten betragen soll.
+Dann klickt sie auf den "suchen"-Button.
+Nach ein bis zwei Sekunden zeigt ihr die App Vorschläge für Gerichte an, die ihren Anforderungen entsprechen.
+Die Gerichte sind absteigend nach der für sie relevanten Kriterien sortiert. Als erstes die Gerichte,
+die alle Anforderungen erfüllen und keine oder wenige zusätzliche Zutaten brauchen, danach absteigend weniger relevante Alternativen.
+
+Anforderungen:
+
+Funktional: Sucheingabe über vordefinierte Bezeichner (Zutaten, Zeit, etc.),
+			"suchen"-Button, um Suche zu starten,
+			Relevanzsortierung in Suchausgaben,
+
+Nichtfunktional: 		

@@ -1,0 +1,62 @@
+Server
+com.cook.cookbook.application.controller (implements Api)
+	RezeptController
+	UserController
+	AuthenticationController 
+
+com.cook.cookbook.application.api (Interfaces)
+	RezeptApi
+	UserApi
+com.cook.cookbook.application.dtos
+	
+com.cook.cookbook.application.services (Erzeugt/Bearbeitet/Löscht Daten)
+	RezeptService
+	UserService
+	AuthenticationService
+	JwtTokenService 
+com.cook.cookbook.repository
+	DatabaseCon
+com.cook.cookbook.domain.model
+	Rezept
+	User
+	Zutat
+	Tag
+
+Client
+com.cook.cookbook
+	MainActivity
+
+com.cook.cookbook.view
+	RezepteListFragment
+	RezeptFragment
+	SearchListFragment
+
+com.cook.cookbook.viewmodel
+	RezepteListViewModel
+	SearchListViewModel
+	RezeptViewModel
+
+com.cook.cookbook.adapter
+	RezeptListAdapter
+	SearchListAdapter
+
+com.cook.cookbook.model
+	Rezept
+	Zutat
+	User
+	Tag
+
+com.cook.cookbook.repository.db
+	AppDatabase
+
+com.cook.cookbook.repository.db.enity
+	RezpetEnity
+	ZutatEnity
+	UserEntity
+	TagEntity
+
+com.cook.cookbook.repository.db.dao
+	RezpetDao
+	UserDao
+
+com.cook.cookbook.repository.	

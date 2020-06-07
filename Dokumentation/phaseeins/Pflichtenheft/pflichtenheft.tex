@@ -1,0 +1,170 @@
+% ---------------------------------------------------------- 
+%lala
+% PDF real ausdrucken:
+%	colorlinks=false setzen oder entfernen
+%	gelbe Kommentare deaktivieren, durch aktiveren des \renewcommands für \kommentar weiter unten
+%	Versionsangaben überprüfen!
+%
+%
+%
+% ---------------------------------------------------------- Einstellungen
+
+% Papierformat, Layout
+\documentclass[a4paper,parskip=full]{scrreprt}
+\usepackage[a4paper,left=2.5cm,right=4cm,top=3cm,bottom=3cm]{geometry}
+
+% Umlaute und Sonderzeichen werden als EIN Zeichen dargestellt und nicht zusammengesetzt.
+\usepackage[T1]{fontenc}
+
+% Deutsche Silbentrennung und mehr (ngerman: new german)
+\usepackage[german]{babel}
+
+% utf8 wegen deutscher Umlaute
+\usepackage[utf8]{inputenc}
+
+% Schönschrift beim PDF erstellen
+\usepackage{lmodern}
+
+% Grafikunterstützung, wie Command: figure
+\usepackage{graphicx}
+
+% Zitate \enquote{} Makro für "quotes"
+\usepackage{csquotes}
+
+% Farbige Hervorhebungen
+\usepackage{soul}
+\sethlcolor{yellow}
+
+% Sneltingtools
+%\usepackage{scrhack}
+\usepackage{rdfref-query}
+\usepackage{rdfref-user}
+\usepackage{xcolor}
+
+%Tools
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{svg}
+\usepackage{caption}
+%\captionsetup[figure]{labelformat=empty, textformat=empty}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{blindtext}
+
+% Klickbare URL in PDF
+% colerlinks auf false setzten für PDF-Druck
+\usepackage{hyperref}
+\hypersetup{pdftitle={Pflichtenheft},
+colorlinks=true, bookmarks, bookmarksnumbered} 
+
+% Glossar
+% Zu laden nach: hyperref, babel, inputenc, fontenc
+\usepackage[nonumberlist, toc]{glossaries}
+
+% PDF Kommentare
+% zu laden nach: hyperref
+% \usepackage{pdfcomment}
+
+% Kommentare einfügen: \kommentar{Autor}{Kommentar\\Zeile2}
+\newcommand{\kommentar}[2]{
+	\begin{tcolorbox}[colback=yellow, title=#1]
+	#2
+	\end{tcolorbox}
+}
+
+\include{macros}
+%Kommentare deaktivieren;
+\renewcommand{\kommentar}[2]{}
+
+% Versionierung
+\newcommand{\version}{1.1}
+
+% Command Overrides
+% item 2. Ebene: Diamonds, statt: -
+\renewcommand{\labelitemii}{$\diamond$}
+% Tabellen-Spaltenabstand (Default 0 mm)
+\setlength{\tabcolsep}{2mm}
+% Tabellen-Zeilenabstand (Default Faktor: 1 )
+\renewcommand{\arraystretch}{1.8}			
+
+%cleveref muss als letztes, sonst compile-error in windows
+\usepackage[nameinlink]{cleveref}
+
+%\glsaddall 
+\makenoidxglossaries
+%
+% % Glossareinträge
+\input{glossar}
+% ---------------------------------------------------------- Dokumentanfang
+% ------------------------------------\\\hline	1.0		&PSE3		&22.11.2019		&Entwurf		&Abgabe---------------------- Deckblatt
+\begin{document}
+
+\title{Pflichtenheft}
+\subtitle{\Large{Kochbuchapp}}
+\date{
+	\vspace{3cm}
+	 Wintersemester 2019/2020, 24.11.2019\\
+	\vspace{1cm}
+	\textbf {v.\version}
+}
+\author{
+        Lea Strauch  
+        \and Magnus Bühler
+        \and Pascal Maier 
+        \and Thomas Weidmann
+        \and Wolf H. Lauppe
+        }
+        
+\maketitle
+
+% ---------------------------------------------------------- Revisions-Historie
+
+\newpage
+\begin{table}[b]
+\centering
+\begin{tabular}{|l|l|l|l|p{0.4\textwidth}|}\hline
+	\textbf{Version}	&\textbf{Autor}	&\textbf{Datum}	&\textbf{Status}	&\textbf{Kommentar}
+\\\hline 	0.2		&PSE3		&19.11.2019		&Entwurf		&Vorababgabe
+\\\hline	0.4		&PSE3		&22.11.2019		&Entwurf		&Vorababgabe
+\\\hline	1.0		&PSE3		&24.11.2019		&Entwurf		&Abgabe
+\\\hline	1.1		&PSE3		&22.12.2019		&			& Revision: Funktionale Anforderungen Admin F.. Verlinkungen gestrichen. 
+\\\hline				&			&			&			&
+\\\hline
+\end{tabular}
+\caption{\label{tab:revision}Versionshistorie}
+\end{table}
+
+
+
+% ---------------------------------------------------------- Abstract
+
+\newpage
+
+% ---------------------------------------------------------- Inhaltsverzeichnis
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\input{zielbestimmung_kriterien}
+\input{produkteinsatz}
+\input{produktumgebung}
+\input{funktionale_anforderungen}
+\input{produktdaten}
+\input{nichtfunk_anforderungen}
+\input{testfaelle}
+\chapter{Systemmodelle}
+\input{szenarien}
+\input{anwendungsfaelle}
+\input{benutzeroberflaeche}
+
+
+%
+% % Automatisch generiertes Glossar (Latex zwei mal ausführen, um Glossar anzuzeigen)
+%
+%\glsaddall % das sorgt dafür, dass alles Glossareinträge gedruckt werden, nicht nur die verwendeten. Das sollte nicht nötig sein!
+\printnoidxglossaries
+
+\end{document}

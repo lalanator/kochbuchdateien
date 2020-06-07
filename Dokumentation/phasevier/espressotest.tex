@@ -1,0 +1,406 @@
+\chapter{User-Interface Layer Testfälle}
+Die Tests des UI Layers wurden mithilfe des Espresso Frameworks durchgeführt. Dazu wurde für jeden Test die Testumgebung auf einem Gerät simuliert, die Voraussetzungen für den Test aufgebaut und dann anhand von Assertions sichergestellt, dass der durchgeführte Test nicht fehlschlägt.
+Alle in diesem Kapitel stehenden Tests befinden sich im Paket \textbf{de.psekochbuch.exzellenzkoch.testcases} in entsprechenden Unterverzeichnissen.
+
+\section{Profil erstellen \& verwalten}
+
+\subsection{Testfall 7.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}}
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet und ist nicht eingeloggt.
+\item Aktion: Der Nutzer Navigiert über das Menü auf "Mein Profil"
+\item Erwartetes Ergebnis: Ein Template mit Email, Benutzer-ID und Passwort öffnet sich, das der Nutzer ausfüllen kann.
+\item Getestet: Das Fragment bietet Textfelder an, die dem Nutzer eine Eingabe für Email, Benutzer-ID und Passwort ermöglichen.
+\end{itemize}
+
+
+\subsection{Testfall 7.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}}
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet und loggt sich ein.
+\item Aktion:  Nun wählt der Nutzer aus, sein Profil zu bearbeiten. 
+\item Erwartetes Ergebnis: Es öfffnet sich ein Template mit den aktuellen Informationen des Nutzers, die er bearbeiten kann. 
+\item Getestet: Das Fragment bietet ein Template an, in das der Nutzer seine Eingaben machen kann.
+\end{itemize}
+
+
+\subsection{Testfall 7.3}
+\subsubsection{Status \textcolor{blue}{ Der Test wird ignoriert}}
+\subsubsection{Vorgehen}
+Diese Funkionalität ist noch nicht implementiert. 
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet und loggt sich ein. Nun wählt der Nutzer aus, sein Profil zu bearbeiten. 
+\item Aktion:  Das Fragment bietet ein Template an, in das der Nutzer eine neue NutzerID einträgt und dies speichert.
+\item Erwartetes Ergebnis: das Rezept wird serverseitig auf Eindeutigkeit überprüft und falls dies der Fall ist geändert. 
+\item Test: Der Server übernimmt die neue ID. (ID wird nicht übernommen)
+\item Lösungsvorschlag: Der Server kann eine existente UserID nicht entfernen, da diese fest mit öffentlichen Rezepten dieses Users verknüpft ist. Man könnte eine Liste an Usern speichern, die gelöscht wurden und weiterhin mit den Rezepten verknüpft bleiben, deren IDs aber wieder vergeben werden können. 
+\end{itemize}
+
+\subsection{Testfall 7.4}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}} 
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffne, besitzt ein Account ohne eingetragene ID und ist eingeloggt. 
+\item Aktion: Er navigiert zur Profilansicht.
+\item Erwartetes Ergebnis: In der Profilansicht wird eine ID angezeigt, die der Server generiert hat. 
+\item Getestet: Der Nutzer hat eine ID zugewiesen bekommen, die angezeigt wird. Es Existiert ein Textfeld mit einem Eintrag "KochDummyXY", wobei XY eine Ganzzahl ist, damit die ID eindeutig ist. 
+\end{itemize}
+
+\subsection{Testfall 7.5}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}} 
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet, besitzt ein Account ohne eingetragene ID  und loggt sich ein. 
+\item Aktion: Er navigiert zur Profilbearbeiten Ansicht und wählt aus, dass er seinen Account löschen möchte.
+\item Erwartetes Ergebnis: Der Nutzer wird lokal und Serverseitig gelöscht 
+\item Getestet:  alle Daten des Nutzers sind gelöscht und es kann ein neuer Account mit den Daten erstellt werden. Es wird ein Account erstellt mit den exakt gleichen Informationen, um zu sehen ob der Nutzer gelöscht wurde.  
+\end{itemize}
+
+
+\subsection{Testfall 7.6}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}} 
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet, besitzt einen Account ohne eingetragene ID und loggt sich ein. Der Nutzer hat private Rezepte erstellt.
+\item Aktion: Der Nutzer löscht sein Profil und sucht das Rezept in den öffentlichen Rezepten. 
+\item Erwartetes Ergebnis: Jedes Rezept ist nur noch lokal verfügbar und serverseitig gelöscht. 
+\item Getestet:  Das Rezept wird in der Suche nicht mehr angezeigt.
+\end{itemize}
+
+
+\subsection{Testfall 7.7}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}} 
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet, besitzt einen Account und loggt sich ein. Er navigiert zu der Profil Bearbeiten Ansicht.
+\item Aktion: Er ändert dort seine NutzerID.
+\item Erwartetes Ergebnis: Der Server testet die eingegebene ID auf Eindeutigkeit und ändert diese gegebenenfalls.
+\item Getestet: Der Nutzer registriert sich und geht in die Profilbearbeiten Ansicht. Dort ändert er seine ID und Speichert. Dann wird getestet, ob diese ID übernommen wurde. 
+\end{itemize}
+
+
+
+\section{Erstellen von Rezepten}
+
+\subsection{Testfall 8.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}} 
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App geöffnet, besitzt einen Account und loggt sich ein.
+\item Aktion:  Erstellt ein neues Rezept und speichert dies ab.
+\item Erwartetes Ergebnis: Das Ergebnis hat wird in der Suche angezeigt und hat das aktuelle Datum
+\item Getestet: Das Rezept wird in der Suche gefunden, ausgewählt und hat das aktuelle Datum als Eintrag. Das ein Rezept lokal das Datum als Eintrag hat, wird über die datalayer.localDB.repository Tests überdeckt. 
+\end{itemize}
+
+
+\subsection{Testfall 8.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und wählt aus, ein Rezept zu erstellen.  
+\item Aktion: Er gibt einen Titel, die Zubereitungszeit, die Backzeit, die Portionenanzahl, die Zutaten mit Mengenangaben  und eine Zubereitungsbeschreibung ein und speichert das Rezept.
+\item Erwartetes Ergebnis: Das Ergebnis ist lokal gespeichert und über die Rezeptliste abrufbar. 
+\item Getestet: Der Nutzer navigiert zur Rezeptliste, wo das eben erstellte Rezept angezeigt wird. 
+\end{itemize}
+
+
+\section{Speichern von Rezepten}
+
+\subsection{Testfall 9.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und wählt aus, ein Rezept zu erstellen. 
+\item Aktion: Er gibt einige Informationen ein und verlässt die Erstellen-Ansicht über den Zurück-Button des Gerätes.
+\item Erwartetes Ergebnis: Das Rezept wird in der Rezeptliste angezeigt.
+\item Getestet: Vergleich: Wird das Rezept angezeigt und sind die eingegebenen Daten mit den Erwarteten kongruent?
+\end{itemize}
+
+
+\subsection{Testfall 9.2}
+\subsubsection{Status \textcolor{green}{Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und wählt aus, ein Rezept zu erstellen. 
+\item Aktion: Er gibt einige Informationen ein und verlässt die Ansicht. und navigiert zur suche, wo er das Rezept sucht. 
+\item Erwartetes Ergebnis: Das Rezept wird automatisch gespeichert, sobald die Ansicht verlassen wird und das Rezept wird in der Suche  angezeigt. Falls der Nutzer gewählt hat, das Rezept zu veröffentlichen wird es auf dem Server aktualisiert. 
+\item Getestet: Der Nutzer sucht über die Suche  das geänderte Rezept, welches in der Suche in der aktuellen Version angezeigt wird.  
+
+\end{itemize}
+
+
+\subsection{Testfall 9.3}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und wählt aus ein Rezept zu erstellen. 
+\item Aktion: Er gibt einige Informationen ein, drückt den "`speichern"'-Button und verlässt die Ansicht.
+\item Erwartetes Ergebnis: Das Rezept wird in der Rezeptliste angezeigt, welche über das Menü auffindbar ist. 
+\item Getestet: Das Rezept wird in der Rezeptliste angezeigt.
+\end{itemize}
+
+
+\section{Veröffentlichen von Rezepten}
+
+\subsection{Testfall 10.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und meldet sich an. 
+\item Aktion: Er erstellt ein neues Rezept, markiert, dass dieses veröffentlicht werden soll und speichert es.
+\item Erwartetes Ergebnis: Das Rezept wird veröffentlicht und ist öffentlich sichtbar.
+\item Getestet: Das soeben erstellte Rezept ist das erste angezeigte Rezept, wenn der Feed aufgerufen wird.
+\end{itemize}
+
+\subsection{Testfall 10.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und meldet sich an.
+\item Aktion:  Er erstellt unvollständig ein Rezept und speichert dies.
+\item Erwartetes Ergebnis:  Das Rezept ist trotz seiner Unvollständigkeit in der Rezeptliste gespeichert worden. Bei der Konvertierung des Rezeptes ist jedoch aufgefallen, dass es nicht vollständig war und daher wird dieses nicht veröffentlicht. 
+\item Getestet: Das Rezept kann in der Lokalen Rezeptliste in seiner Aktuellen Form gefunden werden, jedoch ist es über die Suchfunktion nicht auffindbar, da es nicht veröffentlicht wurde. 
+\end{itemize}
+
+
+\subsection{Testfall 10.4}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und meldet sich an. Über das Menü navigiert er zu seiner Rezeptliste, wo er auswählt ein neues Rezept zu erstellen.
+\item Aktion:  Er erstellt ein Rezept, welches er komplett und vollständig über das Template beschreibt. Er wählt aus das Rezept zu veröffentlichen und drückt speichern.
+\item Erwartetes Ergebnis: Das Rezept wird auf Vollständigkeit getestet und da dies erfüllt wird auf dem Server veröffentlicht. 
+\item Getestet: Der Nutzer ist nach dem Erstellen des Rezepts in seiner Rezeptliste, wo das Rezept angezeigt wird. Nun navigiert er über das Menü zur Suche und gibt als Suchkriterium den Titel des eben erstellen Rezepts ein. Er drückt auf suchen und unter den geladenen, öffentlichen Rezepten findet er auch das gerade erstelle Rezept. 
+\end{itemize}
+
+\section{Bearbeiten und Löschen von Rezepten}
+
+
+\subsection{Testfall 11.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer ist angemeldet, navigiert über das Menü zu seiner Rezeptliste, wo er ein Rezept erstellt. Nach dem Erstellen befindet er sich wieder in der Rezeptliste, wo er das Rezept auswählt.
+\item Aktion:  Er ändert den Titel des Rezepts ab und wählt aus das Rezept mit seinem neuen Titel zu speichern.
+\item Erwartetes Ergebnis: Das Rezept wird lokal und Serverseitig mit dem neuen Titel akualisiert. 
+\item Getestet: Der nutzer geht auf die Suche und gibt den neuen Titel des Rezepts ein. Er findet das eben geänderte und veröffentliche Rezept und sieht, dass der Titel akualisiert wurde. 
+\end{itemize}
+
+\subsection{Testfall 11.2}
+\subsubsection{Status \textcolor{red}{ Der Test schlägt fehl} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer befindet sich in der App und navigiert über das Menü zur Loginseite, wo er seine Email und sein Passwort eingibt. Nachdem er sich eingeloggt hat, geht er zu seiner Rezeptliste, wählt aus ein neues Rezept zu Erstellen. Er füllt alle notwendigen Felder für ein öffentliches Rezept aus, und wählt aus dieses zu veröffentlichen und zu speichern. Nun erscheint das Rezept in seiner Aktuellen Form in der Rezeptliste.
+\item Aktion: Der Nutzer öffnet das Rezept in der Bearbeiten Ansicht und gibt dem Rezept einen neuen Titel. Wieder wählt er aus das Rezept mit seiner neuen Form zu veröffentlichen. 
+\item Erwartetes Ergebnis: Das Ergebnis wird nicht doppelt erstellt, sondern nur mit dem aktuellen Titel aktualisiert. Es ist in seiner neuen Form lokal und auf dem Server Verfügbar.
+\item Getestet: Nach dem Bearbeiten des Rezepts befindet sich der Nutzer in seiner Rezeptliste. Nun navigiert er über das Menü zur Suche, wo er den neuen Titel des Rezepts eingibt. Beim Suchen wird das neue, aktualisierte Rezept in der öffentlichen Suchergebnissliste angzeigt. 
+\item Lösungsvorschlag: Das Bild laden erfodert eine Nutzerinteraktion, weshalb dies nur manuell testbar ist. Für den Zugriff auf die Galerie benötigt man das Einverständnis des Nutzers, was Espresso nicht emulieren kann. Daher ist dieser Test hier nicht durchführ bar. Das Speichern eines Bildpfads wird über die Repositorytests abgedeckt. 
+\end{itemize}
+
+\subsection{Testfall 11.3}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer ist eingeloggt und erstellt ein Rezept, welches in der Rezeptliste angezeigt wird. 
+\item Aktion: Er wählt aus, das Rezept zu löschen.
+\item Erwartetes Ergebnis: Das Rezept wird lokal aus der Datenbank entfernt und wird daher nicht mehr in der Rezeptliste angezeigt und falls das Rezept öffentlich war, wird dieses Serverseitig entfernt.
+\item Getestet: Nach dem Löschen des Rezepts wird das Rezept nicht mehr in der Rezeptliste angezeigt und wenn der Nutzer über die Suche das Rezept sucht, wird dieses nicht mehr geladen. 
+\end{itemize}
+
+\subsection{Testfall 11.4}
+\subsubsection{Status \textcolor{blue}{ Der Test wird überdeckt}}
+\subsubsection{Vorgehen}
+\begin{itemize}
+
+\item  (Dieser Test wird von Test 10.4 und 7.5 vollkommen überdeckt. Daher wurde er hier nicht erneut implementiert, sondern das Vorgehen nur beschrieben)
+\item Voraussetzung: Der Nutzer ist eingeloggt und befindet sich in der Rezeptliste, wo alle selbst erstellen Rezepte angezeigt werden.
+\item Aktion: Der Nutzer wählt bei einem Rezept aus, dieses zu löschen.
+\item Erwartetes Ergebnis: Das Rezept wird aus der lokalen Datenbank entfernt und nicht mehr in der Rezeptliste angezeigt. Falls das Rezept öffentlich verfügbar war, wird das Rezept serverseitig entfernt und ist nicht mehr über dies Suche auffindbar. 
+\item Getestet: Nach dem Löschen des Rezepts befindet sich der Nutzer auf seiner Rezeptliste. Er navigiert zur Suche und gibt den Titel des eben gelöschten Rezepts ein. Dieses wird nicht mehr in den Suchergebnissen abgezeigt. 
+\end{itemize}
+
+
+\section{Laden von Rezepten}
+
+
+\subsection{Testfall 12.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App, ihm wird der Feed angezeigt. 
+\item Aktion: Er wählt eines der Rezepte aus.
+\item Erwartetes Ergebnis: Das Rezept wird angezeigt.
+\item Getestet: Das Rezept wird serverseitig geladen und alle Elemente werden angezeigt.
+\end{itemize}
+
+
+\section{Favoriten}
+
+\subsection{Testfall 13.1\&2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet die App und wählt ein öffentliches Rezept zum anzeigen an (hier: aus dem Feed).
+\item Aktion:  Er drückt den "`favorisieren"' Button.
+\item Erwartetes Ergebnis: In der Favoritenliste wird das soeben favorisierte Rezept angezeigt.
+\item Getestet: Der Rezepttitel des Rezeptes, das nach dem Favorisieren in der Favoritenliste steht, entspricht dem erwarteten Wert.
+\end{itemize}
+
+
+\section{Mengenangaben skalieren}
+
+\subsection{Testfall 14.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer öffnet ein öffentliches Rezept und skaliert einmal des Rezept um eine Portion hoch und danach einmal um eine Portion runter.
+\item Erwartetes Ergebnis: Die Mengenangaben im Zutaten-Textfeld werden erst hochskaliert und danach auf den ursprünglichen Wert wieder runterskaliert.
+\item Getestet: Der Eingabetext inklusive veränderter Mengeneingaben entspricht beide Male den erwarteten Werten.
+\end{itemize}
+
+
+
+\section{Benutzerprofil}
+
+\subsection{Testfall 21.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch}}
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App offen und meldet sich an. Er geht auf "`Profil bearbeiten"' und tippt etwas in das "`Beschreibung"'-Textfeld. Dann drückt er auf speichern.
+\item Erwartetes Ergebnis: Die Nutzerprofilansicht seines eigenen Profils zeigt die aktualisierte Beschreibung an.
+\item Getestet: Der Textfeld, das die Beschreibung enthält, enthält den zuvor eingegebenen neuen String.
+\item Lösungsvorschlag:
+\end{itemize}
+
+
+\subsection{Testfall 21.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Voraussetzung: Der Nutzer hat die App offen und meldet sich an. Er läd ein Bild hoch.
+\item Erwartetes Ergebnis: Die Nutzerprofilansicht seines eigenen Profils zeigt das aktualisierte Profilbild an.
+\item Getestet: das Bild des Nutzers wurde übernommen und geladen.
+\end{itemize}
+
+
+\section{Nutzeranmeldung}
+
+\subsection{Testfall 22.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App offen und wählt über das Appmenü "`Mein Profil"' aus. Er tippt seine Email-Adresse und sein Passwort ein und drückt auf den "`Login"'-Button.
+\item Erwartetes Ergebnis: Der Nutzer gelangt auf seine persönliche Nutzerprofilansicht.
+\item Getestet: Der Nutzer ist eingeloggt 
+\end{itemize}
+
+\section{Rezeptsuche}
+
+\subsection{Testfall 25.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer befindet sich in der Rezeptsuche und gibt einen Titel ein, nach dem er suchen möchte.
+\item Aktion: Er klickt auf "`suchen"'.
+\item Erwartetes Ergebnis: Dem Nutzer wird eine Liste von Rezepten angezeigt.
+\item Getestet: Simulierte Nutzereingabe und Zusicherung, dass eine Rezeptliste angezeigt wird.
+\end{itemize}
+
+\subsection{Testfall 25.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer geht auf die Suche und gibt "beutel" ein. Es werden ihm Rezepte, die "beutel" im Titel haben.
+\item Aktion: Er wählt die Option nach "Titel" zu sortieren.
+\item Erwartetes Ergebnis: Die Rezepte werden nun nach ihrem Titel sortiert angezeigt. 
+\item Getestet: Simulierte Nutzereingabe und Zusicherung, dass auch nur Rezepte mit dem Schlagwort angezeigt werden.
+\end{itemize}
+
+\section{Rezeptfeed}
+
+
+\subsection{Testfall 28.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer hat die App installiert.
+\item Aktion: Der Nutzer öffnet die App.
+\item Erwartetes Ergebnis: Ihm wird der Feed angezeigt.
+\item Getestet: Die App wird geöffnet und eine Zusicherung gesetzt, dass Rezepte angezeigt werden.
+\end{itemize}
+
+\subsection{Testfall 28.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+\item Voraussetzung: Der Nutzer geht auf eine Seite, die nicht der Feed ist. 
+\item Aktion: Er klickt im Menü auf "`Feed"'.
+\item Erwartetes Ergebnis: Der Feed wird geladen und angezeigt.
+\item Getestet: Aufruf des Feeds aus einem anderen Fragment und Zusicherung, dass Rezepte angezeigt werden. 
+\end{itemize}
+
+\section{Navigation-Tests}
+
+Die Navigationstests sind im Paket \textbf{de.psekochbuch.exzellenzkoch.navigation} zu finden.
+
+\subsection{Menu}
+\subsubsection{menu -> AdminFragment \textcolor{green}{läuft durch}}
+\subsubsection{menu -> FavouriteFragment \textcolor{green}{läuft durch}}
+\subsubsection{menu -> FeedFragment \textcolor{green}{läuft durch}}
+\subsubsection{menu -> LoginFragment \textcolor{green}{läuft durch}}
+\subsubsection{menu -> RecipelistFragment \textcolor{green}{läuft durch}}
+\subsubsection{menu -> SearchFragment \textcolor{green}{läuft durch}}
+\subsubsection{menu -> ProfileDisplayFragment \textcolor{green}{läuft durch}}
+
+\subsection{AdminFragment}
+\subsubsection{AdminFragment -> RecipeDisplayFragment \textcolor{green}{läuft durch}}
+\subsubsection{AdminFragment -> ProfileDisplayFragment \textcolor{green}{läuft durch}}
+
+\subsection{CreateRecipeFragment}
+\subsubsection{CreateRecipeFragment -> RecipeListFragment \textcolor{green}{läuft durch}}
+
+\subsection{RecipeDisplayFragment}
+\subsubsection{FavouriteFragment -> RecipeDisplayFragment \textcolor{green}{läuft durch}}
+
+\subsection{LoginFragment}
+\subsubsection{LoginFragment -> RegistrationFragment \textcolor{green}{läuft durch}}
+\subsubsection{LoginFragment -> ProfileDisplayFragment \textcolor{green}{läuft durch}}
+
+\subsection{ProfileDisplayFragment}
+\subsubsection{ProfileDisplayFragment -> ProfileEditFragment \textcolor{green}{läuft durch}}
+\subsubsection{ProfileDisplayFragment -> LoginFragment \textcolor{green}{läuft durch}}
+\subsubsection{ProfileDisplayFragment -> RecipeSearchFragment \textcolor{blue}{wurde entfernt}}
+Diese Verbindung wurde entfernt, da sie nicht richtig war. 
+\subsubsection{ProfileDisplayFragment -> RecipeDisplayFragment \textcolor{green}{läuft durch}} 
+
+\subsection{ProfileEditFragment}
+\subsubsection{ProfileEditFragment -> ProfileDisplayFragment \textcolor{green}{läuft durch}}
+\subsubsection{ProfileEditFragment -> RegistrationFragment \textcolor{green}{läuft durch}}
+\subsubsection{ProfileEditFragment -> ChangePasswordFragment \textcolor{green}{läuft durch}}
+
+\subsection{PublicRecipeSearchFragment}
+\subsubsection{PublicRecipeSearchFragment -> DisplaySearchListFragment \textcolor{green}{läuft durch}}
+
+
+\subsection{DisplaySearchListFragment}
+\subsubsection{DisplaySearchListFragment -> RecipeDisplayFragment \textcolor{green}{läuft durch}}
+
+\subsection{RecipeDisplayFragment}
+\subsubsection{RecipeDisplayFragment -> FavouriteFragment \textcolor{blue}{wurde entfernt}}
+Diese Verbindung wurde entfernt, da die Favoriten über das Menü erreicht werden sollen.
+\subsubsection{RecipeDisplayFragment -> DisplaySearchFragment \textcolor{blue}{wurde entfernt}}
+Diese Verbindung wurde entfernt, da das Rezept weiterhin angezeigt werden soll.
+
+\subsection{RecipeListFragment}
+\subsubsection{RecipeListFragment -> CreateRecipeFragment \textcolor{green}{läuft durch}}
+
+\subsection{RegistrationFragment}
+\subsubsection{RegistrationFragment -> ProfileEditFragment \textcolor{green}{läuft durch}}
+
+\subsection{ChangePasswordFragment}
+\subsubsection{ChangePasswordFragment -> ProfileDisplayFragment \textcolor{green}{läuft durch}}
+
+
+

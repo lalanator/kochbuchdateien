@@ -1,0 +1,26 @@
+\chapter{Zielbestimmung}
+
+Dieses Dokument bietet ein Bericht zur Qualitätssicherung des Projektes "`Exzellenzkoch"'. Wie bereits in vorigen Dokumenten wird sich an den drei Schichten der zugrundeliegenden Clean Architecture orientiert:
+\begin{itemize}
+	\item User Interface Layer
+	\item Data Layer
+	\item Domain Layer
+\end{itemize}
+Die dokumentierten Testfälle beinhalten alle im Pflichtenheft spezifizierten Testfälle, die zum derzeitigen Implementierungsstand umsetzbar sind. Es werden also alle Muss-, sowie implementierte Wunschkriterien getestet.
+
+\section{Paketübersicht}
+\subsection{Client}
+Generell teilen sich die Testpakete in zwei Stränge auf: Unittests und andere Tests.
+Unittests sind im Paket \textbf{de.psekochbuch.exzellenzkoch} unter "`test"' zu finden und andere Tests in \textbf{de.psekochbuch.exzellenzkoch} unter "`androidTest"'. 
+Unter "`andere Tests"' zählen sowohl die Tests des UI Layers, sowie auch die Repository- und Lasttests.
+Die Tests des User Interface Layers befinden sich im Paket \textbf{de.psekochbuch.exzellenzkoch.testcases}, sowie in \textbf{de.psekochbuch.exzellenzkoch.navigation}.
+Die Tests des Data Layers teilen sich auf in Servertests und Tests der Interface Implementierungen.
+Repositorytests befinden sich im Paket
+\textbf{de.psekochbuch.exzellenzkoch.datalayer}.
+Der Server wird in seinem eigenen Repo getestet.
+Lastentests sind im Paket \textbf{de.psekochbuch.exzellenzkoch.lastentest} zu finden.
+Das Domain Layer enthält lediglich die Domain Entities, sowie die Interfaces, welche nicht getestet werden.
+
+\subsection{Server}
+Servertests befinden sich im Paket \\
+\textbf{package de.psekochbuch.exzellenzkoch} unter "`test.kotlin"'

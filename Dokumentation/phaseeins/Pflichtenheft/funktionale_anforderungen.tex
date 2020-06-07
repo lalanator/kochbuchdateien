@@ -1,0 +1,506 @@
+\chapter{Funktionale Anforderungen}
+
+
+	 
+	%Rezeptverwaltung
+\section{Rezeptverwaltung}
+
+	\subsection{Erstellung von Rezepten}
+	
+	\functionality{Neues Rezept erstellen}{fnc:rec_new}
+		\Glspl{Nutzer} können neue Rezepte erstellen
+	\fulfills{crt:rezepterstellen}
+	
+		\functionality{Bild hinzufügen}{fnc:rec_pic}
+			\Glspl{Autor} können ihren Rezepten ein Bild hinzufügen
+		\fulfills{crt:rezepterstellen}
+
+		\functionality{Titel}{fnc:rec_title}
+			\Glspl{Autor} können ihren Rezepten einen Titel geben
+		\fulfills{crt:rezepterstellen}
+
+		\functionality{Zutatenliste}{fnc:rec_zutaten}
+			\Glspl{Autor} können in ihren Rezepten eine Zutatenliste angeben
+		\fulfills{crt:rezepterstellen}
+
+		\functionality{Mengenangabe}{fnc:rec_mengen}
+			\Glspl{Autor} können zu jeder Zutat einer Zutatenliste Mengenangaben machen
+		\fulfills{crt:rezepterstellen}
+
+		\functionality{Zubereitungsbeschreibung}{fnc:rec_beschreib}
+			\Glspl{Autor} können ihren Rezepten eine Zubereitungsbeschreibung hinzufügen
+		\fulfills{crt:rezepterstellen}
+
+		\functionality{Tags}{fnc:rec_tags}
+			\Glspl{Autor} können ihren Rezepten \glspl{Tag} aus einer vordefinierten Liste hinzufügen
+		\fulfills{crt:rezepterstellen}
+
+		\functionality{Gesamtzeit aufteilen}{fnc:rec_time_split} 
+			\Glspl{Autor} können ihren Rezepten Zeiten zuordnen:
+					\begin{itemize}[nosep]
+						\item \gls{Zubereitungszeit}
+						\item \gls{Backzeit/Schmorzeit}
+					\end{itemize}
+		\fulfills{crt:rezepterstellen}
+		
+		\functionality{Gesamtzeit}{rec_time}
+			Aus \gls{Zubereitungszeit} und der \gls{Backzeit/Schmorzeit} wird die Gesamtzeit errechnet
+		\fulfills{crt:rezepterstellen}
+					
+		\functionality{Portionenanzahl}{fnc:rec_portions}
+			\Glspl{Autor} können die Anzahl an Portionen, die eines ihrer Rezepte bedient, festlegen
+		\fulfills{crt:rezepterstellen}
+
+		
+	\subsection{Speichern von Rezepten}
+	
+		\functionality{Automatisches Speichern}{fnc:rec_save}
+			\Glspl{pRezept} werden automatisch in der \gls{Rezeptliste} gespeichert, auch wenn sie noch nicht fertig bearbeitet sind
+		\fulfills{crt:speichere_unvollst}
+		
+		\functionality{Rezeptliste}{fnc:rec_list}
+			Die \gls{Rezeptliste} hat einen eigenen Menüpunkt im Appmenü
+		\fulfills{crt:speichere_unvollst}
+		
+	\subsection{Veröffentlichen von Rezepten}
+	
+		\functionality{Autoren können ihre privaten Rezepte veröffentlichen}{fnc:rec_pub}
+			Bei Veröffentlichung muss das Rezept:
+				\begin{itemize}[nosep]
+					\item einen Titel haben
+					\item eine Zutatenliste haben
+					\item eine Zubereitungsbeschreibung haben
+					\item eine Zubereitungsdauer haben
+					\item eine Anzahl an Portionen haben
+				\end{itemize}
+  	\fulfills{crt:rezeptveroeffentlichen}
+		\fulfills{crt:rezeptdurchsuchen}
+	
+		\functionality{Erstelldatum}{fnc:rec_date}
+		 Dem Rezept wird bei Veröffentlichung das Erstelldatum hinzugefügt
+		\fulfills{crt:rezeptveroeffentlichen}
+		\fulfills{crt:rezeptdurchsuchen}
+		
+		
+	\subsection{Bearbeitung von Rezepten}
+	
+	\functionality{Private Rezepte bearbeiten}{fnc:rec_edit}
+		\glspl{Autor} können alle Felder ihrer privaten Rezepten \gls{bearbeiten}
+	\fulfills{crt:rezeptverwalten}
+		
+	\functionality{Öffentliche Rezepte bearbeiten}{fnc:rec_pub_edit}
+	Wenn Autoren das zugehörige private Rezept eines öffentlchen Rezepts erneut veröffentlichen, ist das veröffentlichte Rezept in der neuen bearbeiteten Version verfügbar
+	\fulfills{crt:rezeptverwalten}
+	
+	\functionality{Rezepte löschen}{fnc:rec_del}
+		\glspl{Autor} können ihre privaten Rezepte und veröffentlichten Rezepte löschen
+	\fulfills{crt:rezeptverwalten}
+
+
+	\subsection{Favoriten}
+	
+	\functionality{Favorisieren von Rezepten}{fnc:fav}
+	Nutzer können \glspl{oRezept} als Favoriten auswählen
+	\fulfills{crt:rezeptdurchsuchen}
+	\fulfills{crt:rezeptfav}
+
+	\functionality{Favoritenliste}{fnc:fav_men}
+	Favorisierte Rezepte haben einen eigenen Menüpunkt im Appmenü
+	\fulfills{crt:rezeptfav}
+	
+	
+	\subsection{{\em optional} Mengenangaben skalieren}
+	
+	\functionality{Portionenanzahl skalieren}{fnc:port_skal}
+		Die Portionenanzahl eines Rezepts ist von einem Nutzer in der Rezeptanzeige änderbar.
+		Die Zutatenmengen in der Anzeige passen sich entsprechend an
+	\fulfills{crt:mengenangaben_skalieren}
+	
+	\subsection {{\em optional} Einkaufsliste}	
+	\functionality{Einkaufsliste}{fnc:shop_who}
+		Alle \glspl{Nutzer} haben eine Einkaufsliste. Diese kann leer sein
+	\fulfills{crt:einkaufsliste}
+	
+	\functionality{Zutaten hinzufügen}{fnc:shop_add}
+		\glspl{Nutzer} können Zutaten eines Rezepts auswählen und ihrer Einkaufsliste hinzufügen
+	\fulfills{crt:einkaufsliste}
+	
+	\functionality{Mengenangaben übernehmen}{fnc:shop_men}
+		Die eingestellten Mengenangaben einer Zutat werden mit in die Einkaufsliste übernommen
+	\fulfills{crt:einkaufsliste}
+	
+	\functionality{Einkaufsliste bearbeiten}{fnc:shop_del}
+		\glspl{Nutzer} können Zutaten von ihrer Einkaufsliste löschen
+	\fulfills{crt:einkaufsliste}
+	
+	\functionality{Einkaufsliste finden}{fnc:shop_pos}
+		Die Einkaufsliste hat einen eigenen Menüpunkt im Appmenü
+	\fulfills{crt:einkaufsliste}
+
+
+	\subsection{{\em optional} Import- und Exportfunktion}
+		
+		\functionality{Export}{fnc:exp}
+		Rezepte können in eine Datei \gls{lokal} auf dem Gerät  \gls{Nutzer}s exportiert, bzw. an eine andere App, wie Notizapp oder Mailapp per Teilen an-Knopf gesendet werden
+		\fulfills{crt:importexport}
+		
+		\functionality{Import}{fnc:imp}
+		Rezepte können aus externen Quellen als neue \glspl{pRezept} in die Applikation geladen werden. Externe Quellen sind:
+		\begin{itemize}[nosep]
+					\item Rezepte von bereits existierenden Kochwebseiten
+					\item Text aus anderen Apps
+				\end{itemize}
+		\fulfills{crt:importexport}
+
+	
+	\subsection{{\em optional} Textverweise auf interne Rezepte}
+	
+		\functionality{Rezepte verlinken}{fnc:link}
+		\glspl{Autor} können in ihrem Rezept einzelne Wörter auswählen und ihnen pro Wort ein \glspl{oRezept} zuordnen
+		\fulfills{crt:rezeptverlinken}
+		
+		
+		\functionality{Anzeige von Verlinkungen}{fnc:linkcol}
+		Verlinkte Wörter werden nach Veröffentlichung des Rezepts farblich vom restlichen Text abgehoben
+		\fulfills{crt:rezeptverlinken}
+		
+		\functionality{Aufrufen von Verlinkten Rezepten}{fnc:linkact}
+		\Glspl{Nutzer} können verlinkte Rezepte durch das Auswählen eines markierten Wortes anzeigen lassen
+		\fulfills{crt:rezeptverlinken}
+		
+		\functionality{Inaktive Verlinkungen}{fnc:linkinact}
+		Ist ein \gls{oRezept} nicht mehr vorhanden (zB gelöscht), aber noch in einem anderen Rezept verlinkt, wird eine Fehlermeldung angezeigt
+		\fulfills{crt:rezeptverlinken}
+		
+		\subsection{{\em optional} Rezeptstruktur}
+	  \functionality{Eingabe von Überschriften}{fnc:ueingabe}
+	  Nutzer können die Zutatenliste und Rezepteingabe durch Überschriften untergliedern
+		\fulfills{crt:rezeptstruktur}
+		
+		\functionality{Anzeige von Überschriften}{fnc:uanzeige}
+		In der Rezeptanzeige wird die Zutatenliste und Rezepteschreibung mit Überschriften zu einzelnen Abschnitten   formatiert dargestellt 
+		\fulfills{crt:rezeptstruktur}
+		
+
+	\subsection{{\em optional} Bewertungsfunktion}
+		
+		\functionality{Bewertung}{fnc:bew}
+		\Glspl{angemeldeter Nutzer} können jedem veröffentlichten Rezept einen Wert von 1 bis 5 zuordnen
+		\fulfills{crt:bewerten}
+		
+
+	\subsection{{\em optional} Kommentarfunktion}
+
+		\functionality{Kommentare anzeigen}{fnc:com_see}
+		Unter einem veröffentlichten Rezept werden vorhandene Kommentare angezeigt
+		\fulfills{crt:rezept_kommentieren}
+	
+	
+		\functionality{Rezept kommentieren}{fnc:com_wr}
+		\Glspl{angemeldeter Nutzer} können einem \gls{oRezept} Kommentare hinzufügen
+		\fulfills{crt:rezept_kommentieren}
+		
+		\functionality{Kommentare bearbeiten}{fnc:com_ed}
+		Nutzer können ihre Kommentare unter einem veröffentlichten Rezept \gls{bearbeiten}
+		\fulfills{crt:rezept_kommentieren}
+		
+%Benutzerverwaltung
+\section{Benutzerverwaltung}
+
+	\subsection{Profilerstellung}
+	
+	\functionality{Profilerstellung}{fnc:prf}
+	\Glspl{Nutzer} müssen bei der Erstellung folgende Daten angeben: eindeutige E-Mail-Adresse und Passwort. \Glspl{angemeldeter Nutzer} können eine eindeutige \gls{ID} angeben. 
+	\fulfills{crt:make_acc}
+	
+	\functionality{Benutzer ID zuweisen}{fnc:id}
+	Falls \Glspl{Nutzer} keine eindeutige \gls{ID} bei Profilerstellung angibt, wird ihm eine eindeutige \gls{ID} zugewiesen
+	\fulfills{crt:make_acc}	
+	
+		
+	\subsection{Profilbearbeitung}
+	
+	\functionality{Passwort ändern}{fnc:pw_chg}
+	\Glspl{angemeldeter Nutzer} können eigenes Passwort ändern
+	\fulfills{crt:make_acc}
+	
+	\functionality{Benutzer-Id ändern}{fnc:id_chg}
+	\Glspl{angemeldeter Nutzer} können ihre \gls{ID} ändern
+	\fulfills{crt:make_acc}
+
+	
+	\functionality{Profil löschen}{fnc:del_profil}
+	\Glspl{angemeldeter Nutzer} können eigenes Profil löschen. Dabei werden alle Benutzerdaten, außer gespeicherte Rezepte, gelöscht
+	\fulfills{crt:make_acc}
+		
+	\subsection{{\em optional} Benutzerprofil}
+	
+	\functionality{Personenbeschreibung hinzufügen}{fnc:prsn_dsc}
+	\Glspl{angemeldeter Nutzer} können eine textuelle Kurzbeschreibung seiner selbst zum Benutzerprofil hinzufügen
+	\fulfills{crt:profilansicht}
+
+	\functionality{Personenbeschreibung bearbeiten}{fnc:prsn_chg}
+	\Glspl{angemeldeter Nutzer} können eigene Personenbeschreibung bearbeiten
+	\fulfills{crt:profilansicht}
+
+	\functionality{Profilbild hinzufügen}{fnc:prsn_dscc}
+	\Glspl{angemeldeter Nutzer} können ein Profilbild hinzufügen. Falls kein Profilbild hinzugefügt wurde, wird Default-Bild eingestellt
+	\fulfills{crt:account_profilbild}
+	
+	\functionality{Profilbild bearbeiten}{fnc:prsn_chgg}
+	\Glspl{angemeldeter Nutzer} können eigenes Profilbild \glspl{bearbeiten}
+	\fulfills{crt:account_profilbild}
+	
+	\functionality{Profil anschauen}{fnc:prfl_rprsnt}
+	\Glspl{Nutzer} können Profile von anderen angemeldeten Nutzern anschauen. Dabei sind ID, Liste veröffentlichter Rezepte, Personenbeschreibung und Profilbild sichtbar
+	\fulfills{crt:profilansicht}
+	
+	\functionality{Profil abonnieren}{fnc:prfl_abb}
+	\Glspl{angemeldeter Nutzer} müssen andere \glspl{angemeldeter Nutzer} abonnieren und wieder deabonnieren können
+	\fulfills{crt:profilansicht}
+	
+	\functionality{Abonnierte Profile}{fnc:wtch_abb}
+	Abonnierte, \glspl{angemeldeter Nutzer} sind in einem eigenen Menüpunkt im Appmenü einsehbar
+	\fulfills{crt:profilansicht}
+	
+
+	\subsection{Nutzeranmeldung}
+	
+	\functionality{Anmeldung}{fnc:usr_aut}
+	Zum Login werden \gls{ID} und zugehöriges Passwort benutzt
+	\fulfills{crt:login_acc}
+	
+
+%Suche	
+\section{Suche}
+
+	\subsection{Rezeptsuche}
+	
+		\functionality{Suche}{fnc:rcp_srch}
+		\Glspl{Nutzer} können nach öffentlichen Rezepten suchen und mehrere \glspl{Suchfilter} einstellen und anwenden
+		\fulfills{crt:rezeptdurchsuchen}
+		
+		\functionality{Suchfilter}{fnc:rcp_fltr}
+		\Glspl{Nutzer} können Rezepttitel, Zutaten, \glspl{Tag} und Zubereitungsdauer als \glspl{Suchfilter} einstellen
+		\fulfills{crt:rfilter}
+
+			
+	\subsection{Ergebnisse Rezeptsuche}
+	
+		\functionality{Ergebnis}{fnc:srch_rslt}
+		Alle durch die \gls{Suchfilter} gefundenen öffentlichen Rezepte werden untereinander angezeigt
+		\fulfills{crt:rezeptdurchsuchen}
+		
+		\functionality{Rezeptanzeige}{fnc:rcp_rprsnt}
+		Die aufgelisteten Rezepte beinhalten den Titel und das Bild des Rezepts
+		\fulfills{crt:rezeptdurchsuchen}
+		
+		%wie wäre noch Dauer? --als Wunschkrit. vllt? 
+	
+		\functionality{Sortierung}{fnc:srch_sort}
+		Die Suchergebnisse sind nach Durchschnittsbewertung, Erstellungsdatum oder Favorisierung sortierbar
+		\fulfills{crt:rezeptdurchsuchen}
+	
+	
+	\subsection{{\em optional} Erweiterte Suche}
+		
+		\functionality{Bewertungssuche}{fnc:srch_rtng}	
+		Bewertungen ist ein \gls{Suchfilter}
+		\fulfills{crt:erw_suche}
+		
+		\functionality{Zubereitungsbeschreibung}{fnc:srch_prep}
+		Zubereitungsbeschreibung ist ein \gls{Suchfilter}
+		\fulfills{crt:erw_suche}
+		
+		\functionality{Sortierung}{fnc:srch_sortt}
+		Die Suchergebnisse sind nach durchschnittlicher Bewertung der Suchergebnisse sortierbar
+		\fulfills{crt:rezept_bewertung_suchen}
+	
+	
+	\subsection{{\em optional} Benutzersuche}
+	
+		\functionality{Benutzersuche}{fnc:usr_srch}
+		\Glspl{Nutzer} können nach \glspl{angemeldeter Nutzer} suchen und dabei mehrere \gls{Suchfilter} einstellen und anwenden
+		\fulfills{crt:user_search}
+		
+		\functionality{Suchfilter}{fnc:usr_srch_filter}
+		Die \gls{ID} ist ein \gls{Suchfilter}
+		\fulfills{crt:user_search}
+		
+		\functionality{Benutzeranzeige}{fnc:fnc_usr_rprsnt}
+		Die Suchergebnisse \glspl{angemeldeter Nutzer} beinhalten \glspl{ID}
+		\fulfills{crt:user_search}
+		
+		\functionality{Oberfläche Benutzersuche}{fnc:fnc_usr_rprsntt}
+		Die Nutzersuche kriegt einen eigenen Menüpunkt im Appmenü
+		\fulfills{crt:user_search}
+		
+		
+		\subsection{{\em optional} Freundesystem}
+	
+	\functionality{Freund anfragen}{fnc:add_frnd}
+	\Glspl{angemeldeter Nutzer} können anderen \glspl{angemeldeter Nutzer} eine Freundschaftsanfrage schicken
+	\fulfills{crt:account_freunde}
+	
+	\functionality{Freundschaftsanfragen}{fnc:frnd_rqst}
+	\Glspl{angemeldeter Nutzer} können Freundschaftsanfragen annehmen oder ablehnen
+	\fulfills{crt:account_freunde}
+	
+	\functionality{Freunde löschen}{fnc:frnd_del}
+	\Glspl{angemeldeter Nutzer} können \glspl{Freund} löschen
+	\fulfills{crt:account_freunde}
+
+	\functionality{Freunde anzeigen}{fnc:frnd_rprsnt}
+	\Glspl{angemeldeter Nutzer} können alle \glspl{Freund} anzeigen
+	\fulfills{crt:account_freunde}
+
+	\functionality{Gruppenmitglieder}{fnc:grp_add}
+	\Glspl{angemeldeter Nutzer} können Freunde zu einer eigenen Freundesgruppe hinzufügen und entfernen
+	\fulfills{crt:account_freunde}
+
+		
+	\functionality{Gruppen}{fnc:frnd_grp}
+	\Glspl{angemeldeter Nutzer} können eigene Freundesgruppe erstellen und diese löschen
+	\fulfills{crt:account_freunde}
+
+	\Glspl{angemeldeter Nutzer} können \glspl{Freund} zu einer eigenen \gls{Freundesgruppe} hinzufügen und entfernen
+	
+
+	\functionality{Rezepte teilen}{fnc:frnd_rcp}
+	\Glspl{angemeldeter Nutzer} können \glspl{pRezept} an \glspl{Freund} oder an \glspl{Freundesgruppe}, in denen sie Mitglied sind, schicken
+	\fulfills{crt:account_freunde}
+		
+		
+	\subsection{{\em optional} Rezepte Feed}
+	
+		\functionality{Feed}{fnc:rcp_fd}
+		Beim Öffnen der App wird ein \gls{Feed} mit den neusten veröffentlichten Rezepten angezeigt 
+		\fulfills{crt:rezept_feed}
+		
+		
+		\functionality{Feed Menü}{fnc:rcp_fd_m}
+		Der \gls{Feed} kann durch einen Menüpunkt "`Startseite"' aufgerufen werden
+		\fulfills{crt:rezept_feed}
+	
+		\functionality{Feed Menü}{fnc:rcp_fd_act}
+		Wird der \gls{Feed} erneut aufgerufen, zeigt er die aktuell neusten \glspl{oRezept}
+		\fulfills{crt:rezept_feed}
+		
+	\subsection{{\em optional} Private Tags}
+			
+		\functionality{Tags hinzufügen}{fnc:tags_wk}
+			Jeder Nutzer kann der Liste an Tags welche hinzufügen, die nur er sieht und suchen kann
+		\fulfills{crt:wktags}
+		
+
+
+	%Kochbuchserver
+\section{Kochbuchserver}
+Damit die definierten Wunsch- und Musskriterien umgesetzt werden können muss der Server einige Funktionen in seiner
+Schnittstelle bereitstellen, die im Folgenden spezifiziert sind:
+
+	\functionality{Speichern eines neuen privaten Rezepts}{fnc:server_create}
+	\fulfills{crt:rezeptveroeffentlichen}
+	\fulfills{crt:speichere_unvollst}
+
+
+  \functionality{Ändern eines privaten Rezepts}{fnc:server_update}
+	\fulfills{crt:rezeptverwalten}
+
+	\functionality{Löschen eines privaten Rezepts}{fnc:server_delete}
+	\fulfills{crt:rezeptverwalten}
+
+	\functionality{Veröffentlichen eines privaten Rezepts}{fnc:ser_pr_ver}
+  Mit Aufruf dieser Funktion wird ein privates Rezept veröffentlicht und ist als \glspl{oRezept} 
+  verfügbar.
+	Falls es schon veröffentlicht war, wird durch den Aufruf das öffentliche Rezept mit aktuellen
+ Daten des privaten Rezepts aktualisiert
+ 
+	\fulfills{crt:rezeptveroeffentlichen}
+
+
+	\functionality{Laden eines privaten Rezepts}{fnc:server_read}
+	Ein privates Rezept für eine Funktion laden
+	\fulfills{crt:rezeptverwalten}
+
+	\functionality{Laden eines öffentlichen Rezepts}{fnc:server_read}
+	Ein öffentliches Rezept für eine Funktion laden
+	\fulfills{crt:rezeptdurchsuchen}
+
+
+	\functionality{Entfernen eines öffentlichen Rezepts}{fnc:server_delete_o}
+  Mit dem Aufruf dieser Funktion wird das öffentliche Rezept entfernt
+	\fulfills{crt:rezeptverwalten}
+	
+
+  \functionality{Laden der Profildaten eines Nutzers}{fnc:userdata}
+  Lädt öffentlich verfügbare Profildaten eines \gls{Nutzer}s
+	\fulfills{crt:account_profilbild}
+	\fulfills{crt:login_acc}
+  
+  \functionality{Ändern der Profildaten des eigenen Nutzers}{fnc:server_chg_userdata}
+  Erlaubt, änderbare Einheiten des Benutzerprofils zu ändern
+%  Stellt sicher dass die Änderungen konsistent sind. Zum Beispiel wird bei den öffentlichen Rezepten
+% nach Änderung der Benutzerid, die Benutzerid des Authors angepasst. 
+% Anmerkung: Zu schwammig für FA "`konsistent"' zB - lieber raus
+	\fulfills{crt:make_acc}
+  
+  \functionality{Laden der Liste der privaten Rezepte einer Benutzerid}{fnc:server_delete}
+	\fulfills{crt:speichere_unvollst}
+   
+  \functionality{Laden der Tags des eigenen Benutzers}{fnc:wk_tag}
+   \fulfills{crt:wktags}
+	
+  \functionality{Speichern der Tags des eigenen Benutzers}{fnc:wk_tags}
+	\fulfills{crt:wktags}
+  
+  \functionality{Laden der Einkaufsliste des eigenen Benutzers}{fnc:server_ld_ek}
+	\fulfills{crt:einkaufsliste}
+   
+  \functionality{Speichern der Einkaufsliste des eigenen  Benutzers}{fnc:server_sv_ek}
+	\fulfills{crt:einkaufsliste}
+
+  \functionality{Rezeptsuche}{fnc:server_rec_search}
+Gibt eine Liste mit Rezept-IDs zurück von öffentlichen Rezepten die den Suchfilterkriterien entsprechen. Liste gegebenenfalls sortiert ausgeben
+	\fulfills{crt:rezeptdurchsuchen}
+  
+   \functionality{Benutzersuche}{fnc:server_ben_search}
+ Gibt eine Liste mit Benutzer-IDs von Benutzern zurück, die den Suchfilterkriterien entsprechen
+	\fulfills{crt:user_search}
+
+  \functionality{Speichern eines Kommentars}{fnc:server_kom_sv}
+   Speichert einen zu einer bestimmten Rezept-ID eines öffentlichen Rezeptes gehörigen Kommentar.
+   Wird die Funktion auf dem gleichen Kommentar mehrmals aufgerufen, wird der alte Kommentar mit dem neuen Text überschrieben
+	\fulfills{crt:rezept_kommentieren}
+      
+  \functionality{Speichern eines neuen Freundes}{fnc:server_fr_sv}
+  Speichert zu einem Nutzer einen Freund, der auch ein Nutzer ist, falls dieser die Anfrage annimmt
+  \fulfills{crt:account_freunde}
+  
+  \functionality{Löschen eines Freundes}{fnc:server_fr_dl}
+  Von einem Nutzer wird ein Freund gelöscht
+  \fulfills{crt:account_freunde}
+  
+  \functionality{Speichern einer Freundesgruppe}{fnc:server_fg_sv}
+  Erstellte Freundesgruppe mit Verweisen zu Freunden und Rezepte speichern
+  \fulfills{crt:account_freunde}
+  
+  \functionality{Ändern einer Freundesgruppe}{fnc:server_fg_ed}
+  Die Verweise zu den Rezepten und Freunden wird aktualisiert
+  \fulfills{crt:account_freunde}
+  
+  \functionality{Löschen einer Freundesgruppe}{fnc:server_fg_dl}
+  Die Freundesgruppe wird gelöscht und die Verweise aufgelöst
+  \fulfills{crt:account_freunde}
+  
+  
+  \section{Admin}
+  \functionality {gemeldete Rezepte löschen}
+  der Admin kann Rezepte mit unangemessenen Inhalt manuell prüfen und entfernen
+  
+  \functionality {gemeldete Gruppen löschen}
+  der Admin kann Gruppen mit unangemessenen Inhalt manuell prüfen und entfernen
+  
+  \functionality {gemeldete Profile verwalten und löschen} der Admin kann Profile mit unangemessen Inhalten manuell prüfen und entfernen
+  
+  Der Admin ist verantwortlich dafür gemeldete Rezepte auf ihre Angemessenheit zu überprüfen und kann diese Entfernen. Ist ein Profil nicht in Ordnung, löscht der Admin dieses über die Firebase Datenbank. 

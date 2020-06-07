@@ -1,0 +1,119 @@
+Protokoll 29.11.2019 
+
+1. Standup Meeting
+- Heiner 
+	- Issues angelegt für Kalender (Jeder trägt sich ein)
+	- Uml tools
+- Lea
+ 	- Zeitplan für Entwurfsphase
+	- Uml tools
+	- PSE techdokument 
+- Magnus 
+	- Code of Conduct 
+	- Uml tool
+	- Issues (Jeder trägt sich ein)
+- Thomas 
+	- Uml tools
+- Pascal
+	- Uml tools
+
+2. Heiner Ideen-pitch (Merge für Reiche)
+3. Tool Runde
+	- Lea
+		- Enterprise Architect (30 Tage trial)
+			- Umfangreich 
+			- simulierbar (Sequenzdiagramme, Aktivitätsdiagramme,...)
+			- kann Code erstellen aus Diagrammen
+			- kann aus Code Diagramme erstellen (Round trip)
+		 	- Eclipse integrierbar
+
+		- visual Paradigm (30 Tage Trial)
+			- Round trip verfahren
+			- REST Api generierbar
+			- echtzeitcloud Repo
+
+		- Oxygen (Kostenlos)
+			- für Unix 
+
+		- Umbrello (Kostenlos)
+			- eher für kleine Projekte
+
+		- Papyrus ()
+			- Eclipse integration
+			- Code Generator für UML Diagramme
+			- Git Integration
+		
+	- Magnus 	
+		- Lucidchards
+		
+	- Thomas 
+		- Uml to Java
+			- generiert Java Code
+
+		- Edraw
+			- geeignet für Sequenz Diagramme
+	- Pascal 
+		- Springboot
+			- Server 
+			- Eclipse kompatibel
+
+		- Simple UML
+			- für Android Studio (plugin)
+
+		- Mysql
+			- Datenbank (mysql) 
+			- generiert direkt 
+			- Library für Java
+
+		- Mysql Datenbankverbindung
+			
+
+https://www.ionos.de/digitalguide/websites/web-entwicklung/die-besten-uml-tools/ Anschauen und Bewerten in Git
+
+4. Zeitplan 
+	- 3.12 Betreuertreffen
+		-> übers We Sprint bis Vor dem Treffen 	
+		-> Discordtreffen am Montag/Dienstag
+	- 10.12 Betreuertreffer
+		-> Sprint
+	- 17.12 Betreuertreffen (DEADLINE)
+		-> fertiges Dokument da am 20.12 Abgabe ist
+		-> Fragen bzgl. fertigem Dokument überlegen
+	- 20.12 um 23:59 Uhr Abgabe 
+	- 07.01.2020
+ -> Issue Eintragen !
+
+5. Entwurfsmuster (Heiner)
+	- Basic Sample 
+		- MV-VM
+	- Browser Sample
+		- Suche implementiert 
+		- 
+	- Vogella für Android Erklärungen
+	- REST Server beispiel 
+		- retrofit 
+	
+6. Frameworks (Pascal)
+	- Serverseitig Springboot & Mysql
+		- Mysql hat Libraryschnittstellen zum Verbinden 
+		- alternativ NoSql
+		- 
+		
+	- API Dokumentation evtl. durch openAPI 
+	- room 
+	- Swagger 
+
+
+7. Aufgaben
+	- bis zum Sonntagnachmittag Komponenten der Kochbuchapp und Umsetzung
+	- Beispiele des BasicSample und Brower auf Github verstehen und lernen
+	- 
+7.1 MVC Besprechung 
+	- android Jetpack 
+	- Ziel bist Dienstag Appseitige Funktionen verstehen	
+		
+Aufgaben
+- Object relatable mapper 
+- Github issues aufräumen 
+- Betreuer bzgl. Termin Fragen 
+- Testklassen im Entwurf berücksichtigen

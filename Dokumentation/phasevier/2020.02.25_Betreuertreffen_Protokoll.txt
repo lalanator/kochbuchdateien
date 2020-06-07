@@ -1,0 +1,49 @@
+**Besprechung Präsentation**
+Note: 1.7
+Begründung: Vortrag war nur ok, Fragen nicht allzugut beantwortet und fast ausschließlich nur von Heiner,
+	andere Mitglieder haben nicht unterbrochen/sind nicht zu Wort gekommen
+Anmerkungen: Konsistenz zwischen Vortrag und Abgabe vorhanden soll vorhanden sein
+
+
+**Vorstellung der Betreuer:**
+
+- Definierte Testfälle ausm Pflichtenheft testen
+-----> dazu: Testabdeckung nicht representativ (aber 90% gibt "Fleißpunkte")
+- Testen mit Unittests, Integrationstests, UITests, etc.
+- Größere Abläufe aufbrechen in kleinere Tests (Szenarien stellen sich aus verschiedenen kleinen Tests zsm)
+- Testpyramide (SWT1)
+- nicht jeder Fehler muss behoben werden, aber getestet und dokumentiert sein
+- Usertests: Fragebögen rumgeben möglich, aber NUR wenn sinnvoll (wenn Testszenarien es erfordern/hergeben)
+- Präsentation: Wo war es schwierig zu testen? Wo war es schwierig private Methoden zu testen?
+- Private Methoden oder Felder testen zB mit Jailbreaking vor Test (Manifould)
+-----> setzt im Kontext des Tests alles auf public
+- Mockito tests für n-to-n mock Tests
+- Wichtig: Unterscheidung von Unittests und Tests zu Funktionalitätsnachweisen
+- UI-Testing: nicht wirklich machbar
+- Nichtfunktionale Anforderungen: Lastengenerator aufbauen für Stresstests
+	zB: 1000 Rezepte erstellen:
+		1. Tests, der DB cleared
+		2. Routine, die 1000 Rezepte schreibt
+		3. Teste, ob die geforderten Rezepte auch durchgekommen sind
+		4. DB clear
+		Testen in Container mit gespiegelter DB und nicht in produktiv DB
+- Toten Code löschen! (auch dokumentieren)
+----> kann reproduziert werden 
+
+
+**Vorgehen (Szenariobasiert, anhand von SWT1):**
+
+0. Musskriterien implementieren und Fehler fixen
+1. Aufteilen: "Routen" (n-to-n tests) nach unseren Tests und Szenarien determinieren
+	- Jede "Testroute" (also jeder große Test) enthält x Integrations- und y Unittests
+	- Kleingruppen aufteilen, die sich um zugeteilte Tests inklusive Integrations-/Unittests kümmern
+2. Doku: Zu jedem Kleintest in der "Route":
+	- Vorbedingung, Testbeschreibung, Nachbedingung (über den Mock des Tests)
+	- Nachweisen: Vor dem Test: WO ist Startpunkt, WAS wird getest, WIE getestet
+3. Dokument: Musskriterien und Wunschkriterien aufgeteilt in FAs dokumentieren in der Art:
+		Wie getestet, Was getestet, Vor-/Nachbedingung
+last. Code aufräumen
+
+
+Nächstes Semester: Proseminar Softwarekatastrophen wird angeboten
+Vielleicht kann einer der Arconsis-Leute am 17.03. nicht, deswegen kommt möglicherweise nochmal ne Mail dazu rum, obs verschoben werden kann (kann man aber verneinen, dann isses am 17.3.)

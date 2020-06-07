@@ -1,0 +1,22 @@
+**T7: Profil erstellen und verwalten**
+
+- T7.1: Espressotest
+- T7.2: Espressotest
+- T7.3: Espressotest + Unittest: Werden geänderte Daten korrekt gespeichert? (Server) + Integrationstest: Repositoryanbindung PublicRepo
+- T7.4: Espresso + Unittest: Werden Daten korrekt geladen? (Server) + Unittest: Werden Daten korrekt angezeit (UI) + Integrationstest: Repositoryanbindung PublicRepo
+- T7.5: Espresso + Unittest: Daten gelöscht? (Server)
+- T7.6: Espresso + Unittest: private Rezepte immernoch angezeigt (UI) + Unittest: Öffentliche Rezepte als private angezeigt (UI und Server?)
+- T7.7: Espresso + Integrationstest: ID eindeutig (Server + Repo) + Unittest: neue ID richtig übernommen? (Server) + Unittest: neue ID richtig angezeigt? (UI)
+
+**T8: Erstellen von Rezepten**
+
+- T8.1: Espressotest + Unittest: Aktuelles Datum angezeigt? (UI) + Unittest: Datum aktualisiert? (Server)
+- T8.2: Espressotest + Unittest: Neues Rezept in Rezeptliste angezeigt? (UI) + Unittest: wird Rezept korrekt gespeichert? (Loal DB) + Integrationstest (PrivateRepo)?
+
+**T9: Speichern von Rezepten**
+- T9.1 und T9.2: Automatisches Speichern nicht implementiert, deswegen nicht getestet
+- T9.3: Espresso + Unittest: Wird Rezept in Rezeptliste angezeigt? (UI) + Unittest: wird Rezept korrekt gespeichert? (Local DB) (kann in T8.2 getestet werden)
+
+ // bis hier im issue bereits vorhanden
+**T10: Veröffentlichen von Rezepten**
+- T10.1: Espresso + 

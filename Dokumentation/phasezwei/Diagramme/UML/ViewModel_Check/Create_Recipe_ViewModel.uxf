@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>18</y>
+      <w>102</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>CreateRecipeFragment
+--
+--
+-recipeTitle:EditText,
+-preppingTime:EditText,
+-cookingTime:EditText,
+-tagsList:TextView,
+-tagsAdd:Button,
+-servings:EditText,
+-ingredients:EditText,
+-description:EditText,
+-public:Switch,
+-save:Button,
+-share:Button</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>24</y>
+      <w>216</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>CreateRecipeViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;privateRec:PrivateRecipe
+--
+-title:LiveData&lt;String&gt;?
+-preppingTime:LiveData&lt;int&gt;?
+-cookingTime:LiveData&lt;int&gt;?
+-servings:LiveData&lt;int&gt;?
+-ingredients:LiveData&lt;IngredientAmount&gt;?
+-description:LiveData&lt;String&gt;?
+-isPublic:LiveData&lt;boolean&gt;
+--
++addTags():void
++&lt;&lt;private&gt;&gt;setContent(title, preppingtime, cookingtime,
+  servings,ingredients, description, idPublic)
++addToRepository(rec:PublicRecipe)
++save()
++parse(rec:PrivateRecipe):PublicRecipe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>174</x>
+      <y>48</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>276</x>
+      <y>288</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+--
++addPrivateRecipe(rec:PrivateRecipe)
++getTagList():List&lt;String&gt;
++getRecipe():PrivateRecipe</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>228</y>
+      <w>48</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>174</x>
+      <y>84</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+</diagram>

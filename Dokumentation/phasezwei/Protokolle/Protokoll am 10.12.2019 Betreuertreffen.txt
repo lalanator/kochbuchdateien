@@ -1,0 +1,65 @@
+Protokoll am 120.12.2019  (Betreuertreffen)
+0.Betreuertreffen
+		 - Uml Syntax:  - syntaktisch muss menschenverständlich sein, nicht maschinen lesbar 
+				- Attribute beschreiben (private, öffentlich)
+				- Assotiationen mit Rollen, Multiplizitäten ,...
+				- Übersichtlichkeit muss am Ende stimmen 
+				
+		- Klassendiagramme partiell beschreiben 
+				
+
+		- User login Name ID:
+				- id nicht auf KlassendiagrammEbene
+				- Datenbankstruktur nicht in der Klassendiagrammstruktur nachbauen
+				- DAO in Klassendiagramm 
+				
+		- Fragments XML Dateien 
+				- View muss modelliert sein (XML Element) sollen rein, wenn sie Elemente darstellen
+				- Gui Entwürfe ins Pflichtenheft
+				- Gui mit Fließtext beschreiben 
+		- UMLTipps:
+				- Rezepte haben gemeinsame Oberklasse 
+				- Freunde über Pushpull modell (nicht als Entity, sondern Funktionalität) 
+				- Unterscheidung zwischen Utilitypaket und Entitypaket
+				- Mapping von Mapping nicht selbst modellieren (beschreiben wir nehmen Ro Mapping)
+		- Kommentare auf Deutsch
+		- Vortragsstruktur Schwerpunkt eher auf Inhalt aber Prozess 
+				- Datenmodell zeigen 
+				- clean Architecture anhand des Projektes 
+
+1. Standup 
+		- Fragment States Diagramm 
+		- Friendsstruktur
+		- Server und Klient Struktur auf Github hochgeladen 
+		- Authentifizierung im Code auf Git 
+		- Admin Fragment 
+		- DAO Klasse iö
+		- Listen aus UML angepasst 
+		- Google account erstellt 
+		- Sequenzdiagramm add to Favorites
+		- Struktur für LaTeX
+		- Uml Einheitlich 
+		
+	- Zu Besprechen 
+		- ID über Datenbank (Implementierung)
+2. Zu Modellieren 
+		- ClassdiagrammUML und DB Modellierung anpassen
+		- Verbindungsstellen zum Server darstellen (Pascal) 
+		- 
+
+			- Aktivitätsdiagramm 	
+				- Nutzer erstellen 
+				- Rezept erstellen 
+				- Rezept favorisieren 
+				- 
+		- Repository modellieren 
+		- DAO Klassen modellieren
+		
+		- 
+ TODO
+	- Fragments states anschauen 
+		- DB Uml anpassen 
+		- 
+
+
+  

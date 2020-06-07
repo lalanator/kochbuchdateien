@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>304</x>
+      <y>128</y>
+      <w>256</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>GroupViewModel
+--
+&lt;&lt;construct&gt;&gt; groupid:String
+--
+-mRepo:Repository
+-recipes:List&lt;PrivateRecipe&gt;
+-groupName:String
+--
++getRecipes(groupid:String):List&lt;PrivateRecipe&gt;
++showRecipe(recipe:PrivateRecipe)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>576</x>
+      <y>208</y>
+      <w>408</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>getrecipes(groupid:String):List&lt;PrivateRecipe&gt;
+liefert alle privaten Rezept, die in dieser Gruppe gesendet wurden.
+
+showrecipe(recipe:PrivateRecipe)
+wechselt zu dem CreateRecipeFragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

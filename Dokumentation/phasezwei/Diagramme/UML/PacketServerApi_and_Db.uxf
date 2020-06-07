@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>380</x>
+      <y>16</y>
+      <w>208</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.controller.dto
+--
+bg=light_gray
+layer=-3
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>28</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>UserDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>44</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FriendRelationDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>60</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>GroupDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>516</x>
+      <y>60</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>RecipeRatingDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>76</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>CommentDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>516</x>
+      <y>28</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>IngredientChapterDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>44</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>IngredientAmountDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>60</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>RecipeTagDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>76</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PrivateRecipeTagDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>516</x>
+      <y>44</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>SharedPrivateRecipeDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>28</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeDto
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>16</x>
+      <y>16</y>
+      <w>352</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.controller
+--
+bg=light_gray
+layer=-3
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>60</y>
+      <w>144</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FavouritesController implements FavouritesApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>44</y>
+      <w>144</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>CommentController implements CommentApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>28</y>
+      <w>144</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FriendRequestController implements FreindRequestApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>76</y>
+      <w>136</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>UserController implements UserApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>60</y>
+      <w>136</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeController implements PublicRecipeApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>44</y>
+      <w>136</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>GroupController implements GroupApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>28</y>
+      <w>136</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>AdminController implements AdminApi
+bg=#0857c5
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>16</x>
+      <y>104</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.service
+--
+bg=light_gray
+layer=-3
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>116</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>UserService
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>132</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeService
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>148</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>GroupService
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>164</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>AdminService
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>116</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FriendRequestService
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>132</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>CommentService
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>148</y>
+      <w>68</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FavouritesSerivce
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>208</x>
+      <y>108</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.application.controller.api
+--
+bg=light_gray
+layer=-3
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>120</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>UserApi&lt;&lt;interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>136</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeApi&lt;&lt;interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>168</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>GroupApi&lt;&lt;interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>296</x>
+      <y>120</y>
+      <w>72</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FavouritesApi&lt;&lt;Interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>296</x>
+      <y>152</y>
+      <w>72</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>CommentApi&lt;&lt;interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>296</x>
+      <y>136</y>
+      <w>72</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>AdminApi&lt;&lt;interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>152</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FriendRequestApi&lt;&lt;interface&gt;&gt;
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>400</x>
+      <y>116</y>
+      <w>188</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.domain.model
+--
+bg=light_gray
+layer=-3
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>128</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>User
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>144</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Follower
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>160</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Group
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>144</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>SharedPrivateRecipe
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>128</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PublicRecipe
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>176</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FriendRequest
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>160</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt; State
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>176</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>RecipeRating
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>524</x>
+      <y>144</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>Comment
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>524</x>
+      <y>128</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>IngredientChapter
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>208</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>RecipeTag
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>208</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PrivateRecipeTag
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>452</x>
+      <y>192</y>
+      <w>64</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>IngredientAmount
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>192</y>
+      <w>44</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt; Unit
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>208</y>
+      <w>148</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>UserDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>224</y>
+      <w>148</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FriendRequestDao implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>240</y>
+      <w>148</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>FollowerDao implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>204</x>
+      <y>256</y>
+      <w>148</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>CommentDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>288</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>RecipeRatingDao implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>272</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>IngredientAmountDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>256</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>IngredientChapterDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>240</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>224</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>SharedPrivateRecipe implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>208</y>
+      <w>156</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>GroupDao&lt;&lt;interface&gt;&gt; implements JpaRepository
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>16</x>
+      <y>196</y>
+      <w>340</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.infrastructure.dao
+--
+bg=light_gray
+layer=-3
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

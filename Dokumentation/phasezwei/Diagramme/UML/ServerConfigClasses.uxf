@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>72</y>
+      <w>486</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.config
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>27</x>
+      <y>108</y>
+      <w>126</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>FirebaseConfig
+--
+-dataBaseUrl:String
+-configPath:String
+--
+init()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>522</x>
+      <y>72</y>
+      <w>909</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.security
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1089</x>
+      <y>342</y>
+      <w>324</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>JWTRequestFilter extends OncePerRequestFilter
+--
+doFilterInternal(request: HttpServletRequest, 
+                 response: HttpServletResponse, 
+                 chain: FilterChain</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>468</y>
+      <w>486</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>504</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ExzellenzkochApplication
+--
+main()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>522</x>
+      <y>468</y>
+      <w>486</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>de.psekochbuch.exzellenzkoch.exception
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>513</y>
+      <w>333</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>RessourceNotFoundException extends RuntimeException
+--
+-resourceName:String
+-fieldName:String
+-fieldValue:Any</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>135</x>
+      <y>216</y>
+      <w>342</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>WebSecurityConfig extends 
+WebSecurityConfigurerAdapter
+--
+-jwtAuthenticationEntryPoint: JwtAuthenticationEntryPoint
+-jwtRequestFilter: JwtRequestFilter
+--
+passwordEncoder()
+configure(httpSecurity: HttpSecurity)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1089</x>
+      <y>126</y>
+      <w>324</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>FirebaseAuthentication extends 
+AbstractAuthenticationToken
+--
+-principal:Any
+-credentials:Any
+--
++FirebaseAuthentication(principal: Any, credentials: Any)
++FirebaseAuthentication(principal: Any, credentials: Any,
+                authorities: Collection&lt;GrantedAuthority&gt;)
++getCredentials():Any
++getPrincipal():Any
++setAuthenticated():Any
++eraseCredentials():Any</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>558</x>
+      <y>126</y>
+      <w>135</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>FirebaseTokenHolder
+--
+-token:FirebaseToken
+--
++getEmail:Stirng
++getIssuer:String
++getName:String
++getUid:String
++getGoogleId:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>126</y>
+      <w>279</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>JwtAuthenticationEntryPoint implements 
+AuthenticationEntryPoint
+--
+commence(request: HttpServletRequest, 
+         response: HttpServletResponse,
+         authException: AuthenticationException)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>243</y>
+      <w>441</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0;470.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1197</x>
+      <y>297</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+</diagram>

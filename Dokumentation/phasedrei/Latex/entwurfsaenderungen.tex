@@ -1,0 +1,61 @@
+\chapter{Änderungen zum Entwurf}
+Folgende Änderungen haben sich seit dem Release des Entwurfsdokuments ergeben:
+
+\section{User Interface Layer}
+
+\subsection{Änderungen}
+Zu den Änderungen an Fragments haben sich analog auch ViewModel Änderungen ergeben, welche hier zur Vermeidung von Redundanz, nicht alle genannt werden.
+
+\subsubsection{Appmenü} 
+Im Appmenü wird nicht der Bereich "`Login"'/"'Logout"' angezeigt, sondern alternativ der Bereich "`Mein Profil"', welcher die Login und Logout Funktionen enthält.
+
+\subsubsection{DisplaySearchListFragment}
+Die Sortierung der Rezepte wurde, wie später noch erklärt, nicht implementiert, deswegen enthält das DisplaySearchListFragment keinen Spinner für die Sortierung der Suchergebnisse.
+
+\subsubsection{PublicRecipeSearchFragment}
+Das Fragment enthält keine Texteingabe für die Zeit, da Rezepte nicht nach ihrer Zeit durchsucht werden. Außerdem werden Tags nicht einzeln in einem anderen Fragment, sondern direkt im Suchfragment ausgewählt.
+
+\subsubsection{AdminFragment}
+Die RecyclerViews im AdminFragment enthalten neben dem "`löschen"'-Button auch einen "`freigeben"'-Button, welcher Rezepte und User wieder entmeldet.
+
+\subsubsection{RecipeDisplayFragment}
+Da Rezepte zum momentanen Stand keine Portionenanzahl enthalten, ist das Eingabefeld dafür nicht im Fragment enthalten.
+
+
+\subsection{Additionen}
+
+\subsubsection{Adapter}
+Für jedes Fragment, welches eine RecyclerView nutzt, wurden Adapterklassen hinzugefügt:
+\begin{itemize}
+	\item AdminRecipeAdapter
+	\item AdminUserAdapter
+	\item DisplaySearchListAdapter
+	\item FeedAdapter
+	\item ProfileDisplayAdapter
+	\item RecipeListAdapter
+\end{itemize}
+Die Adapter enthalten Observer zu Attributen im des ihnen zugehörigen ViewModels. Sie sind unter dem Pfad \textbf{de.psekochbuch.exzellenzkoch.userinterfacelayer.adapter} zu finden.
+
+\subsection{ViewModelFactories und InjectorUtils}
+Um zu garantieren, dass jedes Fragment ein ViewModel hat, das auf eine Singleton Instanz eines ihm zugeordneten Repositories zugreift, wurden die ViewModelFactories eingeführt. Diese vermitteln ihrem ViewModel die Instanz des benötigten Repositorys. Die Zuordnung der Repositories an die Factories geschieht in der UnjectorUtils Klasse, welche auf dem Toplevel liegt.
+
+
+\section{Domain Layer}
+
+\subsection{User}
+Das Bild ist als Text, der den Pfad auf dem Server repräsentiert, gespeichert und nicht als BufferedImage.
+
+\subsection{PrivateRecipe}
+Das Bild ist als Text, der den Speicherpfad repräsentiert, gespeichert und nicht als BufferedImage. Es besitzt nun zusätzlich das Feld publishedRecipeId, welche 0 ist, wenn das Rezept noch nie veröffentlicht wurde und andernfalls die ID des veröffentlichten Rezeptes ist. Es besitzt zusätzlich ein Feld namens creationTimeStamp, welche die Zeit der Erstellung des Rezeptes repräsentiert.
+
+\subsection{PublicRecipe}
+Das Bild ist als Text, der den Pfad auf dem Server repräsentiert, gespeichert und nicht als BufferedImage.
+
+
+\section{Data Layer}
+\subsection{Authentification}
+Da dies durch die Kotlin Syntax möglich ist, wurde die Authentification nicht als Klasse, sondern als statisch aufrufbares Objekt angelegt. Dadurch implementiert sie kein Interface mehr.
+
+\section{Server}
+\subsection{FileAPI}
+Auf dem Webserver ist das FileAPI Interface hinzugekommen, welches es Spring durch eine Annotation möglich macht, dieses als Requests auf die Controller zu mappen.

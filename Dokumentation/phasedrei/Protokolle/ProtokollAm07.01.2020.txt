@@ -1,0 +1,15 @@
+!!!
+Betreueranmerkung: 
+Nach Implementierungsphase und nach Testphase Rückmeldung für die Betreuer, ob Clean Architecture und die AUfteilung nach Schichten usw. uns überhaupt und an welcher Stelle etwas gebracht hat!
+
+
+Vorgehen Implementierungsphase:
+In einem Extra-Repository testweise:
+1) Grundfunktionen von Server und App implementieren
+2) zum Laufen bringen
+3) Erweitern
+
+Freitag am 17.1.2020 oder das Wochenende danach PSE A3 Kochabend
+
+Klausurenphase: Am Ende der Iplementierungsphase, sodass es in der Impl.phase ist!
+Bis zum 26.01.2020 ungefähr sollen Musskriterien fertig sein

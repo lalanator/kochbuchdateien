@@ -1,0 +1,145 @@
+[Kochbuch]-App Anforderungen fürs Pflichtenheft:
+
+(Priorisierung nach dem MoSCoW Prinzip)
+
+
+
+Glossar:
+
+"Tags": Attribute für die Art eines Gerichts, zB "orientalisch", "mild", "scharf", "italienisch", etc.
+"Ansicht": Subpage innerhalb der App, die einem bestimmten Bereich zugeordnet ist und die der User sieht, zB "Startansicht-die Ansicht beim Öffnen der App"
+"Relevanz": hier: Sortierungskriterium der Rezepte in der Suchfunktion. Sehr relevant: enthält alle/die meisten Attribute, die vom User in Suchleiste eingegeben wurden. Nicht relevant: enthält keine/wenige der Suchattribute
+"Aktivität": ein Nutzer ist aktiv, wenn er in der App online eine Funktion ausführt - also ein Rezept hochlädt, oder eine Bewertung abgibt
+
+
+
+Must have (Musskriterien):
+
+    Allgemein:
+	- leicht zu bedienen:
+		- simple Navigation 
+		- intuitive Bezeichner in den Menüs
+	- Suchen von Rezepten
+	- Einfügen von privaten Rezepten und Veröffentlichung dieser
+		
+    Grafisch:
+	- anschauliche Startansicht (mit Suchfunktion)
+		- enthält Button mit Aufschrift "Neues Rezept hinzufügen" (redirect zum Loginansicht, nur offline ohne Login)
+		- enthält Suchmenü zum Suchen nach vorhandenen Rezepten:
+			- Suchleiste zum Eintippen von "Tags"/Zutaten
+	
+	- Seitenmenü (Szenario 1: nicht eingelogged)
+		- ein- und ausklappbar über Button, der immer sichtbar ist
+		- Button oben links auf dem Bildschirm
+		- enthält verschiedene Reiter, die nachm Draufklicken zu den jeweiligen Ansichten leiten
+			- Login (redirect zur Loginansicht)
+			- mein Profil (wenn eingelogged: Profilansicht, sonst: Non-User-Ansicht)
+			- meine Rezepte (redirect zu Ansicht mit "Merkzettel" und "Private Rezepte" (offline))
+	
+	- Loginansicht
+		- Felder für Eingabe von:
+			- Username
+			- Passwort
+		- Button: "Login"
+		- darunter Text: "Noch nicht dabei? Registrieren Sie sich hier" und Button (bei Klick redirect zur Registrierungsansicht)
+	
+	- Registrierungsansicht
+		- Felder für Eingabe von:
+			- E-Mail-Adresse
+			- Username
+			- Passwort
+		-Button: "Registrieren"
+	
+	- Profilansicht
+		- Username (fix - Identifier)
+		- Passwort (änderbar)
+		- E-Mail-Adresse (fix - Identifier)
+		- Profilbild (optional, änderbar)
+	
+	- Non-User-Ansicht
+		- Seite mit Text: "Sie sind noch nicht angemeldet. Melden Sie sich an oder registrieren Sie sich, um diesen Bereich nutzen zu können."
+		- darunter Button mit Aufschrift: "Anmelden oder Registrieren"
+	
+	- Meine Rezepte-Ansicht	
+		- zeigt Liste von gespeicherten Rezepten:
+			- Anfang: private Rezepte
+			- Trennstrich und darunter: gespeicherte Rezepte
+		- hinter jedem Rezept ein Button mit Auswahlmenü: 
+			- Rezept bearbeiten (redirect zur Bearbeiten-Ansicht)
+			- Rezept löschen
+
+	- Suchergebnisse-Ansicht (nach Klick auf "Suchen"-Button)
+		- absteigend relevanzsortierte Liste mit Rezepten
+		- nach unten scrollbar
+		- Rezepte werden mit Titel, Foto und Zubereitungszeit angezeigt
+		- durch Klick auf Rezept weiterleitung zur jeweiligen Rezept-Ansicht
+	
+	- Rezept-Ansicht (Fall 1: öffentliches Rezept)
+		- Titel
+		- Actiontitel (kurze Beschreibung, maximal einen Satz lang)
+		- Foto
+		- Liste an Zutaten
+		- Zubereitungszeit (aufgeteilt in "Vorbereitungszeit" und "Kochzeit")
+		- Freitextfeld: Zubereitungsbeschreibung
+		- Freitextfeld: Literatur/Inspiration des Kochs
+
+	- Rezept-Ansicht (Fall 2: privates Rezept)
+		- wie öffentliches Rezept, aber zusätzlicher Button "Rezept veröffentlichen
+	
+	- neues Rezept hinzugüfen-Ansicht zeigt:
+		- Rezeptvorlage (Template) mit Feldern für:
+			- Foto des Rezepts
+			- Liste an Zutaten
+			- Mengenangabe an Zutaten
+			- Freitext zur Beschreibung des Zubereitungsvorgangs
+		- Schiebebutton mit Auswahl "privates Rezept"/"öffentliches Rezept"
+		- unten Button: "Rezept ist fertig" (speichert Rezept und schließt Ansicht)
+	
+	- Rezept bearbeiten-Ansicht
+		- wie neues Rezept hinzufügen-Ansicht, aber schon ausgefüllt
+
+    Inhaltlich:
+	- Datenbank an vorhandenen Zutaten
+	- Merkzettel mit gespeicherten Rezepten
+
+
+
+Should have (Wunschkriterien):
+	
+	- Suchmenü:
+		- Felderbasierte Suchansicht
+		- Minimalanzahl an Zutaten, die eingegeben werden müssen (mind. 1)
+	- Rezeptansicht:
+		- Funktion zum Errechnen neuer Mengenangaben für mehr/weniger Portionen als im Rezept angegeben
+	- Datenbank für Zutaten kann durch eigene Zutaten erweitert werden
+	- Priorisierte Anzeige der Suchergebnisse (Absteigend nach Relevanz)
+	- Bewertungsfunktion für öffentliche Rezepte mit 5-Sterne-System und Kommentarfunktion
+
+
+
+Could Have (Extrakriterien):
+	- Suchmenü:
+		- Minimalanzahl an "Tags", die eingegeben werden müssen zur Suche
+		- Beispieleingabe in Suchleiste, die verschwindet, wenn der User zu tippen beginnt
+		- Vorschlagsanzeige beim Eintippen von Suchbegriffen (Zutaten UND Tags)
+		- Auswahl: Vorspeise, Hauptgericht, Nachspeise über drei Buttons über der Suchleiste (zB zum Browsen nutzbar)
+		- "Ähnliche Rezepte"-Vorschlag anzeigen zu Suchergebnissen
+	- neues Rezept hinzufügen-Ansicht:
+		- Vorschläge beim Eintippen von Zutaten
+	- Möglichkeit, private Rezepte mit ausgewählten User-Gruppen zu teilen
+	- Möglichkeit, Usern zu folgen und so ihre Aktivität zu beobachten
+		- Benachrichtigungen
+	- Möglichkeit, neue eigene Tags in die Such-Datenbank einzuspeisen
+	- Ladebildschirm beim Öffnen der App
+	- Funktion, die benötigte Zutaten einer Einkaufsliste hinzufügt (Extra Ansicht in Seitenmenü einfügen)
+	- Volltextsuche in privaten Rezepten
+	- Importfunktion von schon geschriebenen Rezepten (html link) mit parsen der fremden Rezepte in durch App vorgegebene Struktur
+	- Timelinefunktion: wann ist welches Rezept hinzugefügt worden (als Suchparameter)
+		- Rezepte brauchen Zeitstempel, der beim hochladen hinzugefügt wird
+	- Exportmöglichkeit, um Rezept als PDF ausgeben zu lassen (Druckansicht erstellen)
+
+
+
+Won't have (Abgrenzungskriterien):
+	- Chatfunktion
+	- Forumsfunktion

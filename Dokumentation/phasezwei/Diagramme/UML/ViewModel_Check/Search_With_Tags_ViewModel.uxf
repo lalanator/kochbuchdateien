@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>651</x>
+      <y>329</y>
+      <w>490</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Search_with_tags_fragment_search_recipe
+--
+fertigbutton()
+{
+    ((Mainactivity) getactivity()).swtichcontext(new Public_recipe_search_fragment(title, ...))
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>14</x>
+      <y>329</y>
+      <w>385</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Search_with_tags_fragment_create_recipe
+--
+&lt;&lt;create&gt;&gt; Search_with_tags_fragment_create_recipe(String recipeid)
+--
+readybutton()
+{
+    settagstorecipe(recipeid, getselectedtags())
+    ((Mainactivity) getactivity()).swtichcontext(new Create_recipe_fragment(recipeid))
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>448</x>
+      <y>329</y>
+      <w>168</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Search_with_tags_fragment
+&lt;&lt;abstract&gt;&gt;
+--
+List&lt;String&gt; getselectedtags()
+/+fertigbutton()/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>147</y>
+      <w>21</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>203</y>
+      <w>343</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>470.0;180.0;470.0;10.0;10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>210</y>
+      <w>266</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0;360.0;10.0;360.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1036</x>
+      <y>441</y>
+      <w>56</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;create&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>868</x>
+      <y>525</y>
+      <w>245</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Search_with_tags_search_recipe_viewmodel
+--
+title: livedata&lt;String&gt;
+ingredients: livedata&lt;List&lt;String&gt; &gt;
+
+
+--
+getprivatetags()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>728</y>
+      <w>175</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Repository
+&lt;&lt;Singleton&gt;&gt;
+--
+addrecipe(recipe: PrivateRecipe)
+gettags():List&lt;String&gt;
+getrecipe(id: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>532</y>
+      <w>252</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Search_with_tags_create_recipe_viewmodel
+--
+recipeid: livedata&lt;String&gt;
+selectedtags: livedata&lt;List&lt;String&gt; &gt;
+--
+getprivatetags()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>161</x>
+      <y>441</y>
+      <w>56</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;create&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>469</x>
+      <y>511</y>
+      <w>245</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Search_with_tags_viewmodel
+--
+selectedtags:livedata&lt;List&lt;String&gt; &gt;
+
+--
+getprivatetags()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>574</y>
+      <w>175</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;10.0;40.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>35</y>
+      <w>168</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Fragment
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>329</x>
+      <y>588</y>
+      <w>154</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>441</y>
+      <w>56</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;create&gt;&gt;
+</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>623</y>
+      <w>70</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=mrepository</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

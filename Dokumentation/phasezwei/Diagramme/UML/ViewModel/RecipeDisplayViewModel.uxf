@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>128</y>
+      <w>232</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>RecipeDisplayViewModel
+--
+construct: recipe:PublicRecipe
+--
+-mRepo:Repository
+-recipe:PublicRecipe
+-portions:Livedata&lt;int&gt;
+-creator:User
+-rating:int
+--
++getUser(recipe:PublicRecipe):User
++addtoshoppinglist()
++scale()
++rate()
++markasevil()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>672</x>
+      <y>216</y>
+      <w>408</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>getUser(recipe:PublicRecipe):User
+gibt den Ersteller eines öffentlichen Rezeptes zurück
+
+addtoshoppinglist()
+fügt alle Zutaten des Rezeptes zur shoppinglist hinzu
+
+scale()
+skaliert das rezept mit der eingegebenen portionenzahl
+
+markasevel()
+markiert das rezept in der onlinedatenbank als gemeldet</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

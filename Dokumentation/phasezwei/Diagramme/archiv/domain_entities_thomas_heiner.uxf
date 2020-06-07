@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>170</y>
+      <w>300</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Recipe
+--
+-author: User
+-ingredients: ingredientAmountList
+-image:BufferedImg
+-title:String
+-bewertung:double
+-preparation:String
+-isPublic:Boolean
+-creationTimeStamp:TimeStamp
+-preparationTime:Int
+-cookingTime:Int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>440</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt; Unit
+--
+{Eßl. ,Tel., g, Liter, Strück, ... }</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>590</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>FavroriteList
+--
+recipies: List&lt;recipies&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>870</y>
+      <w>320</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ShoppingList
+--
+ingredients: List&lt;IngredientAmount&gt; 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>730</y>
+      <w>320</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>ShoppingList
+--
+ingredients: List&lt;IngredientAmount&gt; 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>1000</y>
+      <w>350</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>PersonalUserData
+--
+-user:User. 
+-shoppingList: List&gt;IngredientAmount&gt;
+-privateTags:Taglist</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>590</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>TagList:
+--
+getTags():List&lt;String&gt;
+addTag(Tag:String) 
+removeTag(Tag:String)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>440</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>IngredientAmount
+--
+quantity: double 
+ingredient: String
+unit: unit</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,307 @@
+\chapter{Data Layer - Servertests}
+Es gibt Test, welche über einen Mock auf die API zugreifen und es gibt Tests die auf die Controller direkt zugreifen, da manche URLs nicht nur mit Authentifizierung über Firebase-Token funktioniert
+
+\section{PublicRecipeTest}
+
+\subsection{Rezept hinzufügen T10.4}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt. Ein Rezeptobjekt, welches gespeichert werden soll wurde erstellt.
+	\item Aktion: Es wird die Methode zum erzeugen des Rezeptes, des Controllers, aufgerufen.
+	\item Erwartetes Ergebnis: Rezept wurde in der Datenbank abgespeichert und zurückgegeben.
+	\item Getestet: Das soeben erstellte Rezept und zurückgelieferte Rezept wird mit dem in der Datenbank erstellen Rezept verglichen, ob sie gleich sind.
+\end{itemize}
+
+\subsection{Rezept laden T12.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Ein Rezept mit einer bestimmten ID existiert schon.
+	\item Aktion: Es wird die API aufgerufen, um ein Rezept mit einer bestimmten ID zu laden .
+	\item Erwartetes Ergebnis: Rezept mit der bestimmten ID wird zurückgegeben.
+	\item Getestet: Das Rezept wird auf Vollständigkeit geprüft.
+\end{itemize}
+
+\subsection{Rezept bearbeiten T11.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Ein Rezept mit einer bestimmten ID existiert schon. Im SecurityContextHolder ist der Nutzer hinterlegt, der das Rezept erstellt hat.
+	\item Aktion: Es wird die Methode zum Updaten von Rezepten, des Controllers, aufgerufen.
+	\item Erwartetes Ergebnis: Das Rezept wurde in der Datenbank aktualisiert.
+	\item Getestet: Das Rezept wird von der Datenbank geladen und überprüft, ob die Änderungen übernommen wurden.
+\end{itemize}
+
+\subsection{Rezept löschen}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Ein Rezept mit einer bestimmten ID existiert schon. Im SecurityContextHolder ist der Nutzer hinterlegt, der das Rezept erstellt hat.
+	\item Aktion: Es wird die Methode zum Löschen von Rezepten, des Controllers, aufgerufen.
+	\item Erwartetes Ergebnis: Das Rezept wurde in der Datenbank gelöscht.
+	\item Getestet: Das Rezept wird von in der Datenbank gesucht. Wenn eine RessourceNotFoundException geworden wird, ist das Bild gelöscht.
+\end{itemize}
+
+\subsection{Rezepte mit Titel suchen T25.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Es existieren verschiedene Rezepte in der Datenbank.
+	\item Aktion: Es wird die API aufgerufen, um nach Rezepten zu suchen, welche einen bestimmtes Wort im Titel haben.
+	\item Erwartetes Ergebnis: Es wird eine Liste mit Rezepten, die das bestimmten Wort im Titel haben, zurückgegeben.
+	\item Getestet:Es wird überprüft, ob die gelieferten Rezepte, dass bestimmten Wort im Titel haben.
+\end{itemize}
+
+\subsection{Rezepte mit Zutaten suchen T25.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Es existieren verschiedene Rezepte in der Datenbank.
+	\item Aktion: Es wird die API aufgerufen, um nach Rezepten zu suchen, welche bestimmte Zutaten haben.
+	\item Erwartetes Ergebnis: Es wird eine Liste mit Rezepten, welche eine der Zutaten, nach denen gesucht wurde, beinhaltet, zurückgegeben.
+	\item Getestet:Es wird überprüft, ob die gelieferten Rezepte, eines der gesuchten Zutaten beinhaltet.
+\end{itemize}
+
+\subsection{Rezepte mit Tags suchen T25.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Es existieren verschiedene Rezepte in der Datenbank.
+	\item Aktion: Es wird die API aufgerufen, um nach Rezepten zu suchen, welche bestimmte Tags haben.
+	\item Erwartetes Ergebnis: Es wird eine Liste mit Rezepten, welche eine der Tags, nach denen gesucht wurde, beinhaltet, zurückgegeben.
+	\item Getestet:Es wird überprüft, ob die gelieferten Rezepte, eines der gesuchten Tags beinhaltet.
+\end{itemize}
+
+\subsection{Rezepte von Nutzer laden}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Es existieren verschiedene Rezepte von einem Nutzer in der Datenbank.
+	\item Aktion: Es wird die API aufgerufen, um die Rezepte von einem Nutzer zu laden.
+	\item Erwartetes Ergebnis: Es wird eine Liste von Rezepten vom Nutzer zurückgegeben.
+	\item Getestet:Es wird überprüft, ob die gelieferten Rezepte, den Nutzer als Ersteller eingetragen haben.
+\end{itemize}
+
+
+\section{UserTest}
+\subsection{Nutzer ohne Id erstellen}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt.
+	\item Aktion: Es wird die Methode zum erzeugen von einem Nutzer aufgerufen.
+	\item Erwartetes Ergebnis: Es wird ein neuer Nutzer mit einem automatisch generierten Nutzernamen in der Datenbank angelegt und der Nutzernamen wird im Firebaseaccount hinterlegt.
+	\item Getestet:Es wird überprüft, ob eine Userid des Nutzers in Firebase hinterlegt wurde und ob der Nutzer in der Datenbank existiert.
+\end{itemize}
+
+\subsection{Prüfen ob Nutzername noch nicht existiert}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: -
+	\item Aktion: Es wird die API aufgerufen, welche überprüft, ob eine Userid noch nicht existiert.
+	\item Erwartetes Ergebnis: Es wird ein leeres Nutzerobjekt zurückgegeben, wenn die Userid noch nicht existiert.
+	\item Getestet:Es wird überprüft, ob das Nutzerobjekt leer ist.
+\end{itemize}
+
+\subsection{Nutzer mit Id erstellen}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt.
+	\item Aktion: Es wird die Methode zum erzeugen von einem Nutzer mit Userid aufgerufen.
+	\item Erwartetes Ergebnis: Es wird ein neuer Nutzer mit der übergebenen Userid in der Datenbank angelegt.
+	\item Getestet:Es wird überprüft, ob der Nutzer mit dem gewünschten Nutzernamen in der Datenbank existiert.
+\end{itemize}
+
+\subsection{Prüfen ob Nutzername schon existiert}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Ein Nutzer mit dem gewünschten Nutzernamen ist in der Datenbank und in Firebase hinterlegt.
+	\item Aktion: Es wird die API aufgerufen, welche überprüft, ob eine Userid schon existiert.
+	\item Erwartetes Ergebnis: Es wird ein befülltes Nutzerobjekt zurückgegeben, wenn die Userid schon existiert.
+	\item Getestet:Es wird überprüft, ob das Nutzerobjekt ausgefüllte Werte hat.
+\end{itemize}
+
+\subsection{Nutzerprofil aktualisieren T7.2, T7.4, T21.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt. Der Nutzer der aktualisiert werden soll, ist in der Datenbank hinterlegt.
+	\item Aktion: Es wird die Methode zum aktualisieren von einem Nutzer aufgerufen und die Daten welche aktualisiert werden sollen übergeben.
+	\item Erwartetes Ergebnis: Der Nutzer wird in der Datenbank aktualisiert und wenn sich die Userid ändert, wird diese in Firebase im Nutzeraccount aktualisiert.
+	\item Getestet:Es wird überprüft, ob der Nutzer in der Datenbank die neuen Werte beinhaltet und wenn sich die Userid geändert hat, ob diese in Firebase aktualisiert wurde.
+\end{itemize}
+
+\subsection{Nutzerprofil löschen T7.5}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt. Der Nutzer der gelöscht werden soll, ist in der Datenbank hinterlegt.
+	\item Aktion: Es wird die Methode zum löschen von einem Nutzer aufgerufen und die Userid übergeben.
+	\item Erwartetes Ergebnis: Der Nutzer wird in der Datenbank und der Account in Firebase wird gelöscht.
+	\item Getestet:Es wird überprüft, ob der Nutzer in der Datenbank gelöscht wurde.
+\end{itemize}
+
+\section{FileTest}
+\subsection{Image hochladen T11.2, T21.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt und man hat ein Bild zum speichern.
+	\item Aktion: Es wird die Methode hochladen von einem Bild aufgerufen. 
+	\item Erwartetes Ergebnis: Das Bild wird auf dem Server unter einem Ordner, der den Namen des Nutzers hat, gespeichert.
+	\item Getestet:Es wird überprüft, ob das Bild auf dem Server gespeichert wurde und gleich dem hochgeladenen Bild ist.
+\end{itemize}
+
+\subsection{Image hochladen T11.2, T21.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt und man hat ein Bild zum speichern.
+	\item Aktion: Es wird die Methode hochladen von einem Bild aufgerufen. 
+	\item Erwartetes Ergebnis: Das Bild wird auf dem Server unter einem Ordner, der den Namen des Nutzers hat, gespeichert. Wenn schon ein Bild existiert, welches den gleichen Namen hat, wird das Bild mit \dq\_Zahl\dq  erweitert.
+	\item Getestet:Es wird überprüft, ob das Bild auf dem Server gespeichert wurde und gleich dem hochgeladenen Bild ist und einen neuen Namen hat.
+\end{itemize}
+
+\subsection{Image laden T11.2, T21.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt und man hat ein Bild auf dem Server hinterlegt.
+	\item Aktion: Es wird die Methode zum Laden von einem Bild aufgerufen und der Bildname und Nutzerid übergeben. 
+	\item Erwartetes Ergebnis: Das Bild wird vom Server geladen.
+	\item Getestet:Es wird überprüft, ob das Bild auf dem Server gleich dem geladenen Bild ist.
+\end{itemize}
+
+\subsection{Image aktualisieren T11.2, T21.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt und man hat ein Bild zum aktualisieren.
+	\item Aktion: Es wird die Methode zum Aktualisieren von einem Bild aufgerufen und der Bildname, Nutzerid und das neue Bild übergeben. 
+	\item Erwartetes Ergebnis: Das Bild wird auf dem Server geladen und das aktuelle Bild wird durch das Neue ersetzt.
+	\item Getestet:Es wird überprüft, ob das aktualisierte Bild auf dem Server gleich dem hochgeladenen Bild ist.
+\end{itemize}
+
+\subsection{Bild löschen T11.2, T21.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt und man hat ein Bild zum löschen.
+	\item Aktion: Es wird die Methode zum Löschen von einem Bild aufgerufen und der Bildname und die Nutzerid. 
+	\item Erwartetes Ergebnis: Das Bild wird auf dem Server gelöscht.
+	\item Getestet:Es wird überprüft, ob das Bild auf dem Server gleich gelöscht wurde.
+\end{itemize}
+
+
+\section{AdminTest}
+\subsection{Überprüfen ob man Admin ist}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist im SecurityContextHolder hinterlegt. Der Nutzer ist als Admin in der Datenbank hinterlegt.
+	\item Aktion: Es wird die Methode zum überprüfen, ob der Nutzer Admin ist aufgerufen.
+	\item Erwartetes Ergebnis: Des wird Objekt zurückgeliefert, in dem steht, ob der Nutzer Admin ist.
+	\item Getestet:Es wird überprüft, ob im Objekt drinsteht, das der Nutzer Admin ist.
+\end{itemize}
+
+\subsection{Ein Rezept wird gemeldet}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Ein Rezept zum Reporten ist hinterlegt.
+	\item Aktion: Es wird die Methode zum Reporten aufgerufen und die Id des Rezeptes übergeben.
+	\item Erwartetes Ergebnis: Das Rezept wird in der Datenbank als reported markiert.
+	\item Getestet:Es wird überprüft, ob das Rezept in der Datenbank auf reported gesetzt wurde.
+\end{itemize}
+
+\subsection{Ein User wird gemeldet}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Ein User zum Reporten ist hinterlegt.
+	\item Aktion: Es wird die Methode zum Reporten eines Nutzers aufgerufen und die Id des Nutzers übergeben.
+	\item Erwartetes Ergebnis: Der User wird in der Datenbank als reported markiert.
+	\item Getestet:Es wird überprüft, ob der User in der Datenbank auf reported gesetzt wurde.
+\end{itemize}
+
+
+
+\subsection{Gemeldete Rezepte-Liste zurückgeben}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: In der Rezeptliste sind bereits gemeldete Rezepte vorhanden.
+	\item Aktion: Die Liste der gemeldeten Rezepte wird angefordert.
+	\item Erwartetes Ergebnis: Die Liste der gemeldeten Rezepte wird vollständig zurückgegeben.
+	\item Getestet: Die Rezeptliste wird durchgegangen und geprüft, dass jedes Rezept als gemeldet markiert ist.
+\end{itemize}
+
+
+
+\subsection{Gemeldete Nutzer-Liste zurückgeben}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: In der Nutzerliste sind bereits gemeldete Nutzer vorhanden.
+	\item Aktion: Die Liste der gemeldeten Nutzer wird angefordert.
+	\item Erwartetes Ergebnis: Die Liste der gemeldeten Nutzer wird vollständig zurückgegeben.
+	\item Getestet: Die Nutzerliste wird durchgegangen und geprüft, dass jeder Nutzer als gemeldet markiert ist.
+\end{itemize}
+
+
+\subsection{Rezepte entmelden}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: In der Rezeptliste sind bereits gemeldete Nutzer vorhanden.
+	\item Aktion: Alle Rezepte werden nacheinander entmeldet.
+	\item Erwartetes Ergebnis: Die Rezepte sind in der Datenbank nicht mehr reported.
+	\item Getestet: Die Rezepte werden von der Datenbank geladen und geprüft, dass jedes Rezept nicht als gemeldet markiert ist.
+\end{itemize}
+
+
+\subsection{Nutzer entmelden}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: In der Nutzerliste sind bereits gemeldete Nutzer vorhanden.
+	\item Aktion: Alle Nutzer werden nacheinander entmeldet.
+	\item Erwartetes Ergebnis: Die User in der Datenbank sind nicht mehr reported.
+	\item Getestet: Die User werden von der Datenbank geladen und geprüft, dass jeder Nutzer nicht als gemeldet markiert ist.
+\end{itemize}
+
+\section{FavouriteTest}
+
+\subsection{Favoriten hinzufügen T13.1}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist angemeldet.
+	\item Aktion: Es werden drei Rezepte erstellt und dem Controller übergeben. Jedes Rezept wird favorisiert.
+	\item Erwartetes Ergebnis: Die soeben favorisierten Rezepte sind in der Liste an Favoriten des Nutzers enthalten.
+	\item Getestet: Die Favoritenliste wird durchgegangen und geprüft, dass jedes der favorisierten Rezepte enthalten ist.
+\end{itemize}
+
+\subsection{Favoritenliste zurückgeben T13.2}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist angemeldet und hat bereits favorisierte Rezepte.
+	\item Aktion: Die Favoritenliste des Nutzers wird geladen.
+	\item Erwartetes Ergebnis: Alle favorisierten Rezepte sind in der Liste enthalten.
+	\item Getestet: Die Favoritenliste wird durchgegangen und geprüft, dass jedes der favorisierten Rezepte enthalten ist.
+\end{itemize}
+
+\subsection{Aus Favoritenliste löschen}
+\subsubsection{Status \textcolor{green}{ Der Test läuft durch} }
+\subsubsection{Vorgehen}
+\begin{itemize}
+	\item Voraussetzung: Gültiger Nutzer ist angemeldet und hat bereits favorisierte Rezepte.
+	\item Aktion: Alle Rezepte werden nacheinander defavorisiert.
+	\item Erwartetes Ergebnis: Die Rezepte sind nicht mehr für den Nutzer favorisiert.
+	\item Getestet: Die Favoritenliste wird geprüft, dass sie leer ist.
+\end{itemize}

@@ -1,0 +1,15 @@
+\chapter{Unittests}
+Da das UI Layer durch das Espresso-Testing bereits sicherstellt, dass enthaltene Methoden wie definiert funktionieren, werden nur Methoden aus dem Data- und dem Domain Layer durch Unittests getestet.
+
+\section{Data Layer}
+\subsection{Mapper}
+\textbf{Status \textcolor{green}{Der Test läuft durch} \\}
+Der Mapper, der Public Recipe Entities in DTOs umwandelt, damit diese an den Server geschickt werden können wird in \\
+\textbf{de.psekochbuch.exzellenzkoch.datalayer.remote.mapper} getestet.
+
+
+\section{Domain Layer}
+\subsection{Parser}
+\textbf{Status \textcolor{green}{ Der Test läuft durch}} \\
+Der Parser für die Zutatenangaben wird getestet im Paket \\
+\textbf{de.psekochbuch.exzellenzkoch.domainlayer.domainentities}.

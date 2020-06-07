@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=25
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>144</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FriendGroupFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>28</x>
+      <y>124</y>
+      <w>156</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>FriendFragment
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>184</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FriendListFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>220</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>CreateGroupFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>256</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>GroupFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>292</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>GroupMemberListFragment
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>208</x>
+      <y>124</y>
+      <w>152</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>RecipeFragment
+bg=gray
+layer=-2
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>148</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>RecipeListFragment
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>188</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>RecipeDisplayFragment
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>224</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>CreateRecipeFragment
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>260</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>EditTagFragment
+bg=#0857c5
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>384</x>
+      <y>124</y>
+      <w>172</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>FeedFragment
+bg=gray
+layer=-2
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>404</x>
+      <y>140</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FeedFragment
+bg=#0857c5
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>384</x>
+      <y>192</y>
+      <w>172</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ShoppinglistFragment
+bg=gray
+layer=-2
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>212</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ShoppingListDisplayFragment
+bg=#0857c5
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>384</x>
+      <y>268</y>
+      <w>172</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>CommentFragment
+bg=gray
+layer=-2
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>288</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AddEditCommentFragment
+bg=#0857c5
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>384</x>
+      <y>356</y>
+      <w>172</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>FavouriteFragment
+bg=gray
+layer=-2
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>376</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FavouriteFragment
+bg=#0857c5
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>204</x>
+      <y>364</y>
+      <w>164</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>SearchFragment
+bg=gray
+layer=-2
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>384</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>DisplaySearchListFragment
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>420</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>UserSearchFragment
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>460</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeSearchFragment
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>212</x>
+      <y>500</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>SearchWithTagsFragment
+bg=#0857c5
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>28</x>
+      <y>364</y>
+      <w>160</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>ProfileFragment
+bg=gray
+layer=-2
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>508</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ProfileDisplayFragment
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>464</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>RegistrationFragment
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>424</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>LoginFragment
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>384</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ProfileEditFragment
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>384</x>
+      <y>432</y>
+      <w>176</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>Admin
+bg=gray
+layer=-2
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>448</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AdminFragment
+bg=#0857c5
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>92</y>
+      <w>592</w>
+      <h>524</h>
+    </coordinates>
+    <panel_attributes>Fragments
+layer=-3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>548</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ChangePasswordFragment
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>16</x>
+      <y>28</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>MainActivity
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>176</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>MainActivity
+bg=light_gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

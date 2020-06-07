@@ -1,0 +1,67 @@
+2 große Themenblöcke: Room und Retrofit (und Permissions)
+
+1.) Room
+
+- Pro Entity ein DAO
+- Entity Objekte als Datenklassen (data class)
+- data class in Kotlin ist Klasse, die einem .equals() und ähnliche Methoden abnimmt und automatisch erzeugt
+	---> braucht einen Konstruktor mit Attributen
+	---> erstellt Objektklasse, die auch per == vglb. ist
+
+- AnnotationProcessor in AndroidStudio sucht nach @XYZ-Annotations (@Entity zB) und verarbeitet diese
+
+1.1) DAOs:
+
+- in DAO Klasse (@DAO-annotiertes Interface oder abstract class):
+Methoden für DB
+@Insert 
+fun save() 
+überschreibt Daten, wenn zB User mit ID=1 erneut gesaved wird -> dazu gibt es Konfliktlösungen:
+@Insert(onConflict = OnConflictStrategy.REPLACE) zB
+
+- um in Room keine ganze DB, sondern nur einen Teil (einzelne Spalten) zu laden, kann die SQL-Annotation über der Methode genutzt werden (zum laden von einzelnen Spalten nur)
+@Query("SELECT line FROM table")
+fun getAttribute()
+	---> bei uns gelöst durch DTOs
+
+1.2.1) Database
+
+- wieder über Anntotations gehandlet:
+	@Database
+	abstract class Klassenname(entities = [FromClass::class]
+						version = 1) {}
+	
+
+- companion object für das Bauen einer Room Persistence DB. Enthält: 
+	fun create(context: Context) {
+			return Room.databaseBuilder(context.applicationContext,
+					Klassenname::class.java,
+					"name_db")
+					.optionForVersionOfDB()
+					.build()
+		}
+
+- man kann einzelne Spalten auch in der Entity class in einer Subclass darstellen, indem man eine [data class Klasse2() {}] in der [@Entity \\ data class Klasse1() {}] erstellt und diese mit @Embedded in den Parametern von Klasse1(@Embedded Klasse2()) einbindet
+
+1.2.2) Type Converter
+
+- @TypeConverter Annot. über Klasse, um Datentypen ineinander umzuwandeln, zB Long -> Date (und zurück):
+	schreibe Klasse mit Converter-Methoden und annotiere diese, damit Room weiß,
+	auf welche Klasse zugegriffen werden muss, um Typen umzuwandeln
+	(Bsp. in example von Arconsis)
+
+1.3) Dependency Injection
+
+- kann entweder händisch oder mit Dagger, Coin, etc. gemacht werden (im example in der ExampleViewModelFactory ist es händisch implementiert)
+
+- ViewModelFactory, um VM zu erzeugen: eigene class ViewModelFactory : ViewModelProvider.Factory {...}
+	--> Anm. zum Code: "lazy" ist annot., die bewirkt, dass Code
+		erst ausgeführt wird, wenn tatsächlich gebraucht
+--> Soll so gebaut sein, dass es ein Singleton ist (companion object in Klasse ExampleViewModelFactory gibt Übersicht, wie das gemacht wird)
+	--> Anm.: if-else statement nötig, damit die INSTANCE nicht durch einen 
+		anderen Thread vereinnahmt wird, während die Factory genutzt wird
+
+- Thread Handler Klasse, um Repo Aktionen nebenläufig und ohne Blockieren des MainThreads auszuführen (ThreadHandler in example)
+	---> Somit wird die UI nicht vom DataLayer blockiert
+	--> Repo und VMFactory kriegen ThreadHandler als Parameter/Attribut
+	Android Coroutines nehmen einem diese Aufgabe ab?!

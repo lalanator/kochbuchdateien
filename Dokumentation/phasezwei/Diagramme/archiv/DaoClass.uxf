@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>lala
+</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>959</x>
+      <y>28</y>
+      <w>553</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeDao
+--
+getNewestRecipe(anzahl:int):List&lt;PublicRecipe&gt;
+searchRecipe(title:String,ingredients:List&lt;String&gt;,preptime:int,bewertung:double,desc:String):List&lt;PublicRecipe&gt;
+createRecipe(recipe:PublicRecipe)
+deleteRecipe(id:String)
+rateRecipe(userID:String,recipeID:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1372</x>
+      <y>238</y>
+      <w>259</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>UserDao
+--
+getFriends(userID:String):List&lt;User&gt;
+deleteFriend(userID:String, friendID:String):void
+sendFriendMessage(userID:String,friendID:String):void
+createAcc(userID:String,eMail:String,pw:String):void
+addInfo(userID:String,pic:BufferedImage,text:String):void
+getUniqueID():String
+abo(userID:String,toaboID:String):void
+getUser(userID:String):User
+searchUser(userID:String):List&lt;User&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>196</y>
+      <w>294</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>FriendGroupDao
+--
+getFriendGroups(userID:String):List&lt;FriendGroup&gt;
+createFriendGroup(creatorID:String,member:List&lt;String&gt;):void
+deleteUser(groupID:String,userID:String):void
+addUser(groupID:String,userID:String):void
+addRecipe(recipe:PrivateRecipe,userID:String)
+getRecipe(groupID:String):List&lt;privateRecipe&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1022</x>
+      <y>392</y>
+      <w>294</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>CommentDao
+--
+addComment(recipeID:String,authorID:String,text:String):void
+edidComment(text:String,commentID:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>896</x>
+      <y>0</y>
+      <w>784</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>Repository Objekte
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>7</y>
+      <w>868</w>
+      <h>525</h>
+    </coordinates>
+    <panel_attributes>Repository Objekte
+--
+bg=#6d84ab
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>378</y>
+      <w>392</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>RecipeDAO
+&lt;&lt;Interface&gt;&gt;
+--
+@Query("SELECT * FROM Recipes where Recipeid = :userId")
+    LiveData&lt;List&lt;Recipe&gt;&gt; loadRecipies(int recipeId);
+
+@Query("SELECT * FROM Recipes where recipeId = :recipeId")
+    List&lt;Recipe&gt; loadRecipeSync(int recipeId);
+
+@Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAll(List&lt;Recipe&gt; recipes);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>21</x>
+      <y>210</y>
+      <w>392</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>TagDAO
+&lt;&lt;Interface&gt;&gt;
+--
+@Query("SELECT * FROM Tags where tagstring = :tag")
+    LiveData&lt;List&lt;String&gt;&gt; loadTags(String tag);
+
+@Query("SELECT * FROM Tags where tagstring = :tag")
+    List&lt;String&gt; loadTagSync(String tag);
+
+@Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAll(List&lt;String&gt; tags);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>35</x>
+      <y>56</y>
+      <w>392</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>FriendDAO
+&lt;&lt;Interface&gt;&gt;
+--
+@Query("SELECT * FROM Friends where userid = :userId")
+    LiveData&lt;List&lt;User&gt;&gt; loadFriends(int userId);
+
+@Query("SELECT * FROM Friends where userId = :userId")
+    List&lt;User&gt; loadFriendsSync(int userId);
+
+@Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAll(List&lt;User&gt; friends);</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>448</x>
+      <y>56</y>
+      <w>406</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Hier stehen alle über SQLite gespeicherten Daten
+Alle Offline zu speichernden Daten
+	- Favoriten
+	- UserData
+	- Tags
+	- Recipes (RecipeList)	
+	- Groups (GroupList)
+	- Friends (FriendList)
+	- ShoppingList </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>420</x>
+      <y>546</y>
+      <w>406</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Hier stehen alle über MySql gespeicherten Daten
+Alle Serverseitig zu speichernden Daten
+	- Feed
+	- public Recipes
+	- UserList
+	- Groups</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

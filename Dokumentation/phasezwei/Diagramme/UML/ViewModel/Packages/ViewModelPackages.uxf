@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>80</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>RecipeListViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>120</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>RecipeDisplayViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>156</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>CreateRecipeViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>192</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>EditTagViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>240</x>
+      <y>56</y>
+      <w>152</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>RecipeViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>436</x>
+      <y>72</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FeedViewModel
+bg=#0857c5
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>416</x>
+      <y>56</y>
+      <w>172</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>FeedViewModel
+bg=gray
+layer=-2
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>428</x>
+      <y>144</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ShoppingListDisplayViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>416</x>
+      <y>124</y>
+      <w>172</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ShoppinglistViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>220</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AddEditCommentViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>416</x>
+      <y>200</y>
+      <w>172</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>CommentViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>308</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FavouriteViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>416</x>
+      <y>288</y>
+      <w>172</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>FavouriteViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>244</x>
+      <y>296</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>DisplaySearchListViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>244</x>
+      <y>332</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>UserSearchViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>244</x>
+      <y>372</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeSearchViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>244</x>
+      <y>412</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>SearchWithTagsViewModel
+&lt;&lt;Interface&gt;&gt;
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>236</x>
+      <y>276</y>
+      <w>164</w>
+      <h>244</h>
+    </coordinates>
+    <panel_attributes>SearchViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>440</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ProfileDisplayViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>396</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>RegistrationViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>356</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>LoginViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>316</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ProfileEditViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>480</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ChangePasswordViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>60</x>
+      <y>296</y>
+      <w>160</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>ProfileViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>432</x>
+      <y>380</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AdminViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>416</x>
+      <y>364</y>
+      <w>176</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>AdminViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>76</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FriendGroupViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>60</x>
+      <y>56</y>
+      <w>156</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>FriendViewModel
+bg=gray
+layer=-2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>116</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>FriendListViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>152</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>CreateGroupViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>188</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>GroupViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>224</y>
+      <w>132</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>GroupMemberListViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>32</x>
+      <y>24</y>
+      <w>592</w>
+      <h>524</h>
+    </coordinates>
+    <panel_attributes>ViewModels
+layer=-3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>244</x>
+      <y>448</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>SearchWithTagsCreateRecipeViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>244</x>
+      <y>484</y>
+      <w>148</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>SearchWithTagsSearchRecipeViewModel
+bg=#0857c5</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

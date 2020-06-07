@@ -1,0 +1,94 @@
+
+Funktionale Anforderungen 
+
+Benutzersystem: 
+
+FA 05: Ein Nutzer muss ein Profil anlegen, verwalten und entfernen können. 
+
+FA 10:
+Ein Nutzer muss einen Profil hinzufügen können. Dabei gibt er
+einen Namen ein, den er später jederzeit wieder ändern kann. Der gewählte
+Name muss nicht eindeutig sein, wird jedoch wenn der Nutzer ein Rezept ver-
+öffentlicht mit dem Rezept angezeigt. Der Name kann nur entfernt werden, 
+falls der Nutzer sein Profil entfernt. 
+
+FA20: 
+Ein Nutzer muss beim Erstellen des Profils eine Email hinzufügen. Die Email
+muss eindeutig dem Nutzer zugeordnet werden können. Die gewählte Email ist 
+fest mit dem Nutzerprofil verbunden und kann im Nachhinein nicht geändert 
+werden. Falls der Nutzer sein Profil komplett erntfernt, wird die Email 
+auch entfernt.
+
+FA30: 
+Ein Nutzer muss beim Erstellen des Profils ein Passwort hinzufügen. Dieses
+wird bei jedem Registrierungsvorgang abgefragt und muss neu eingegeben werden. 
+Der Nutzer kann das Passwort im Nachhinein ändern. Das Passwort wird beim 
+Entfernen des Profils entfernt. 
+
+FA40: 
+Ein Nutzer kann ein Profilbild hinzufügen. Dieses ist veränderbar und kann 
+auch entfernt werden. Ein Profilbild kann jederzeit hinzugefügt werden.
+Falls ein Nutzer kein Profilbild hat, wird ein Default Profilbild angezeigt.
+
+
+
+Rezepte:
+
+FA10 Rezeptname : 
+Der Benutzer muss ein Rezepte hinzufügen können. Dabei muss er einen Namen
+eingeben. Der Name ist jederzeit änderbar, darf aber nicht leer bleiben. 
+Der Name eines Rezepte muss nicht eindeutig sein. 
+
+FA20 Bild Rezept: 
+Der Benutzer kann beim erstellen des Rezeptes ein Bild von diesem Rezept 
+in einem eigens dafür bereitgestelltem Bereich hochladen. Das Bild kann zu 
+jeder Zeit geändert, oder entfernt werden. Falls der Nutzer kein Bild hochläd, 
+oder ein Bild löscht, sodass keins mehr vorhanden ist, wird ein default Bild
+angezeigt. 
+
+FA25 Bildergalerie Rezept:  (wunsch)
+Der Benutzer kann beim erstellen eines Rezeptes, mehrere Bilder hochladen, 
+die er einzeln hinzufügen, oder entfernen kann. Falls kein Bild vorhanden ist, 
+wird ein default Bild angezeigt. Durch diese Bildergalerie kann beim Anschauen 
+des Rezepts durch die Bilder geswiped werden. Die Bilder können jederzeit ver-
+ändert werden. Falls der Nutzer das Rezept entfernt, werden die Bilder automatisch 
+mitentfernt. 
+
+FA30 Freitextbeschreibung: 
+Der Benutzer muss beim Erstellen des Rezepts einen Freitext schreiben, um 
+den Zubereitungsvorgang zu erläutern. der Text kann jederzeit verändert werden
+und wird beim Entfernen des Rezepts mitentfernt. Der Text ist durch eine feste
+Zeichenanzahl begrenzt. 
+
+FA40 Zubereitungslänge:
+Der Benutzer gibt beim Erstellen des Rezepts eine Zeitangabe an, die einen 
+ungefähren Richtwert der Zubereitungsdauer darstellt. Diese Zeitangabe wird 
+in Minuten angegeben. Diese kann jederzeit vom Ersteller korrigiert und ver-
+ändert werden. Die Zeitangabe muss einschließlich zwischen 10 - bis 180 Minuten 
+liegen. 
+
+FA50 Zutatentags: 
+Der Benutzer muss beim Erstellen des Rezepts Zutatentags hinzufügen. Diese 
+müssen eindeutig sein. Die Tags werden in einer eigens dafür bereitgestellten 
+Liste eingegeben. Beim Eingeben der Tags werden dem Benutzer Vorschläge 
+von Tags vorgegeben, aus dennen dann gewählt wird. Die ausgewählten Tags
+müssen mindestens drei verschiedene und maximal 50 verschiedene beinhalten. 
+Ein Tag kann nur einmal pro Rezept ausgewählt werden. Beim Auswählen des Tags
+wird dem Nutzer eine Eingabemöglichkeit bereitgestellt, um die Mengen/Stückzahl
+dazuzuschreiben. Die existierenden Tags können jederzeit vom Ersteller des 
+Rezepts verändert und entfernt werden, solange die oben gegebenen Rahmen-
+bedingungen eingehalten werden. 
+
+FA60 Veröffentlichung der Rezepte: 
+Der Ersteller eines Rezepts kann optioal sein Rezept der Öffentlichkeit zur 
+Verfügung stellen. Dies kann er zu jedem Zeitpunkt wiederrufen und ein öffent-
+liches Rezept wieder privat einstufen und ein privates Rezept jederzeit ver-
+öffentlichen. wird ein Rezept vom Ersteller entfernt, wird das Rezept auch 
+aus dem Öffentlichen Ansicht entfernt. Der Benutzer muss beim Veröffentlichen
+eines Rezepts mit seinem Profil eingeloggt sein. Der Benutzer ist bei einem 
+öffentlichen Rezept auch miteinsehbar. 
+
+
+
+
+ 

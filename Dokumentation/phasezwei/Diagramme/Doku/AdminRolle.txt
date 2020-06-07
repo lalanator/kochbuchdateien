@@ -1,0 +1,31 @@
+Admin-Rolle:
+
+Verwaltung von Server-Einträgen:
+- gemeldete Inhalte überschauen
+	---> Datenbankeintrag "gemeldete Rezepte/Gruppen/User"
+- löschen von Inhalten (zB. Gesetzeswidrige):
+
+	Öffentliche Rezepte (ein Atrribut eines Rezept faulig -> Rezept gelöscht)
+	Kommentare
+	User
+		userID
+		description
+		picture
+	Gruppen
+		gruppenname
+		nutzer
+
+Admin-Fragment enthält Liste an gemeldeten Objekten und Methoden:
+	Objekt entfernen,
+		Autor von Objekt entfernen,
+	Objekt freigeben
+
+Ein Admin ist ein User
+	---> hat "isAdmin" boolean/DB-Eintrag
+	---> hat zusätzliches Fragment im Menü
+	---> hat sonst alle anderen Funktionen eines Users
+
+reportedRecipe:List<User>
+reportedUsers:List<User>
+reportedGroups:List<Group>
+reportedComments:List<iDComment>

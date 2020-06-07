@@ -1,0 +1,49 @@
+TODO
+1. Standupmeeting
+	-Lea
+		- Uml Klassenmodel
+		- Sequenzdiagramm zu Favoriten hinzufügen & delete
+		- Dokumentation 
+	- Pascal
+		- Uml Klassenmodel
+		- Fragen---------------------------------------
+			- Shoppinglist? (Ingredients)
+		- Firebase Authentifizierung
+	- Heiner
+		- DAO erklären -------------------
+		- Clean Architekture
+		- Uml Klassenmodel
+		- Name (Domain) 
+	- Thomas 
+		- Uml Klassenmodel
+		- Doku 
+		- Sequenzdiagramme (Recipe (privat) öffentlich())
+	-Magnus 
+		- Fragments
+		- Friends UML
+		- Sequenzdiagramm zu Recipe und Friends
+2. Namenvorschläge
+	- let`s cook
+	- pseKochbuchDe 
+
+	
+
+TODO
+- Navigator klasse zum Fragment wechsel  (Magnus)
+
+- Fragment uml zu Zustandsdiagramm formatieren (Magnus)
+
+- Ingedients einteilen modellieren (morgen) (alle)
+
+- DAO Klassen Beispiel (heiner)
+
+- Uml Structur zusammenfügen (Thomas & Lea & Magnus)
+
+- Unterscheidung zwischen privaten und öffentlichen Rezepten (Thomas)
+
+- unfertige Rezepte können nur in dem Editfragment angesehen werden  (im Fragment graph anpassen)
+	- Offline Werden kommentare nicht angezeigt 
+
+- Adminrolle modellieren (Pascal)
+
+-  

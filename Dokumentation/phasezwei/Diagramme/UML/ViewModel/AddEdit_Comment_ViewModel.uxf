@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>168</y>
+      <w>119</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>AddEditCommentFragment
+--
+--
+-header:TextView,
+-commentText:EditText
+-comment:Button</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>112</x>
+      <y>203</y>
+      <w>203</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>322</x>
+      <y>448</y>
+      <w>336</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+--
++addCommentToRecipe(recipeID:String,userID:String, comment:String)
++getExistingComment(commentID:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>385</y>
+      <w>56</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+m1=0
+m2=1 mrepo</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>112</x>
+      <y>245</y>
+      <w>203</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>105</x>
+      <y>406</y>
+      <w>210</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>addCommentToRecipe(...) [Serveranfrage] 
+ordnet dem Rezept ein neues Kommentar hinzu, 
+falls die commentID noch nicht existiert. Falls die
+schon existiert, wird das bisherige ersetzt.
+
+getExistinComment(...) [Serveranfrage]
+fragt den Server an, ob ein Kommentar mit der 
+gegebenen ID existiert
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>329</x>
+      <y>28</y>
+      <w>245</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>commentID wird im Konstruktor übergeben
+und ist null, falls ein neues Comment erstellt wird</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>301</x>
+      <y>175</y>
+      <w>343</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>AddEditCommentViewModel
+--
+--
+&lt;&lt;construct&gt;&gt;privateRec(recipeID:String, userID:String, commentID:String? )
+--
+-currentText:livedata&lt;String&gt;
+-recipeID:String
+
+--
++addCommentToRecipe(userID:String,recipeID:String,comment:String)
+{
+mrepo.addCommentToRecipe(...)
+}
++loadComment(commentID:String?):Comment
+{
+return mrepo.getExistingComment(commentID)
+}
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

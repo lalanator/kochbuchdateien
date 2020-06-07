@@ -1,0 +1,514 @@
+\chapter{Testfälle}
+\test{Eigene Tags hinzufügen}{tst:tags}
+\tests{fnc:tags_wk}
+\tests{fnc:wk_tag}
+\tests{fnc:wk_tags}
+
+\teststep{Der Nutzer möchte einen persönlichen Tag hinzufügen}
+{Er gibt den Tag in die Tagliste ein}
+{Der Tag wird ihm beim nächsten Mal taggen angezeigt}
+
+\test{Freunde hinzufügen}{tst:account_freunde} %----------------------
+\tests{fnc:add_frnd}
+\tests{fnc:frnd_rqst}
+\tests{fnc:frnd_rprsnt}
+\tests{fnc:fnc_usr_rprsntt} 
+\tests{fnc:server_fr_sv}
+
+%%Testet F63
+%\teststep{Der \gls{Nutzer} startet die App und befindet sich im Hauptmenü}
+%{Er wählt die Menüanzeige aus}
+%{Die Menüanzeige ist ein Menüpunkt in dem anzeigten Appmenü}
+
+
+\teststep{Der Nutzer hat die App offen und ist auf der Startseite}
+{Der Nutzer öffnet das Appmenü und wählt \glspl{Freund} aus}
+{Eine Liste von bisherigen Freunden öffnet sich}
+
+\teststep{Der Nutzer hat die App offen und ist auf der Übersicht seiner Freunde}
+{Der Nutzer wählt "`Freunde hinzufügen"' und sucht nach einem Nutzer}
+{Es wird eine Liste von Nutzern angezeigt, welche den Suchkriterien entsprechen}
+
+\teststep{Der Nutzer sieht in der Liste der angezeigten Nutzer den, den er anfragen will}
+{Der Nutzer wählt die gesuchte Person aus}
+{Die ausgewählte Person wird als Freund angefragt}
+
+\teststep{Ein Nutzer wurde als Freund angefragt}
+{Der Nutzer akzeptiert die Anfrage}
+{Der anfragende und der angefragte Nutzer sind nun befreundet. Der Server speichert den neuen Freund in der Freundesliste des Anfragenden}
+
+\teststep{Ein Nutzer wurde als Freund angefragt}
+{Der Nutzer lehnt die Anfrage ab}
+{Der anfragende und der angefragte Nutzer sind keine Freunde}
+
+
+\test{Freunde löschen}{tst:delete_Freund}
+\tests{fnc:frnd_del}
+\tests{fnc:server_fr_dl}
+
+\teststep{Der Nutzer sieht die Übersicht seiner Freunde}
+{Der Nutzer klickt einen Freund an und wählt dann löschen}
+{Der Freund wird aus der Freundesliste gelöscht. Der Server aktualisiert die Freundesliste des Nutzers}
+
+
+\test{Freundesgruppen erstellen}{tst:create_Freundesgruppe}
+\tests{fnc:grp_add}
+\tests{fnc:frnd_grp}
+\tests{fnc:frnd_rcp}
+\tests{fnc:server_fg_sv}
+
+\teststep{Der Nutzer hat die App offen und ist auf der Startseite}
+{Der Nutzer wählt im Appmenü \glspl{Freundesgruppe}}
+{Das Fenster mit den Freundesgruppen öffnet sich}
+
+\teststep{Der Nutzer hat die App offen und die Übersicht der Freundesgruppen ist geöffnet}
+{Der Nutzer wählt "`Freundesgruppe erstellen"'}
+{Es öffnet sich die Übersicht um eine Freundesgruppe zu erstellen}
+
+\teststep{Die Übersicht zur Erstellung der \glspl{Freundesgruppe} ist offen}
+{Nutzer wählt Freunde aus, welche er der Gruppe hinzufügen will und wählt von seinen Rezepten diejenigen aus, die er in der Gruppe teilen möchte. Er betätigt das Erstellen}
+{Die Gruppe mit den Mitgliedern und geteilten Rezepten wird erstellt}
+
+\teststep{Die eingeladenen Freunde werden informiert}
+{Ein eingeladener Freund akzeptiert die Einladung}
+{Der eingeladene Freund wird der Gruppe hinzugefügt. Der Server aktualisiert die Mitgliederliste der Gruppe}
+
+\teststep{Die eingeladenen Freunde werden informiert}
+{Ein eingeladener Freund akzeptiert die Einladung nicht}
+{Der eingeladene Freund wird der Gruppe nicht hinzugefügt}
+
+
+\test{Freundesgruppen verwalten}{tst:bearbeiten_Freundesgruppe}
+\tests{fnc:grp_add}
+\tests{fnc:frnd_rcp}
+\tests{fnc:frnd_grp}
+\tests{fnc:server_fg_ed}
+\tests{fnc:server_fg_dl}
+
+\teststep{Ein angemeldeter Nutzer hat eine seiner Freundesgruppen geöffnet}
+{Der Nutzer bearbeitet Rezepte und \glspl{Freund}}
+{In der Gruppe wurden Freunde und Rezepte hinzugefügt oder gelöscht. Der Server aktualisiert seine Daten zur Freundesgruppe}
+
+\teststep{Der angemeldete Nutzer bearbeitet eine seiner Freundesgruppen}
+{Er löscht einen Freund aus der Gruppe}
+{Der Server entfernt den Freund aus der Freundesgruppe des Nutzers}
+
+\test{Freundesgruppen löschen/austreten}{tst:delete_Freundesgruppe}
+\tests{fnc:frnd_grp}
+\tests{fnc:server_fg_dl}
+
+\teststep{Ein angemeldeter Nutzer ist auf der Übersicht seiner Freundesgruppen}
+{Der Nutzer wählt eine Gruppe aus, die er erstellt hat und wählt "`löschen"'}
+{Der Server löscht die Daten dieser Gruppe komplett}
+
+\teststep{Der Nutzer hat die Übersicht seiner Freundesgruppen}
+{Der Nutzer wählt die Gruppe aus und wählt "`austreten"'}
+{Der Nutzer ist aus der Gruppe gelöscht. Der Server löscht seine Daten zu dieser Gruppe}
+
+\test{Profil erstellen \& verwalten}{tst:create_Profil}
+\tests{fnc:prf}
+\tests{fnc:id}
+\tests{fnc:pw_chg}
+\tests{fnc:del_profil}
+\tests{fnc:id_chg}
+\tests{fnc:server_chg_userdata}
+\tests{fnc:userdata}
+
+\teststep{Der Nutzer hat die App offen}
+{Der Nutzer wählt aus, dass er ein Profil erstellen möchte}
+{Eine \Gls{Template} mit Email, Benutzer-ID und Passwort öffnet sicht, das der Nutzer ausfüllen kann}
+
+\teststep{Der Nutzer hat bereits ein Profil erstellt und ist in der \gls{Profilansicht}}
+{Der Nutzer wählt aus, dass er sein Profil bearbeiten möchte}
+{Das Template öffnet sich mit den aktuell eingetragenen Informationen, die der Nutzer nun ändern kann}
+
+\teststep{Der Nutzer hat bereits ein Profil erstellt und ist auf der Profilbearbeitungsansicht}
+{Der Nutzer bearbeitet seine Benutzerid und speichert die Änderung}
+{Der Server speichert die geänderten Daten}
+
+\teststep{Der Nutzer hat bereits ein Profil erstellt, ohne eine ID einzugeben}
+{Der Nutzer geht nun auf seine \gls{Profilansicht}}
+{Der Server lädt die Profildaten. Die automatisch generierte Profil-ID wird angezeigt}
+
+\teststep{Der Nutzer hat bereits ein Profil erstellt und ist auf der \gls{Profilansicht}}
+{Der Nutzer wählt aus, dass er sein Profil löschen möchte}
+{Die \gls{ID}, die Emailadresse, das Profilbild (falls vorhanden) und das Passwort werden aus dem Server gelöscht}
+
+\teststep{Der Nutzer hat einen Account und einige privat erstellte Rezepte}
+{Der Nutzer löscht sein Profil und geht danach auf seine \gls{Rezeptliste}}
+{Die Rezeptliste zeigt immer noch die Rezepte des Nutzers. Waren \glspl{oRezept} dabei, sind diese nun privat}
+
+ %%FA ic change
+\teststep{Der Nutzer hat bereits einen Account und ist in der Profilbearbeitungsansicht}
+{Der Nutzer ändert in der Profilbearbeitungsansicht seine ID}
+{Die eingegebene ID wird auf Eindeutigkeit überprüft und falls dies positiv ist wird die neue ID übernommen. Der Server überschreibt die alte mit der aktualisierten ID}
+
+
+\test{Erstellen von Rezepten}{tst:Rezept_Erstellen}
+\tests{fnc:rec_new}
+\tests{fnc:rec_pic}
+\tests{fnc:rec_title}
+\tests{fnc:rec_zutaten}
+\tests{fnc:rec_mengen}
+\tests{fnc:rec_beschreib}
+\tests{fnc:rec_tags}
+\tests{rec_time}
+\tests{fnc:rec_time_split}
+\tests{fnc:rec_portions}
+\tests{fnc:server_update}
+
+\teststep{Der Nutzer hat gerade ein Rezept neu erstellt, oder ein Rezept bearbeitet}
+{Der Nutzer speichert das Rezept ab}
+{Das Rezept hat das aktuelle Datum als Erstellungsdatum. Das Erstelldatum wird auch auf dem Server aktualisiert}
+
+
+%FA (privates) Rezept erstellen / FA Titel / Fa Zutatenliste /FA Mengenangabe
+%FA Zubereitunsbeschreibung/FA Tags / FA Gesamtzubereitungszeit /FA %Portionenanzahl
+\teststep{Ein Nutzer wählt aus, dass er ein neues Rezept erstellen möchte}
+{Der Nutzer sieht ein \Gls{Template}, in dem er Rezepttitel, Vorbereitungszeit, Arbeitszeit, Portionenanzahl, Zutaten mit Mengenangaben, \glspl{Tag}, Bilder und eine Freitextbeschreibung ausfüllen kann. In dem ausgefüllten Template drückt er auf Speichern}
+{Das Rezept wird nun in der \gls{Rezeptliste} des Erstellers angezeigt}
+%Ende von Kapitel "Erstellung von Rezepten
+
+%Beginn Kapitel 4.1.2 speichern von Rezepten ----------------
+\test{Speichern von Rezepten}{tst: Rezept_Speichern}
+\tests{fnc:rec_portions}
+\tests{fnc:server_create}
+\tests{fnc:rec_save}
+\tests{fnc:rec_list}
+
+
+%FA Automatisches Speichern
+\teststep{Der Nutzer erstellt, oder bearbeitet gerade eines seiner Rezepte}
+{Das Rezepterstellungsmenü wird verlassen}
+{Das Rezept wird automatisch in der \gls{Rezeptliste} abgespeichert}
+
+\teststep{Der Nutzer verlässt die Rezepterstellung}
+{Das Rezept wird automatisch gespeichert}
+{Der Server speichert das aktualisierte oder neue Rezept mit allen eingetragenen Attributen}
+
+
+%FA Rezeptliste
+\teststep{Der Autor eines Rezepts hat ein Rezept erstellt und gespeichert}
+{Das Rezept wird der \gls{Rezeptliste} gespeichert}
+{Das Rezept ist in der Rezeptliste im Appmenü auffindbar}
+%Ende Speichern on Rezepten
+
+%Beginn Kapitel 4.1.3 Veröffentlichen von Rezepten---------------
+\test{Veröffentlichen von Rezepten}{tst: Rezept_Veroeffentlichen}
+\tests{fnc:rec_pub}
+\tests{fnc:rec_date}
+\tests{fnc:ser_pr_ver}
+
+%FA Autoren können ihre privaten Rezepte veröffentlichen
+\teststep{Der Nutzer hat ein Rezept vollständig erstellt und ist in der Bearbeitunsansicht seines Rezepts}
+{Der Nutzer wählt aus, dass er das Rezept veröffentlichen will}
+{Das Rezept muss einen Titel, eine Zutatenliste, eine Zubereitungsbeschreibung, eine Zubereitungsdauer, eine Anzahl an Portionen haben und wird in der öffentliche Suche zugänglich in der aktuellen Version und kann vom Ersteller in seiner \gls{Rezeptliste} gefunden werden}
+
+%FA Autoren können ihre privaten Rezepte veröffentlichen
+\teststep{Der Nutzer ist in der Rezeptbearbeitungsansicht}
+{Der Ersteller will das Rezept unvollständig speichern \& veröffentlichen}
+{Da Das Rezept nicht vollständig ausgefüllt wurde, wird es nicht veröffentlicht, kann aber von dem Ersteller in seiner Rezeptliste in der aktuellen unfertigen Form gefunden werden}
+
+
+%FA Erstelldatum
+\teststep{Der Nutzer erstellt, oder bearbeitet ein Rezept}
+{Der Nutzer will das Rezept speichern, oder veröffentlichen}
+{Dem Rezept wird das aktuelle Datum als Erstelldatum hinzugefügt. Der Server aktualisiert sein gespeichertes Erstelldatum}
+
+\teststep{Der Nutzer veröffentlicht ein Rezept}
+{Die App lässt das Veröffentlichen zu, da das Rezept alle Kriterien erfüllt}
+{Der Server speichert, dass das Rezept veröffentlicht ist}
+
+%Ende  Veröffentlichen von Rezepten
+
+%Beginn Kapitel 4.1.4 Bearbeiten von Rezepten-----------------
+\test{Bearbeiten und Löschen von Rezepten}{tst: Rezept_Bearbeiten}
+\tests{fnc:rec_edit}
+\tests{fnc:rec_pub_edit}
+\tests{fnc:rec_del} 
+\tests{fnc:server_delete}
+\tests{fnc:server_delete_o}
+
+\teststep{Ein \gls{Autor} wählt ein Rezept aus seiner Rezeptliste aus und will dieses bearbeiten}
+{Der Autor bearbeitet den Titel und speichert dann}
+{Das alte Rezept des Nutzers wird mit der Neuerung in der Rezeptliste und, falls dieses öffentlich war, in der öffentlichen Ansicht aktualisiert. Die Rezeptdaten auf dem Server werden aktualisiert}
+
+%\teststep{Ein Nutzer ist in der Rezeptbearbeitungsansicht und bearbeitet ein veröffentlichtes Rezept}
+%{Der Nutzer wählt aus, dass er das Rezept löschen möchte}
+%{Das Rezept wird vom Server gelöscht und wird nicht mehr in seiner Rezeptliste angezeigt}
+
+%FA Bild hinzufügen
+\teststep{Ein Autor ist in der Rezeptbearbeitungsansicht, da er ein neues Rezept erstellt, oder eins seiner erstellten Rezepte bearbeitet}
+{Der Ersteller wählt die Bildfläche aus und lädt ein Rezeptbild hoch}
+{Das Rezeptbild wird dem Rezept hinzugefügt und ist nun bei der Rezeptansicht sichtbar}
+
+%FA Rezept löschen
+\teststep{Ein Autor ist in der Rezeptbearbeitungsansicht}
+{Der Autor wählt aus, dass er das Rezept löschen möchte}
+{Das Rezept und alle Verlinkungen in der App werden gelöscht. Das Rezept wird nicht mehr in der Rezeptliste angezeigt}
+
+%FA Rezept unveröffentlichen
+\teststep{Ein Autor ist in der Rezeptbearbeitungsansicht und bearbeitet eines seiner veröffentlichten Rezepte}
+{Der Autos wählt aus, dass das Rezept nicht mehr öffentlich verfügbar ist}
+{Der Server aktualisiert seine Daten zu diesem Rezept und das Rezept wird nur noch in der Rezeptliste und nicht mehr öffentlich angezeigt}
+
+%Laden von Rezepten
+\test{Laden von Rezepten}{tst:loadrecipes}
+\tests{fnc:server_read}
+
+\teststep{Ein Nutzer möchte sich ein öffentliches Rezept ansehen}
+{Er wählt ein Rezept aus}
+{Der Server lädt die Daten des Rezepts, sodass es angezeigt werden kann}
+
+\teststep{Ein Autor möchte sich eines seiner privaten Rezept ansehen}
+{Er wählt ein Rezept aus der Rezeptliste aus}
+{Der Server lädt die Daten des Rezepts, sodass es angezeigt werden kann}
+
+%Beginn Kapitel 4.1.5 Favoriten-------------------------
+
+\test{Favoriten}{tst:favoriten}
+\tests{fnc:fav}
+\tests{fnc:fav_men}
+
+%FA Favorisieren von Rezepten
+\teststep{Ein \gls{Nutzer} schaut sich ein öffentliches Rezept an}
+{Der Nutzer fügt das Rezept der \gls{Favoritenliste} hinzu}
+{War das Rezept bisher nicht favorisiert, wird es der Favoritenliste des Nutzers hinzugefügt}
+
+%FA Favoriten
+\teststep{Ein Nutzer hat die App geöffnet}
+{Er geht auf das Appmenü und wählt "`Favoriten"' aus}
+{Dem Nutzer werden alle von ihm als Favorit gespeicherten Rezepte in der \gls{Favoritenliste} angezeigt}
+%Ende Favoriten
+
+%Ende Kapitel 4.1.5 Favoriten-------------------------
+
+
+
+%Beginn Kapitel 4.1.5 optional Mengenangaben skalieren-------------------------
+
+%Ende Kapitel 4.1.5 Mengenangaben skalieren-------------------------
+\test{Mengenangaben skalieren}{tst:mengenangaben_skalieren}
+\tests{fnc:port_skal}
+
+\teststep{Der Nutzer hat ein \gls{oRezept} geöffnet}
+{Der Nutzer gibt an, wie viel Portionen er kochen möchte}
+{Die Mengenangaben werden anhand der eingegebenen Portionen neu berechnet und angezeigt}
+
+\test{Einkaufliste öffnen}{tst:einkaufsliste}
+\tests{fnc:shop_who}
+\tests{fnc:shop_pos}
+\tests{fnc:server_ld_ek}
+
+\teststep{Der Nutzer hat die App geöffnet}
+{Der Nutzer öffnet das Appmenü und wählt "`Einkaufsliste"' aus}
+{Der Server lädt die Informationen der Einkaufliste und sie wird in der App angezeigt}
+
+\test{Einkaufsliste verwalten}{tst:einkaufsliste_v}
+\tests{fnc:shop_add}
+\tests{fnc:shop_men}
+\tests{fnc:shop_del}
+\tests{fnc:server_ld_ek}
+\tests{fnc:server_sv_ek}
+
+\teststep{Ein angemeldeter Nutzer sieht sich ein \gls{oRezept} an}
+{Der Nutzer wählt aus, dass er die ganze Zutatenliste der Einkaufsliste hinzufügen möchte}
+{Der Einkaufsliste werden die Zutaten mit den eingestellten Mengenangaben hinzugefügt und auf dem Server gespeichert. Die Einkaufsliste zeigt die neuen Zutaten und Mengenangaben an}
+
+\teststep{Der angemeldete Nutzer hat seine Einkaufsliste offen}
+{Er wählt Zutaten von der Liste aus und drückt löschen}
+{Die Zutat mit ihrer Mengenangabe werden von der Einkaufliste und vom Server entfernt und nicht mehr angezeigt}
+
+\test{Import- und Exportfunktion}{tst:importexport}
+\tests{fnc:exp}
+\tests{fnc:imp}
+
+\teststep{Der Nutzer hat ein Rezept ausgewählt}
+{Der Nutzer wählt aus, dass er das Rezept \gls{lokal} speichern möchte}
+{Ein Fenster zum Auswählen des Dateispeicherorts öffnet sich}
+
+\teststep{Der Nutzer sieht das Fenster zum Auswählen des Dateispeicherorts}
+{Er gibt einen Speicherort auf dem Gerät an}
+{Das Rezept wird dort gespeichert}
+
+\teststep{Der Nutzer hat die Rezeptansicht eines Rezepts offen}
+{Er drückt das {\em Teilen}-icon und wählt die Mailapp aus.}
+{Die Mailapp öffnet sich in der Emailerstellen Ansicht mit dem Rezept als Mailinhalt}
+
+
+\teststep{Ein Nutzer hat eine Textdatei, die ein Rezept ist, auf dem Gerät liegen}
+{Der Nutzer wählt in der App "`Importieren"' aus und wählt die Datei aus}
+{Das Rezept wird als neues privates Rezept gespeichert und in der \gls{Rezeptliste} angezeigt}
+
+\test{Textverweise}{tst:textverweise}
+\tests{fnc:link}
+\tests{fnc:linkcol}
+\tests{fnc:linkact}
+\tests{fnc:linkinact}
+
+\teststep{Ein angemeldeter Nutzer erstellt oder bearbeitet ein öffentliches Rezept}
+{Der Nutzer verlinkt in der Zubereitungsbeschreibung auf einem Wort ein anderes Rezept}
+{Das verlinkte Wort in der Zubereitungsbeschreibung ist farblich vom restlichen Text abgehoben}
+
+\teststep{Ein Nutzer liest ein öffentliches Rezept}
+{Der Nutzer drückt auf ein in der Zubereitungsbeschreibung farblich abgehobenes Wort}
+{Dem Nutzer wird das verlinkte Rezept angezeigt}
+
+\teststep{Ein Nutzer liest ein öffentliches Rezept und möchte eine Verlinkung zu einem gelöschten Rezept auswählen}
+{Der Nutzer drückt auf das in der Zubereitungsbeschreibung farblich abgehobene Wort}
+{Dem Nutzer wird eine Fehlermeldung angezeigt, die besagt, dass das verlinkte Rezept nicht mehr existiert}
+
+\test{Bewertungsfunktion}{tst:bewerten}
+\tests{fnc:bew}
+
+\teststep{Ein angemeldeter Nutzer schaut sich ein öffentliches Rezept an}
+{Der Nutzer wählt eine Bewertung zwischen 1 und 5 aus}
+{Die durchschnittliche Bewertung des Rezepts wird neu berechnet und verändert angezeigt}
+
+
+\test{Textstruktur}{tst:textstruktur}
+\tests{fnc:ueingabe}
+\tests{fnc:uanzeige}
+
+\teststep{Ein Nutzer erstellt ein Rezept}
+{Der Nutzer benutzt eine Überschrift in der Zubereitungsbeschreibung}
+{In der Anzeige ist die Überschrift von der Größe her vom restlichen Text abgehoben}
+
+
+\teststep{Der Nutzer hat ein Rezept offen}
+{Der Nutzer wählt eine Bewertung zwischen 1 und 5 aus}
+{Die Bewertung wird der durchschnittlichen Bewertung des Rezeptes angerechnet}
+
+
+\test{Benutzerprofil}{tst:benutzerprofil}
+\tests{fnc:prsn_dsc}
+\tests{fnc:prsn_chg}
+\tests{fnc:prfl_rprsnt}
+\tests{fnc:prfl_abb}
+\tests{fnc:wtch_abb}
+\tests{fnc:prsn_dscc}
+\tests{fnc:prsn_chgg}
+
+%\teststep{Ein angemeldete Nutzer befindet sich in der Profilbearbeitungsansicht}
+%{Er fügt seinem Profil ein Bild hinzu, oder entfernt ein vorhandenes Bild und speichert dann}
+%Profilansicht angezeigt. Falls er ein Bestehendes entfernt hat, oder überhaupt kein Profilbild hochgeladen hat, %%wird ein Default-Bild angezeigt}
+
+\teststep{Ein angemeldeter Nutzer ist in der Profilbearbeitungsansicht}
+{Er bearbeitet die Kurzbeschreibung und speichert dann}
+{Die neue Kurzbeschreibung ist auf dem Profil sichtbar}
+
+\teststep{Ein angemeldeter Nutzer ist in der Profilbearbeitungsansicht}
+{Er will sein vorhandenes Profilbild erneuern und lädt ein neues Bild hoch}
+{Das neue Bild wird in seinem Profil angezeigt}
+
+\teststep{Ein Nutzer liest ein \gls{oRezept}}
+{Der Nutzer drückt auf das Profil des Autors des Rezeptes}
+{Das Profil des Autors wird angezeigt mit einem Knopf, um diesen zu abonnieren}
+
+\teststep{Ein angemeldeter Nutzer öffnet die Menüleiste}
+{Er drückt auf "`Abonnierte Profile"'}
+{Eine Ansicht aller von ihm abonnierten Profile erscheint}
+
+\test{Nutzeranmeldung}{tst:nutzeranmeldung}
+\tests{fnc:usr_aut}
+
+\teststep{Der Nutzer hat die App geöffnet}
+{Er drückt auf "`Anmelden"', gibt seine ID und Passwort ein und bestätigt}
+{Der Nutzer ist angemeldet auf diesem Gerät}
+
+%TODO
+\test{Rezept kommentieren}{tst:rezept_kommentieren}
+\tests{fnc:com_wr}
+\tests{fnc:server_kom_sv}%F91
+\tests{fnc:com_see}
+
+\teststep{Ein Nutzer schaut sich ein öffentliches Rezept an}
+{Der Nutzer geht ans Ende des Rezepts}
+{Dem Nutzer werden die veröffentlichten Kommentare zu diesem Rezept angezeigt}
+
+\teststep{Ein angemeldeter Nutzer schaut sich ein öffentliches Rezept an}
+{Der Nutzer geht ans Ende des Rezepts, gibt einen Kommentar ins Kommentarfeld ein und drückt auf "`Kommentar hinzufügen"'}
+{Der Kommentar wird dem Rezept hinzugefügt}
+
+\teststep{Ein angemeldeter Nutzer schaut sich ein öffentliches Rezept an}
+{Der Nutzer ans Ende des Rezepts, gibt einen Kommentar ins Kommentarfeld ein und drückt auf Kommentar abbrechen oder verlässt die App}
+{Der Kommentar wird dem Rezept nicht hinzugefügt}
+
+\teststep{Ein angemeldeter Nutzer hat ein Rezept kommentiert}
+{Er speichert den Kommentar}
+{Der Server speichert den Kommentar zu diesem Rezept}
+
+
+\test{Kommentar bearbeiten}{tst:rezept_kommentieren}
+\tests{fnc:com_ed}
+\tests{fnc:server_kom_sv}%F91
+
+\teststep{Ein angemeldeter Nutzer schaut sich ein öffentliches Rezept an}
+{Der Nutzer geht ans Ende des Rezepts und wählt bei einem von ihm erstellten Kommentar "`bearbeiten"' aus}
+{Das Kommentierfeld wird zum Editierfeld und der Kommentator kann seinen Text bearbeiten}
+
+\teststep{Ein angemeldeten Nutzer bearbeitet einen seiner Kommentare}
+{Er bearbeitet seinen Text und drückt auf "`speichern"'}
+{Der Server überschreibt den alten Kommentar mit dem bearbeiteten Text und speichert ihn so}
+
+\teststep{Der Nutzer bearbeitet einen seiner Kommentare}
+{Er bearbeitet seinen Text und drückt auf "`abbrechen"' oder verlässt die App}
+{Der ursprüngliche Text des Kommentars wird nicht geändert}
+
+\test{Rezeptsuche}{tst:rezeptsuche}
+\tests{fnc:rcp_srch}
+\tests{fnc:rcp_fltr}
+\tests{fnc:srch_rslt}
+\tests{fnc:rcp_rprsnt}
+\tests{fnc:srch_sort}
+\tests{fnc:server_rec_search}
+
+\teststep{Ein \glspl{Nutzer} ist auf Rezeptsuche}
+{Der Nutzer stellt einen Rezepttitel, ein paar Zutaten und Tags als Suchfilter ein}
+{Es wird eine Liste an Suchergebnissen angezeigt. Zu jedem Eintrag werden Titel und Bild des Rezepts angezeigt}
+
+\teststep{Der Nutzer sieht die Ergebnisse der Rezeptsuche}
+{Der Nutzer sortiert die Ergebnisse nach Durchschnittsbewertung, Erstellungsdatum oder Favorisierung}
+{Die Ergebnisse der Rezeptsuche werden nun nach dem ausgewählten Kriterium sortiert angezeigt, jeweils beginnend mit dem höchsten Wert}
+
+\test{Erweiterte Rezeptsuche}{tst:erweiterte_rezeptsuche}
+\tests{fnc:srch_rtng}
+\tests{fnc:srch_prep}
+\tests{fnc:srch_sortt}
+
+\teststep{Ein Nutzer ist auf Rezeptsuche}
+{Der Nutzer stellt ein, dass Ergebnisse eine minimale durchschnittliche Bewertung von 3 Sternen haben und fügt Schlagwörter für den Suchfilter Zubereitungsbeschreibung hinzu}
+{Alle Suchergebnisse haben die mindestens die eingestellte durchschnittliche Bewertung und enthalten die angegebenen Schlagwörter in ihrer Zubereitungsbeschreibung}
+
+\teststep{Ein Nutzer sieht die Ergebnisse der Rezeptsuche}
+{Der Nutzer sortiert die Ergebnisse nach durchschnittlicher Bewertung}
+{Die Rezepte sind absteigend nach durchschnittlicher Bewertung sortiert}
+
+\test{Benutzersuche}{tst:benutzersuche}
+\tests{fnc:usr_srch}
+\tests{fnc:fnc_usr_rprsnt}
+\tests{fnc:usr_srch_filter}
+\tests{fnc:fnc_usr_rprsntt}
+\tests{fnc:server_ben_search}
+
+\teststep{Ein \glspl{Nutzer} öffnet das Appmenü}
+{Er drückt auf "`Benutzersuche"'}
+{Die Benutzersuche öffnet sich}
+
+\teststep{Ein Nutzer hat die Benutzersuche offen}
+{Der Nutzer gibt eine ID ein}
+{Die App zeigt ihm das Profil mit der angegebenen ID an}
+
+
+\test{Rezeptefeed}{tst:feed}
+\tests{fnc:rcp_fd}
+\tests{fnc:rcp_fd_m}
+\tests{fnc:rcp_fd_act}
+
+\teststep{Ein Nutzer öffnet die Kochbuchapp}
+{Die App startet}
+{Dem Nutzer wird ein \gls{Feed} der neusten veröffentlichten Rezepte gezeigt}
+
+\teststep{Der Nutzer ist auf einer Seite der App, die nicht die "`Startseite"' ist}
+{Er drückt auf "`Startseite"'}
+{Dem Nutzer wird der aktualisierte Feed angezeigt}

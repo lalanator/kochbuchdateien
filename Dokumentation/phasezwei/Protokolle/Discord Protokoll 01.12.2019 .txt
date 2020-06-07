@@ -1,0 +1,20 @@
+Discord Treffen
+1. Standupmeeting
+	Thomas
+		- Rezeptverwaltung
+	Pascal
+		- Model für DB
+		- Struktur für Server (grobe Package und Klassenstruktur)
+		
+	Heiner
+		- Strukturelle Übersicht (Wikipedia Android MVVM)
+		- MV VM Beispiele
+		
+	Lea
+		- Android developer architecture 
+		-
+2. MV-VM
+3. Brainstorming 
+	- auf Board.net
+4. Aufgabenverteilung
+	- Sunflower Beispiel lesen

@@ -1,0 +1,159 @@
+% Preambel
+\documentclass[a4paper,,openany,parskip=full]{scrreprt}
+\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+%Sprache=deutsch, utf8 oder ansinew(Windows) für Umlaute
+%code formatting
+%Sourcecode Highlighting
+%\usepackage{minted}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+%Schönschrift beim PDF erstellen
+\usepackage{lmodern}
+%Grafikunterstützung
+\usepackage{graphicx}
+
+%LandscapeGrafiken
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{epstopdf}
+
+%Farbliche Texte
+\usepackage{xcolor}
+
+%Zitate
+\usepackage{csquotes}
+%Farbige Hervorhebungen
+\usepackage{soul}
+\sethlcolor{blue}
+%Tools
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{float}
+
+%Klickbare Links
+\usepackage{hyperref}
+\hypersetup{pdftitle={Pflichtenheft},
+colorlinks=true, bookmarks, bookmarksnumbered}
+
+\usepackage[nonumberlist, toc]{glossaries}
+\makenoidxglossaries
+
+
+% Versionierung
+\newcommand{\version}{1.0}
+
+\usepackage{color}
+%Dokumentanfang
+
+
+%% Json Formatting:
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+
+
+\begin{document}
+\title{
+	\huge{Entwurfsdokumentation}
+	}
+\subtitle{
+	\vspace{1cm}
+	  \Large {PSEKochbuch}\\
+		\LARGE{Exzellenzkoch}
+	\vspace{2cm}
+	}
+\date{
+	\vspace{3cm}
+	Wintersemester 2019/2020, \today \\
+	\vspace{1cm}
+	\vspace{1cm}
+	}
+\author{
+		Magnus Bühler
+		\and Wolf H. Lauppe
+		\and Pascal Maier
+		\and Thomas Weidmann
+		\and Lea Strauch
+		}
+\maketitle
+
+% ---------------------------------------------------------- Revisions-Historie
+
+\newpage
+\begin{table}[b]
+\centering
+\begin{tabular}{|l|l|l|l|p{0.4\textwidth}|}\hline
+	\textbf{Version}	&\textbf{Autor}	&\textbf{Datum}	&\textbf{Status}	&\textbf{Kommentar}
+\\\hline	1.0		&PSE3		&22.12.2019		&Abgabe				&Pflichtenheft v1.0 mit Ergänzung der Admin-Rolle
+\\\hline	1.1		&PSE3		&07.01.2020		&				&Formatierungen, Domain Entity richtig eingebunden. 
+\\\hline				&			&			&			&
+\\\hline
+\end{tabular}
+\caption{\label{tab:revision}Versionshistorie}
+\end{table}
+
+
+%Inhaltsverzeichnis
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+%Input einzelner Kapitel
+\input{zielbestimmung}
+\input{architektur}
+\input{interaktion}
+\input{pakete}
+\input{klassenbeschreibungUI}
+\input{wunschkrit}
+\input{klassenbeschreibungDomain}
+\input{klassenbeschreibungDL}
+\input{klassenserverbeschreibung}
+\input{klassenbeschreibungServer}
+\input{aktivzustdiag}
+\input{sequenz}
+\input{klassendiagramm}
+
+\bibliography{zitate}
+\bibliographystyle{ieeetr}
+
+%Automatisch generiertes Glossar. Latex zweimal aufsführen, um Glossar anzuzeigen
+\printnoidxglossaries
+\end{document}

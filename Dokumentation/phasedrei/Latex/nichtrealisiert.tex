@@ -1,0 +1,35 @@
+\chapter{Nicht implementierte Funktionalität}
+
+Im Folgenden wird darauf eingegangen, welche Funktionen aus dem Entwurfsdokument nicht umgesetzt wurden und spezifiziert, warum.
+
+\section{Nicht umgesetzte Kriterien}
+
+Von den Musskriterien aus dem Pflichtenheft wurde \textbf{M5: Rezepte favorisieren} aus zeitlichen Gründen nicht umgesetzt. 
+Ein möglicher Implementierungsansatz wäre aber, ein weiteres Fragment mit einer RecyclerView und zugehörigen Komponenten (RecyclerItem XML, ViewModel und Adapter) in das Appmenü einzufügen. Wählt der User ein Rezept zum favorisieren aus, wird dieses heruntergeladen und als "`PrivateRecipe"' Instanz in einer neuen Liste in der lokalen Datenbank gespeichert. Der User kann das Rezept dann unter dem neuen Menüpunkt "`Favoriten"' einsehen und das Rezept im "`CreateRecipeFragment"' ansehen (wie jedes andere Rezept auch).
+
+Als Folge dessen und, weil \textbf{W10: Bewertung von Rezepten} nicht umgesetzt wurde, ist die Funktion \textbf{F55: Sortierung} nicht umgesetzt. Die in den Suchergebnissen angezeigten Rezepte können demnach momentan nicht nach der Durchschnittsbewertung, oder Favorisierung sortiert werden, sondern werden per Default ihrem Erstelldatum nach sortiert. Eine Lösung dafür ist es, andere Sortierfilter zu implementieren, die momentan möglich sind, zB. neben Datum noch vorgegebene Tags als Sortierfilter zu nehmen.
+
+\section{Nicht umgesetzte Funktionen}
+
+Von den im Entwurfsdokument spezifizierten Funktionen wurden nicht umgesetzt:
+
+\subsection{User Interface Layer}
+
+\subsubsection{Portionen}
+Aus zeitlichen Gründen wurde die Funktion, Rezepten eine Anzahl an Portionen zu geben, nicht implementiert. Die Portionen können momentan nicht in ein neues Rezept eingetragen werden, sind in der DomainEntity aber bereits enthalten. Diese Funktion wird bis zum nächsten Release nachgetragen.
+
+
+\subsubsection{Freunde und Freundesgruppen}
+Da \textbf{W14} nicht implementiert wurde, ist keine der zugehörigen Funktionen implementiert. Dies beinhaltet alle Klassen der Pakete \textbf{Friendfragment} im UI Layer und \textbf{Friends} im Domain Layer, sowie weitere Buttons und daraus folgende Logik, die im UI Layer vernachlässigt werden können.
+
+\subsubsection{Kommentare}
+Da \textbf{W11} nicht implementiert wurde, ist keine der zugehörigen Funktionen implementiert. Dies beinhaltet alle Klassen der Pakete \textbf{Commentfragment} im UI Layer und \textbf{Comment} im Domain Layer, sowie weitere Buttons und daraus folgende Logik, die im UI Layer vernachlässigt werden können.
+
+\subsubsection{Nutzersuche}
+Da die Nutzersuche nicht implementiert ist, werden zugehörige Klassen nicht implementiert. Dazu gehören: UserSearchFragment, UserSearchViewModel.
+
+\subsubsection{Private Tags}
+Die Funktion \textbf{F73} ist nicht implementiert, deswegen sind zugehörige Klassen nicht existent. Dazu gehören: EditTagFragment, EditTagViewModel.
+
+\subsubsection{Einkaufsliste} 
+Die Funktion \textbf{F73} ist nicht implementiert, deswegen sind zugehörige Klassen nicht existent. Dazu gehören: ShoppingListDisplayFragment, ShoppingListDisplayViewModel.

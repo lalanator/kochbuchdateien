@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>60</y>
+      <w>420</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>UserApi&lt;&lt;interface&gt;&gt;
+--
++createUser(user:UserDto):void
++updateUser(user:UserDto):void
++deleteUser(userId:String):void
++getUserById(userId:String):UserDto
++addFollow(subscriberId:String, followedId:String):void
++getFollow(userId:String, page:int, size:int):List&lt;UserDto&gt;
++removeFollow(subscriberId:String, followedId:String):void
++searchUser(userId:String, page:int, size:int):List&lt;UserDto&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>70</y>
+      <w>590</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>GroupApi&lt;&lt;interface&gt;&gt;
+--
++createGroup(group:GroupDto):void
++updateGroup(group:GroupDto):void
++deleteGroup(groupId:int):void
++getGroupById(groupId:int):GroupDto
++addUserToGroup(userId:String, groupId:int):void
++getGroups(userId:String, page:int, size:int):List&lt;GroupDto&gt;
++removeUserFromGroup(userId:String, groupId:int):void
++getSharedRecipesFromGroup(groupId:int, page:int, size:int):List&lt;SharedPrivateRecipeDto&gt;
++addSharedRecipeToGroup(groupId:int, sharedRecipe:SharedPrivateRecipeDto):void
++deleteSharedRecipeFromGroup(groupId:int, sharedRecipeId:int):void
++updateRecipe(groupId:int,recipe:SharedPrivateRecipeDto):void
++reportGroup(groupId:int):void
++reportSharedPrivateRecipe(recipeId:int):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>290</y>
+      <w>490</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>PublicRecipeApi&lt;&lt;interface&gt;&gt;
+--
++addRecipe(recipe:PublicRecipeDto):void
++updateRecipe(recipe:PublicRecipeDto):void
++deleteRecipe(recipeId:int):void
++getRecipe(recipeId:int):PublicRecipeDto
++setRating(recipeId:int, userId:String, value:int):void
++getRatingFromUser(userId:String, recipeId:int):int
++getAverageRating(recipeId:int):double
++search(title:String, tags:List&lt;String&gt;, ingredients:List&lt;String&gt;,
+ creationDate: Date, alreadyLoad:int, readCount:int):List&lt;PublicRecipeDto&gt;
++reportRecipe(recipeId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>330</y>
+      <w>470</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>FavouritesApi&lt;&lt;Interface&gt;&gt;
+--
++addFavRecipe(userId:String, recipeId:int):void
++getFavRecipe(userId:String, page:int, size:int):List&lt;PublicRecipeDto&gt;
++delFavRecipe(userId:String, recipeId):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>450</y>
+      <w>430</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>AdminApi&lt;&lt;interface&gt;&gt;
+--
++getReportedPublicRecipe(size:int, page:int):List&lt;Recipe&gt;
++getReportedSharedPrivateRecipe(size:int, page:int):List&lt;Recipe&gt;
++getReportedUsers(size:int, page:int):List&lt;UserDto&gt;
++getReportedGroups(size:int, page:int):List&lt;GroupDto&gt;
++getReportedComments(size:int, page:int):List&lt;CommentDto&gt;
++deReportPublicRecipe(recipeId:int):void
++deReportSharedPrivateRecipe(recipeId:int):void
++deReportUser(userId:String):void
++deReportGroups(groupId:int):void
++deReportComment(commentId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>660</y>
+      <w>440</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>CommentApi&lt;&lt;interface&gt;&gt;
+--
++addComment(comment:CommentDto):void
++updateComment(comment:CommentDto):void
++deleteComment(commentId:int):void
++getComments(recipeId:int, page:int, size:int):List&lt;CommentDto&gt;
++reportComment(commitId:int):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>570</y>
+      <w>470</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>FriendRequestApi&lt;&lt;interface&gt;&gt;
+--
++publishRequest(request: FriendRelationDto)
++getOpenRequestsforMe(userId:String, page:int, count:int) : List&lt;String&gt;
++getFriends(userId:String, page:int, size:int) : List&lt;String&gt;
++deleteFriend(enquirerId:String, requestedFriendId:String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>20</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>AdminListFragment
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>15</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CommentListFragment
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>15</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CommentViewFragment
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>165</x>
+      <y>190</y>
+      <w>105</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>AdminRecipeListAdapter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>120</y>
+      <w>105</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>AdminRecipeListViewModel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>335</x>
+      <y>140</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CommentListAdapter
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>140</y>
+      <w>95</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CommentListViewModel
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>575</x>
+      <y>140</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>CommentViewModel
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>40</y>
+      <w>185</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Navigiert zu EditRecipeFragment</panel_attributes>
+    <additional_attributes>10.0;20.0;350.0;20.0</additional_attributes>
+  </element>
+</diagram>

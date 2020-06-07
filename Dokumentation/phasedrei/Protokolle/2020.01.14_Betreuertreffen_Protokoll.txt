@@ -1,0 +1,42 @@
+Protokoll 14.01.2020, Implementierungsphase 1. Betreuertreffen:
+
+
+Entwurfsphase Note: 1.0 weil deutlich mehr gemacht als erwartet (Architekturmäßig usw.)
+
+
+Abgabe der Implementierungsphase:
+Code und
+Dokumentation:
+	Code:
+		Javadoc kommentierter Code
+		Javadoc kommentierte Unit-Tests
+	Begleitdokument:
+		Entwurfentscheidungen, die vom Entwurfsdoc abweichen dokumentieren (Änderungsdokument)
+		Kriterien des PFH: wo sie implementiert sind
+		Wenn Kriterien nicht implementiert: OFFEN sagen, warum was nicht impl. worden ist, statt es zu verschweigen!
+
+
+BIS NÄCHSTE WOCHE: Implementierungsplan abgeben (vor Dienstag, zB Wochenende):
+		Meilensteine (bis wann soll was fertig sein?)
+			Wer arbeitet an was?
+		Gliederung schriftlich abgeben	
+
+	Wann wollen wir Urlaub nehmen? (Auch aufteilbar, 1 Woche jetzt, 1 später)
+
+
+Generell gilt für die Abgabe der Implementierungsphase:
+
+	App muss installierbar sein (.apk) und Funktionen müssen ausführbar sein
+		App darf auch mal abschmieren
+	
+	Testabdeckung muss nicht implementiert sein in der Implementierungsphase
+	Anm. der Prüfer: Test-driven-dev sinnvoll
+
+
+Termine in der Implementierungsphase:
+
+	Am 3.3. ist kein Betreuertreffen!!!
+
+	17.03. (wahrscheinlich) ist Abschlusspräsentation --> alle Gruppen sind anwesend + die Leute von Arconsis sind da
+		Reussner oder Koziolek sind auch dabei wenn möglich,
+		Man darf bei den anderen Teams Fragen stellen

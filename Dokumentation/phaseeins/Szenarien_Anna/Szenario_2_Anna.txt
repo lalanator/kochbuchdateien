@@ -1,0 +1,21 @@
+Szenario 2:
+
+(keine Treffer aufgrund zu ausführlicher Suche)
+
+Anna hat jemanden kennengelernt, für den sie ein etwas ausgefalleneres Gericht kochen möchte.
+Sie legt sich auf italienisch Essen fest und klickt auf die [Kochbuch]-App, um sie zu öffnen.
+In der Suchfunktion gibt sie ein, dass das Essen glutenfrei sein soll, da ihr Date 
+kein Gluten verträgt. Nun drückt sie auf den "suchen"-Button. 
+Die App sucht ca 1-2 Sekunden und zeigt dann einen Screen an, auf dem steht: 
+"Leider konnten wir für Ihre Eingaben kein Gericht finden".
+Darunter steht der Satz "Möchten Sie ein eigenes Rezept hinzufügen?" und ein Button mit der
+Aufschrift "Gericht hinzufügen".
+
+Anforderungen:
+
+Funktional:	Bei Klick auf App diese im Vordergrund öffnen,
+			Tags wie "glutenfrei" in Suche einbinden,
+			Wenn kein Ergebnis aus Suche kommt --> Ansagen und Gericht hinzufügen Button zeigen
+			Funktion, um eigene Gerichte hinzuzufügen
+
+Nichtfunktional:

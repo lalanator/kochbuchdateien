@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>30</y>
+      <w>170</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>RegistateFragment
+--
+--
+-header:TextView
+-email:TextView
+-emailField:EditText
+-id:TextView
+-idField:EditText
+-password:TextView
+-passwordField:EditText
+-registrate:Button
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>40</y>
+      <w>290</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>RegistateViewModel
+--
+-mrepo:Repository
+-emailAdress:LiveData&lt;String&gt;
+-userID:LiveData&lt;String&gt;
+-password:LiveData&lt;String&gt;
+--
++registrate(email:String,
+id:String,password:String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>80</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>140</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;observe&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>590</x>
+      <y>250</y>
+      <w>240</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Gibt die Parameter weiter
+an das Repo /Firebase. Ruft
+das Profil Fragment auf</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>140</y>
+      <w>70</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;110.0</additional_attributes>
+  </element>
+</diagram>

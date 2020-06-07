@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>14</x>
+      <y>14</y>
+      <w>357</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Authentification
+&lt;&lt;Interface&gt;&gt;
+--
+--
++registrate(userId:String, email:String, passwort:String, activity:Activity)
++login(email:String, password:String, activity:Activity)
++logout()
++pwEdit(pw:String,activity:Activity)
++usernameEdit(username:String,activity:Activity)
++userDelete(activity:Activity)
+-saveToken()
++getToken(activity:Activity):String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

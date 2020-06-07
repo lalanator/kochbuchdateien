@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>30</y>
+      <w>290</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>ProfilEditViewModel
+--
+-mrepo:Repository
+-userID:LiveData&lt;String&gt;
+-userDescription:LiveData&lt;String&gt;
+--
++save()
++changeLoginData()
++delete()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>220</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>leitet den Nutzer
+zu dem ChangePassword 
+Fragment weiter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>120</y>
+      <w>90</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=().</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;100.0</additional_attributes>
+  </element>
+</diagram>
